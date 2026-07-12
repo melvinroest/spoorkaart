@@ -27,6 +27,7 @@
       "amsterdam-centraal",
       "amsterdam-amstel",
       "utrecht-centraal",
+      "driebergen-zeist",
       "veenendaal-de-klomp",
       "ede-wageningen",
       "arnhem-centraal",
@@ -105,6 +106,7 @@
       "zaandam",
       "amsterdam-sloterdijk",
       "amsterdam-centraal",
+      "amsterdam-muiderpoort",
       "amsterdam-amstel",
       "duivendrecht",
       "amsterdam-bijlmer-arena",
@@ -265,14 +267,13 @@
     {
      "stops": [
       "amsterdam-centraal",
+      "amsterdam-sloterdijk",
       "haarlem",
       "heemstede-aerdenhout",
       "leiden-centraal",
       "den-haag-centraal"
      ],
-     "via": [
-      "amsterdam-sloterdijk"
-     ],
+     "via": [],
      "note": ""
     }
    ],
@@ -299,6 +300,7 @@
     {
      "stops": [
       "amsterdam-centraal",
+      "amsterdam-sloterdijk",
       "haarlem",
       "heemstede-aerdenhout",
       "leiden-centraal",
@@ -322,7 +324,6 @@
       "vlissingen"
      ],
      "via": [
-      "amsterdam-sloterdijk",
       "hillegom",
       "voorhout"
      ],
@@ -533,6 +534,7 @@
    "routes": [
     {
      "stops": [
+      "amersfoort-schothorst",
       "amersfoort-centraal",
       "hilversum",
       "duivendrecht",
@@ -1078,6 +1080,7 @@
    "routes": [
     {
      "stops": [
+      "amsterdam-zuid",
       "schiphol-airport",
       "rotterdam-centraal"
      ],
@@ -1103,6 +1106,7 @@
    "routes": [
     {
      "stops": [
+      "amsterdam-zuid",
       "schiphol-airport",
       "rotterdam-centraal",
       "antwerpen-centraal",
@@ -1161,6 +1165,7 @@
     {
      "stops": [
       "den-haag-centraal",
+      "den-haag-hs",
       "delft",
       "rotterdam-centraal",
       "breda",
@@ -1193,7 +1198,10 @@
      "stops": [
       "dordrecht",
       "dordrecht-zuid",
-      "lage-zwaluwe"
+      "lage-zwaluwe",
+      "zevenbergen",
+      "oudenbosch",
+      "roosendaal"
      ],
      "via": [],
      "note": ""
@@ -1216,7 +1224,6 @@
       "dordrecht-stadspolders",
       "sliedrecht-baanhoek",
       "sliedrecht",
-      "hardinxveld-blauwe-zoom",
       "hardinxveld-giessendam",
       "boven-hardinxveld",
       "gorinchem"
@@ -1479,6 +1486,7 @@
       "breda",
       "gilze-rijen",
       "tilburg-reeshof",
+      "tilburg-universiteit",
       "tilburg",
       "s-hertogenbosch",
       "s-hertogenbosch-oost",
@@ -1862,6 +1870,7 @@
    "routes": [
     {
      "stops": [
+      "hardenberg",
       "marienberg",
       "vroomshoop",
       "daarlerveen",
@@ -2730,6 +2739,7 @@
   "De richtingsmarkering 'Trein stopt alleen in deze richting' komt op pagina 4 alleen in de legenda voor; op het kaartbeeld zijn geen richtingsmarkeringen gevonden.",
   "Station Wolfheze staat op het kaartbeeld gedrukt als 'Wolfeze' (drukfout op de kaart); vocabulaire-id wolfheze is gebruikt.",
   "Offkaart-pijlen (geen stations in het vocabulaire): 'Eurostar London St. Pancras International' (9100), 'Eurostar Paris Nord' (9300), 'Eurostar Paris Aeroport Roissy Charles-de-Gaulle / Paris Marne-la-Vallee-Chessy / Bourg-St-Maurice (alleen in de wintermaanden)' (9900), 'Muenchen Hbf' (120/220), 'Bielefeld Hbf' (RB61).",
-  "Zelfde spoor, twee entrees: het gecombineerde label '12400/9500' (Schiphol-Rotterdam) is gesplitst in series 12400 en 9500 omdat 9500 zuidelijk van Rotterdam los doorloopt naar Brussel."
+  "Zelfde spoor, twee entrees: het gecombineerde label '12400/9500' (Schiphol-Rotterdam) is gesplitst in series 12400 en 9500 omdat 9500 zuidelijk van Rotterdam los doorloopt naar Brussel.",
+  "Verdict patches applied 2026-07-12 from data/patches/verdict-patches.json; evidence in research/2026-07-12 diff-verdicts.md."
  ]
 }

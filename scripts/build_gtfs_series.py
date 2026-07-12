@@ -109,12 +109,20 @@ def main():
     trips = {}
     for r in rows:
         rid = r[header["route_id"]]
-        if rid in route_serie:
-            trips[r[header["trip_id"]]] = (
-                rid,
-                r[header["service_id"]],
-                r[header["direction_id"]],
-            )
+        if rid not in route_serie:
+            continue
+        # 28000-28999 (also with the 700000 variant offset) is the ad-hoc
+        # block: extra/replacement trains and museum shuttles coded onto
+        # regular routes. They run enough dates to beat MIN_SERVICE_DATES
+        # (proven: Maliebaan shuttles 28302..28330 polluting 5600/5700).
+        tsn = r[header["trip_short_name"]]
+        if tsn.isdigit() and 28000 <= int(tsn) % 700000 <= 28999:
+            continue
+        trips[r[header["trip_id"]]] = (
+            rid,
+            r[header["service_id"]],
+            r[header["direction_id"]],
+        )
 
     # calendar_dates: service -> day-class counts
     rows = read_csv(zf, "calendar_dates.txt")
@@ -283,6 +291,43 @@ def main():
             ordered.reverse()
         return ordered, count
 
+    def split_branches(trip_ids):
+        """Split one route_id into two branches, conservatively.
+
+        Only when the two dominant stop patterns EACH serve at least three
+        stations the other never does (real branches like RB51/RB64 sharing
+        the Enschede-Gronau trunk in one feed route). One-sided differences
+        (skip-stop variants, partial runs) stay one route.
+        """
+        pat = defaultdict(list)
+        for tid in trip_ids:
+            key = tuple(sorted(stop_code.get(s) or "" for _, s, _ in per_trip[tid]))
+            pat[key].append(tid)
+        if len(pat) < 2:
+            return [trip_ids]
+        # Pairwise over the top patterns: the two branches need not be the
+        # two most frequent patterns (RB64 ranks below two RB51 variants).
+        ranked = sorted(pat.items(), key=lambda kv: -len(kv[1]))[:8]
+        best = None
+        for i in range(len(ranked)):
+            for j in range(i + 1, len(ranked)):
+                a, b = set(ranked[i][0]), set(ranked[j][0])
+                score = min(len(a - b), len(b - a))
+                if score >= 3 and (best is None or score > best[0]):
+                    best = (score, a, b)
+        if best is None:
+            return [trip_ids]
+        _, a, b = best
+        ga, gb = [], []
+        for key, tds in pat.items():
+            s = set(key)
+            fit_a = len(s & a) - len(s - a)
+            fit_b = len(s & b) - len(s - b)
+            (ga if fit_a >= fit_b else gb).extend(tds)
+        if min(len(ga), len(gb)) < 0.15 * len(trip_ids):
+            return [trip_ids]
+        return [ga, gb]
+
     OUTDIR.mkdir(exist_ok=True)
     summary = []
     for page in (1, 2, 3, 4):
@@ -295,9 +340,10 @@ def main():
                 by_route[trips[tid][0]].append(tid)
             candidates = []
             for rid_tids in by_route.values():
-                stops, count = build_route(rid_tids)
-                if len(stops) >= 2:
-                    candidates.append((stops, count, len(rid_tids)))
+                for subset in split_branches(rid_tids):
+                    stops, count = build_route(subset)
+                    if len(stops) >= 2:
+                        candidates.append((stops, count, len(subset)))
             if not candidates:
                 continue
             # longest route first; absorb routes whose stops are a subset

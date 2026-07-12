@@ -54,7 +54,9 @@ And the mirror image, where GTFS is sharper: exact times (the future minutes-per
 | research/2026-07-12 map-vs-gtfs-diff.md | disagreement report for hand review | uv run scripts/diff_map_gtfs.py > "research/2026-07-12 map-vs-gtfs-diff.md" |
 | data/sources/stations-2023-09.csv | vendored RdT station list | re-download from opendata.rijdendetreinen.nl if ever needed |
 
-Regeneration order after a vocabulary change: build_stations -> merge_public -> build_gtfs_series -> build_gtfs_minutes -> extract_serie_colors -> extract_highlights -> diff_map_gtfs -> validate everything (series AND minutes files; the minutes are index-aligned with the series stop arrays, so they must regenerate together).
+Regeneration order after a vocabulary change: build_stations -> merge_public -> build_gtfs_series -> build_gtfs_minutes -> build_gtfs_shapes -> extract_serie_colors -> extract_highlights -> diff_map_gtfs -> validate everything (series AND minutes files; the minutes are index-aligned with the series stop arrays and the shapes are keyed to the series routes, so all three regenerate together).
+
+Corrections to the map files go through data/patches/verdict-patches.json plus scripts/apply_patches.py (applied 2026-07-12, 183 ops), never by hand-editing: the patch file is the audit trail from verdict to edit. GTFS pipeline exclusions worth knowing: trip numbers 28000-28999 (ad-hoc extras and museum shuttles) are dropped, and a route_id whose trips form two mutually exclusive stop-pattern clusters (3+ stations each way) is split into branch routes (RB51/RB64 case).
 
 ## Refresh policy
 

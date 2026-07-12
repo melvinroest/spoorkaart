@@ -376,22 +376,12 @@
       "glanerbrug",
       "gronau",
       "epe-westf",
-      "ochtrup",
       "ahaus",
-      "metelen-land",
       "legden",
-      "steinfurt-burgsteinfurt",
       "rosendahl-holtwick",
-      "steinfurt-grottenkamp",
-      "steinfurt-borghorst",
       "coesfeld",
-      "nordwalde",
-      "altenberge",
       "lette",
-      "munster-hager",
       "dulmen",
-      "munster-zentrum-nord",
-      "munster-westf-hbf",
       "ludinghausen",
       "selm",
       "selm-beifang",
@@ -402,11 +392,30 @@
       "dortmund-kirchderne",
       "dortmund-hbf"
      ]
+    },
+    {
+     "stops": [
+      "enschede",
+      "enschede-de-eschmarke",
+      "glanerbrug",
+      "gronau",
+      "ochtrup",
+      "metelen-land",
+      "steinfurt-burgsteinfurt",
+      "steinfurt-grottenkamp",
+      "steinfurt-borghorst",
+      "nordwalde",
+      "altenberge",
+      "munster-hager",
+      "munster-zentrum-nord",
+      "munster-westf-hbf"
+     ]
     }
    ],
    "confidence": "low",
    "issues": [
-    "stations met weinig ritten (mogelijk variant of spitsstop): epe-westf, ahaus, legden, rosendahl-holtwick, steinfurt-grottenkamp, steinfurt-borghorst, coesfeld, nordwalde, altenberge, lette, munster-hager, dulmen"
+    "1 extra routevariant(en) met eigen traject",
+    "stations met weinig ritten (mogelijk variant of spitsstop): epe-westf, ahaus, legden, rosendahl-holtwick, coesfeld, lette, dulmen, ludinghausen, selm, selm-beifang, bork, lunen-hbf"
    ]
   },
   {
@@ -1959,12 +1968,11 @@
    "kind": "binnenland",
    "frequency": {
     "class": "2x_per_uur",
-    "note": "GTFS-afgeleid: ~43 ritten per dag (beide richtingen) in dit venster"
+    "note": "GTFS-afgeleid: ~42 ritten per dag (beide richtingen) in dit venster"
    },
    "routes": [
     {
      "stops": [
-      "utrecht-maliebaan",
       "utrecht-centraal",
       "utrecht-overvecht",
       "bilthoven",
@@ -1983,10 +1991,8 @@
      ]
     }
    ],
-   "confidence": "low",
-   "issues": [
-    "stations met weinig ritten (mogelijk variant of spitsstop): utrecht-maliebaan"
-   ]
+   "confidence": "medium",
+   "issues": []
   },
   {
    "id": "5700",
@@ -1994,7 +2000,7 @@
    "kind": "binnenland",
    "frequency": {
     "class": "1x_per_uur",
-    "note": "GTFS-afgeleid: ~28 ritten per dag (beide richtingen) in dit venster"
+    "note": "GTFS-afgeleid: ~25 ritten per dag (beide richtingen) in dit venster"
    },
    "routes": [
     {
@@ -2016,15 +2022,12 @@
       "hilversum-sportpark",
       "hollandsche-rading",
       "utrecht-overvecht",
-      "utrecht-centraal",
-      "utrecht-maliebaan"
+      "utrecht-centraal"
      ]
     }
    ],
-   "confidence": "low",
-   "issues": [
-    "stations met weinig ritten (mogelijk variant of spitsstop): utrecht-maliebaan"
-   ]
+   "confidence": "medium",
+   "issues": []
   },
   {
    "id": "5800",

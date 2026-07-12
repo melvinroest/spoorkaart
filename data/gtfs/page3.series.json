@@ -363,22 +363,12 @@
       "glanerbrug",
       "gronau",
       "epe-westf",
-      "ochtrup",
       "ahaus",
-      "metelen-land",
       "legden",
-      "steinfurt-burgsteinfurt",
       "rosendahl-holtwick",
-      "steinfurt-grottenkamp",
-      "steinfurt-borghorst",
       "coesfeld",
-      "nordwalde",
-      "altenberge",
       "lette",
-      "munster-hager",
       "dulmen",
-      "munster-zentrum-nord",
-      "munster-westf-hbf",
       "ludinghausen",
       "selm",
       "selm-beifang",
@@ -389,10 +379,30 @@
       "dortmund-kirchderne",
       "dortmund-hbf"
      ]
+    },
+    {
+     "stops": [
+      "enschede",
+      "enschede-de-eschmarke",
+      "glanerbrug",
+      "gronau",
+      "ochtrup",
+      "metelen-land",
+      "steinfurt-burgsteinfurt",
+      "steinfurt-grottenkamp",
+      "steinfurt-borghorst",
+      "nordwalde",
+      "altenberge",
+      "munster-hager",
+      "munster-zentrum-nord",
+      "munster-westf-hbf"
+     ]
     }
    ],
    "confidence": "medium",
-   "issues": []
+   "issues": [
+    "1 extra routevariant(en) met eigen traject"
+   ]
   },
   {
    "id": "20300",
@@ -480,6 +490,19 @@
     },
     {
      "stops": [
+      "nijmegen",
+      "nijmegen-heyendaal",
+      "mook-molenhoek",
+      "cuijk",
+      "boxmeer",
+      "vierlingsbeek",
+      "venray",
+      "blerick",
+      "venlo"
+     ]
+    },
+    {
+     "stops": [
       "venlo",
       "tegelen",
       "reuver",
@@ -490,7 +513,7 @@
    ],
    "confidence": "medium",
    "issues": [
-    "1 extra routevariant(en) met eigen traject"
+    "2 extra routevariant(en) met eigen traject"
    ]
   },
   {
@@ -1103,26 +1126,34 @@
    "routes": [
     {
      "stops": [
+      "maastricht",
+      "sittard",
+      "roermond",
+      "weert",
+      "eindhoven-centraal",
+      "s-hertogenbosch",
+      "utrecht-centraal",
+      "amsterdam-bijlmer-arena",
+      "amsterdam-centraal",
+      "schiphol-airport"
+     ]
+    },
+    {
+     "stops": [
       "schiphol-airport",
       "amsterdam-centraal",
-      "amsterdam-bijlmer-arena",
       "almere-centrum",
-      "utrecht-centraal",
       "lelystad-centrum",
-      "s-hertogenbosch",
       "zwolle",
-      "eindhoven-centraal",
-      "weert",
-      "roermond",
       "assen",
-      "sittard",
-      "groningen",
-      "maastricht"
+      "groningen"
      ]
     }
    ],
    "confidence": "low",
-   "issues": []
+   "issues": [
+    "1 extra routevariant(en) met eigen traject"
+   ]
   },
   {
    "id": "3500",
@@ -1917,7 +1948,6 @@
    "routes": [
     {
      "stops": [
-      "utrecht-maliebaan",
       "utrecht-centraal",
       "utrecht-overvecht",
       "bilthoven",
@@ -1936,18 +1966,16 @@
      ]
     }
    ],
-   "confidence": "low",
-   "issues": [
-    "stations met weinig ritten (mogelijk variant of spitsstop): utrecht-maliebaan"
-   ]
+   "confidence": "medium",
+   "issues": []
   },
   {
    "id": "5700",
    "product": "Sprinter",
    "kind": "binnenland",
    "frequency": {
-    "class": "1x_per_uur",
-    "note": "GTFS-afgeleid: ~17 ritten per dag (beide richtingen) in dit venster"
+    "class": "overig",
+    "note": "GTFS-afgeleid: ~13 ritten per dag (beide richtingen) in dit venster"
    },
    "routes": [
     {
@@ -1966,15 +1994,12 @@
       "hilversum-sportpark",
       "hollandsche-rading",
       "utrecht-overvecht",
-      "utrecht-centraal",
-      "utrecht-maliebaan"
+      "utrecht-centraal"
      ]
     }
    ],
-   "confidence": "low",
-   "issues": [
-    "stations met weinig ritten (mogelijk variant of spitsstop): utrecht-maliebaan"
-   ]
+   "confidence": "medium",
+   "issues": []
   },
   {
    "id": "5800",

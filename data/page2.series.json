@@ -125,7 +125,6 @@
       "den-haag-hs",
       "delft",
       "rotterdam-centraal",
-      "dordrecht",
       "breda",
       "tilburg",
       "eindhoven-centraal"
@@ -205,6 +204,7 @@
       "schiphol-airport",
       "amsterdam-zuid",
       "duivendrecht",
+      "hilversum",
       "amersfoort-centraal",
       "amersfoort-schothorst"
      ],
@@ -260,7 +260,6 @@
       "haarlem",
       "heemstede-aerdenhout",
       "leiden-centraal",
-      "den-haag-mariahoeve",
       "den-haag-centraal"
      ],
      "note": ""
@@ -289,11 +288,15 @@
       "den-haag-laan-van-noi",
       "den-haag-hs",
       "delft",
+      "schiedam-centrum",
       "rotterdam-centraal",
       "rotterdam-blaak",
       "dordrecht",
       "roosendaal",
       "bergen-op-zoom",
+      "rilland-bath",
+      "krabbendijke",
+      "kruiningen-yerseke",
       "kapelle-biezelinge",
       "goes",
       "arnemuiden",
@@ -327,17 +330,14 @@
       "den-haag-laan-van-noi",
       "den-haag-hs",
       "delft",
+      "schiedam-centrum",
       "rotterdam-centraal",
       "rotterdam-blaak",
       "dordrecht",
       "roosendaal",
       "bergen-op-zoom",
-      "rilland-bath",
-      "krabbendijke",
-      "kruiningen-yerseke",
       "goes",
       "middelburg",
-      "vlissingen-souburg",
       "vlissingen"
      ],
      "note": "in Zeeland stopt 2300 wel te Rilland-Bath, Krabbendijke en Kruiningen-Yerseke, niet te Arnemuiden en Kapelle-Biezelinge"
@@ -533,7 +533,6 @@
       "hoogkarspel",
       "hoorn-kersenboogerd",
       "hoorn",
-      "zaandam",
       "amsterdam-sloterdijk",
       "amsterdam-centraal"
      ],
@@ -569,6 +568,8 @@
       "amsterdam-centraal",
       "amsterdam-amstel",
       "utrecht-centraal",
+      "driebergen-zeist",
+      "ede-wageningen",
       "arnhem-centraal",
       "nijmegen"
      ],
@@ -624,6 +625,7 @@
       "dordrecht",
       "rotterdam-blaak",
       "rotterdam-centraal",
+      "schiedam-centrum",
       "delft",
       "den-haag-hs",
       "den-haag-laan-van-noi",
@@ -706,7 +708,6 @@
       "ommen",
       "marienberg",
       "hardenberg",
-      "gramsbergen",
       "coevorden",
       "nieuw-amsterdam",
       "emmen-zuid",
@@ -764,6 +765,7 @@
       "zaandam",
       "amsterdam-sloterdijk",
       "amsterdam-centraal",
+      "amsterdam-muiderpoort",
       "amsterdam-amstel",
       "duivendrecht",
       "amsterdam-bijlmer-arena",
@@ -858,6 +860,7 @@
      "stops": [
       "den-haag-centraal",
       "den-haag-laan-van-noi",
+      "den-haag-mariahoeve",
       "voorschoten",
       "de-vink",
       "leiden-centraal",
@@ -1161,6 +1164,7 @@
       "amsterdam-science-park",
       "diemen",
       "weesp",
+      "naarden-bussum",
       "bussum-zuid",
       "hilversum-media-park",
       "hilversum",
@@ -1227,6 +1231,7 @@
       "utrecht-terwijde",
       "utrecht-leidsche-rijn",
       "utrecht-centraal",
+      "utrecht-vaartsche-rijn",
       "utrecht-lunetten",
       "houten",
       "houten-castellum",
@@ -1314,6 +1319,7 @@
       "vught",
       "boxtel",
       "best",
+      "eindhoven-strijp-s",
       "eindhoven-centraal",
       "helmond-brandevoort",
       "helmond-t-hout",
@@ -1387,6 +1393,7 @@
       "bodegraven",
       "woerden",
       "utrecht-centraal",
+      "utrecht-vaartsche-rijn",
       "utrecht-lunetten",
       "houten",
       "houten-castellum",
@@ -1546,6 +1553,7 @@
       "zaandam",
       "amsterdam-sloterdijk",
       "amsterdam-centraal",
+      "amsterdam-muiderpoort",
       "amsterdam-amstel",
       "duivendrecht",
       "amsterdam-bijlmer-arena",
@@ -1611,7 +1619,10 @@
       "arnhem-zuid",
       "elst",
       "nijmegen-lent",
-      "nijmegen"
+      "nijmegen",
+      "nijmegen-goffert",
+      "nijmegen-dukenburg",
+      "wijchen"
      ],
      "note": ""
     }
@@ -1921,8 +1932,7 @@
    "routes": [
     {
      "stops": [
-      "amsterdam-zuid",
-      "schiphol-airport",
+      "amsterdam-centraal",
       "rotterdam-centraal",
       "brussel-zuid-midi",
       "london-st-pancras-international"
@@ -1949,10 +1959,12 @@
     {
      "stops": [
       "rotterdam-centraal",
+      "breda",
       "noorderkempen",
       "antwerpen-centraal",
       "antwerpen-berchem",
       "mechelen",
+      "brussels-airport-zaventem",
       "brussel-noord",
       "brussel-centraal",
       "brussel-zuid-midi"
@@ -1977,7 +1989,7 @@
    "routes": [
     {
      "stops": [
-      "amsterdam-zuid",
+      "amsterdam-centraal",
       "schiphol-airport",
       "rotterdam-centraal",
       "antwerpen-centraal",
@@ -2013,7 +2025,6 @@
       "schiphol-airport",
       "rotterdam-centraal",
       "antwerpen-centraal",
-      "brussels-airport-zaventem",
       "brussel-zuid-midi"
      ],
      "note": "via HSL; passeert Noorderkempen, Mechelen, Brussel-Noord en Brussel-Centraal"
@@ -2037,7 +2048,7 @@
    "routes": [
     {
      "stops": [
-      "amsterdam-zuid",
+      "amsterdam-centraal",
       "schiphol-airport",
       "rotterdam-centraal",
       "antwerpen-centraal",
@@ -2760,12 +2771,7 @@
       "leeuwarden",
       "mantgum",
       "sneek-noord",
-      "sneek",
-      "ijlst",
-      "workum",
-      "hindeloopen",
-      "koudum-molkwerum",
-      "stavoren"
+      "sneek"
      ],
      "note": "doorgetrokken lijn"
     }
@@ -3020,7 +3026,7 @@
    "issues": []
   },
   {
-   "id": "zonder-nummer-soestlijn",
+   "id": "5500",
    "kind": "binnenland",
    "frequency": {
     "class": "2x_per_uur",
@@ -3326,6 +3332,7 @@
   "Pijl-bestemmingen zonder cirkel op de kaartrand: London St. Pancras International (9100), Paris Nord (9300), Paris Aeroport Roissy Charles-de-Gaulle en Paris Marne-la-Vallee-Chessy (9900), Munchen Hbf (120/220), Bielefeld Hbf (RB61).",
   "Legendaregel 'Deventer-Amersfoort 7-10 en 16-19 u' (dal/spits-stijl) kon niet aan een specifieke lijn met die stijl op dat traject worden gekoppeld; de enige lijn met de dal/spits-blokstijl is 31000 (Almelo-Hardenberg).",
   "Tekstlaag spelt 'Wolfeze' bij het station tussen Ede-Wageningen en Oosterbeek; vocabulaire heeft correct 'Wolfheze' (geen correctie nodig, id wolfheze gebruikt).",
-  "Groningen Europapark: de IC-series 500 en 700 passeren zonder stop; alle overige lijnen door Europapark stoppen er."
+  "Groningen Europapark: de IC-series 500 en 700 passeren zonder stop; alle overige lijnen door Europapark stoppen er.",
+  "Verdict patches applied 2026-07-12 from data/patches/verdict-patches.json; evidence in research/2026-07-12 diff-verdicts.md."
  ]
 }

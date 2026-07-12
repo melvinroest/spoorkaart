@@ -503,22 +503,12 @@
       "glanerbrug",
       "gronau",
       "epe-westf",
-      "ochtrup",
       "ahaus",
-      "metelen-land",
       "legden",
-      "steinfurt-burgsteinfurt",
       "rosendahl-holtwick",
-      "steinfurt-grottenkamp",
-      "steinfurt-borghorst",
       "coesfeld",
-      "nordwalde",
-      "altenberge",
       "lette",
-      "munster-hager",
       "dulmen",
-      "munster-zentrum-nord",
-      "munster-westf-hbf",
       "ludinghausen",
       "selm",
       "selm-beifang",
@@ -529,11 +519,30 @@
       "dortmund-kirchderne",
       "dortmund-hbf"
      ]
+    },
+    {
+     "stops": [
+      "enschede",
+      "enschede-de-eschmarke",
+      "glanerbrug",
+      "gronau",
+      "ochtrup",
+      "metelen-land",
+      "steinfurt-burgsteinfurt",
+      "steinfurt-grottenkamp",
+      "steinfurt-borghorst",
+      "nordwalde",
+      "altenberge",
+      "munster-hager",
+      "munster-zentrum-nord",
+      "munster-westf-hbf"
+     ]
     }
    ],
    "confidence": "low",
    "issues": [
-    "stations met weinig ritten (mogelijk variant of spitsstop): epe-westf, ahaus, legden, rosendahl-holtwick, coesfeld, lette, dulmen, ludinghausen, selm, selm-beifang, bork, lunen-hbf"
+    "1 extra routevariant(en) met eigen traject",
+    "stations met weinig ritten (mogelijk variant of spitsstop): enschede, enschede-de-eschmarke, glanerbrug, gronau, epe-westf, ahaus, legden, rosendahl-holtwick, coesfeld, lette, dulmen, ludinghausen"
    ]
   },
   {
@@ -595,30 +604,36 @@
    "routes": [
     {
      "stops": [
-      "amersfoort-centraal",
-      "haarlem",
-      "rotterdam-centraal",
       "alkmaar",
       "utrecht-centraal",
-      "driebergen-zeist",
+      "rotterdam-centraal",
+      "haarlem",
       "uitgeest",
       "dordrecht",
       "amsterdam-centraal",
-      "veenendaal-de-klomp",
       "s-hertogenbosch",
       "tilburg",
-      "ede-wageningen",
       "breda",
+      "eindhoven-centraal"
+     ]
+    },
+    {
+     "stops": [
+      "amersfoort-centraal",
+      "utrecht-centraal",
+      "driebergen-zeist",
+      "veenendaal-de-klomp",
+      "ede-wageningen",
       "arnhem-centraal",
       "elst",
-      "nijmegen",
-      "eindhoven-centraal"
+      "nijmegen"
      ]
     }
    ],
    "confidence": "low",
    "issues": [
-    "stations met weinig ritten (mogelijk variant of spitsstop): amersfoort-centraal, haarlem, rotterdam-centraal, alkmaar, driebergen-zeist, uitgeest, dordrecht, veenendaal-de-klomp, ede-wageningen, breda, arnhem-centraal, elst"
+    "1 extra routevariant(en) met eigen traject",
+    "stations met weinig ritten (mogelijk variant of spitsstop): alkmaar, utrecht-centraal, rotterdam-centraal, haarlem, uitgeest, dordrecht, breda"
    ]
   },
   {
@@ -644,11 +659,6 @@
       "rotterdam-centraal",
       "rotterdam-blaak",
       "dordrecht",
-      "dordrecht-zuid",
-      "lage-zwaluwe",
-      "zevenbergen",
-      "breda",
-      "oudenbosch",
       "roosendaal",
       "bergen-op-zoom",
       "rilland-bath",
@@ -664,6 +674,41 @@
     },
     {
      "stops": [
+      "amsterdam-centraal",
+      "amsterdam-sloterdijk",
+      "haarlem",
+      "heemstede-aerdenhout",
+      "leiden-centraal",
+      "den-haag-laan-van-noi",
+      "den-haag-hs",
+      "delft",
+      "schiedam-centrum",
+      "rotterdam-centraal",
+      "rotterdam-blaak",
+      "dordrecht",
+      "dordrecht-zuid",
+      "lage-zwaluwe",
+      "zevenbergen",
+      "breda",
+      "oudenbosch",
+      "roosendaal"
+     ]
+    },
+    {
+     "stops": [
+      "nijmegen",
+      "nijmegen-heyendaal",
+      "mook-molenhoek",
+      "cuijk",
+      "boxmeer",
+      "vierlingsbeek",
+      "venray",
+      "blerick",
+      "venlo"
+     ]
+    },
+    {
+     "stops": [
       "venlo",
       "tegelen",
       "reuver",
@@ -672,10 +717,9 @@
      ]
     }
    ],
-   "confidence": "low",
+   "confidence": "medium",
    "issues": [
-    "1 extra routevariant(en) met eigen traject",
-    "stations met weinig ritten (mogelijk variant of spitsstop): dordrecht-zuid, lage-zwaluwe, zevenbergen, breda, oudenbosch"
+    "3 extra routevariant(en) met eigen traject"
    ]
   },
   {
@@ -879,7 +923,7 @@
    ],
    "confidence": "low",
    "issues": [
-    "stations met weinig ritten (mogelijk variant of spitsstop): purmerend-overwhere, purmerend, purmerend-weidevenne, zaandam-kogerveld, zaandam"
+    "stations met weinig ritten (mogelijk variant of spitsstop): purmerend-overwhere, purmerend, purmerend-weidevenne, zaandam-kogerveld, zaandam, amsterdam-amstel, utrecht-centraal, s-hertogenbosch, eindhoven-centraal, weert, roermond, sittard"
    ]
   },
   {
@@ -1309,25 +1353,33 @@
     {
      "stops": [
       "maastricht",
-      "groningen",
       "sittard",
-      "assen",
       "roermond",
       "weert",
       "eindhoven-centraal",
-      "zwolle",
       "s-hertogenbosch",
-      "lelystad-centrum",
       "utrecht-centraal",
-      "almere-centrum",
       "amsterdam-bijlmer-arena",
       "amsterdam-centraal",
       "schiphol-airport"
      ]
+    },
+    {
+     "stops": [
+      "schiphol-airport",
+      "amsterdam-centraal",
+      "almere-centrum",
+      "lelystad-centrum",
+      "zwolle",
+      "assen",
+      "groningen"
+     ]
     }
    ],
    "confidence": "low",
-   "issues": []
+   "issues": [
+    "1 extra routevariant(en) met eigen traject"
+   ]
   },
   {
    "id": "3500",
@@ -1362,8 +1414,10 @@
      ]
     }
    ],
-   "confidence": "medium",
-   "issues": []
+   "confidence": "low",
+   "issues": [
+    "stations met weinig ritten (mogelijk variant of spitsstop): helmond, deurne, horst-sevenum, blerick, venlo"
+   ]
   },
   {
    "id": "3600",
@@ -1548,20 +1602,20 @@
       "groningen",
       "groningen-noord",
       "sauwerd",
-      "eemshaven",
       "winsum",
       "baflo",
       "warffum",
       "usquert",
       "uithuizen",
       "uithuizermeeden",
-      "roodeschool"
+      "roodeschool",
+      "eemshaven"
      ]
     }
    ],
    "confidence": "low",
    "issues": [
-    "stations met weinig ritten (mogelijk variant of spitsstop): eemshaven"
+    "stations met weinig ritten (mogelijk variant of spitsstop): veendam, zuidbroek, hoogezand-sappemeer, martenshoek, kropswolde, groningen-europapark, eemshaven"
    ]
   },
   {
@@ -1599,7 +1653,7 @@
    ],
    "confidence": "low",
    "issues": [
-    "stations met weinig ritten (mogelijk variant of spitsstop): eemshaven"
+    "stations met weinig ritten (mogelijk variant of spitsstop): bad-nieuweschans, eemshaven"
    ]
   },
   {
@@ -1620,9 +1674,9 @@
       "hoogezand-sappemeer",
       "martenshoek",
       "kropswolde",
-      "groningen-noord",
       "groningen-europapark",
       "groningen",
+      "groningen-noord",
       "sauwerd",
       "bedum",
       "stedum",
@@ -1633,8 +1687,10 @@
      ]
     }
    ],
-   "confidence": "medium",
-   "issues": []
+   "confidence": "low",
+   "issues": [
+    "stations met weinig ritten (mogelijk variant of spitsstop): bad-nieuweschans"
+   ]
   },
   {
    "id": "37800",
@@ -1757,15 +1813,24 @@
       "duisburg-hbf",
       "dusseldorf-hbf",
       "koln-hbf",
-      "dortmund-hbf",
       "frankfurt-m-hbf",
       "frankfurt-m-flughafen-fernbhf"
+     ]
+    },
+    {
+     "stops": [
+      "amsterdam-centraal",
+      "utrecht-centraal",
+      "arnhem-centraal",
+      "oberhausen-hbf",
+      "dortmund-hbf"
      ]
     }
    ],
    "confidence": "low",
    "issues": [
-    "stations met weinig ritten (mogelijk variant of spitsstop): eindhoven-centraal"
+    "1 extra routevariant(en) met eigen traject",
+    "stations met weinig ritten (mogelijk variant of spitsstop): eindhoven-centraal, oberhausen-hbf"
    ]
   },
   {

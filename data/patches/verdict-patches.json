@@ -1,0 +1,1705 @@
+{
+  "generated": "2026-07-12",
+  "source": "research/2026-07-12 diff-verdicts.md",
+  "applyNote": "Patches apply strictly in array order; afterStation refers to the route's stop order at application time (earlier patches in this array may have introduced it). afterStation START means the station becomes the first stop. routeIndex indexes the routes array of the serie entry. When add_stop promotes a station that is present in the route's via array, the applier should also remove it from via. rename_serie changes only the id. add_route creates the serie entry (with meta) if the id does not exist yet.",
+  "patches": [
+    {
+      "page": 1,
+      "serie": "500",
+      "op": "remove_stop",
+      "station": "harderwijk",
+      "routeIndex": 0,
+      "reason": "Harderwijk circles belong to 5600 and dashed spits 5300; pink 500/600 line passes; GTFS 500: 0 trips ever"
+    },
+    {
+      "page": 1,
+      "serie": "500",
+      "op": "remove_stop",
+      "station": "meppel",
+      "routeIndex": 0,
+      "reason": "Meppel circles sit on 9000, 800, 600, 31500 and the paars stoptrein; 500 line passes; GTFS 0 ma-do stops"
+    },
+    {
+      "page": 1,
+      "serie": "600",
+      "op": "remove_stop",
+      "station": "harderwijk",
+      "routeIndex": 0,
+      "reason": "same Harderwijk crop as 500; GTFS 600 never stops there"
+    },
+    {
+      "page": 1,
+      "serie": "700",
+      "op": "remove_stop",
+      "station": "meppel",
+      "routeIndex": 0,
+      "reason": "700 line passes Meppel; raw feed 0 of 88 ma-do days"
+    },
+    {
+      "page": 1,
+      "serie": "1100",
+      "op": "remove_stop",
+      "station": "schiedam-centrum",
+      "routeIndex": 0,
+      "reason": "Schiedam five-circle chain sits on 5200, 5100, 5000, 2200/2300, 3500; the gold 1100 has no ring"
+    },
+    {
+      "page": 1,
+      "serie": "1100",
+      "op": "add_stop",
+      "station": "tilburg",
+      "afterStation": "breda",
+      "routeIndex": 0,
+      "reason": "gold line demonstrably continues past Breda into the Tilburg capsule; 106 of 106 trips serve it"
+    },
+    {
+      "page": 1,
+      "serie": "1100",
+      "op": "add_stop",
+      "station": "eindhoven-centraal",
+      "afterStation": "tilburg",
+      "routeIndex": 0,
+      "reason": "gold line ends in the Eindhoven capsule; 106 of 106 trips; extraction truncated at Breda"
+    },
+    {
+      "page": 1,
+      "serie": "13800",
+      "op": "add_stop",
+      "station": "dalfsen",
+      "afterStation": "zwolle",
+      "routeIndex": 0,
+      "reason": "Dalfsen shows three rings (8000, 3800, 13800 red); all 20 GTFS trips stop"
+    },
+    {
+      "page": 1,
+      "serie": "13800",
+      "op": "add_stop",
+      "station": "ommen",
+      "afterStation": "dalfsen",
+      "routeIndex": 0,
+      "reason": "Ommen shows three rings including the red 13800; all 20 GTFS trips stop"
+    },
+    {
+      "page": 1,
+      "serie": "13800",
+      "op": "add_stop",
+      "station": "hardenberg",
+      "afterStation": "ommen",
+      "routeIndex": 0,
+      "reason": "GTFS: all 20 trips stop at Hardenberg; extraction saw a third circle only at Coevorden"
+    },
+    {
+      "page": 1,
+      "serie": "17900",
+      "op": "add_stop",
+      "station": "almelo",
+      "afterStation": "nijverdal",
+      "routeIndex": 0,
+      "reason": "light-teal line continues from Nijverdal through the Almelo capsule; 29 of 29 trips stop"
+    },
+    {
+      "page": 1,
+      "serie": "17900",
+      "op": "add_stop",
+      "station": "hengelo",
+      "afterStation": "almelo",
+      "routeIndex": 0,
+      "reason": "line runs through the Hengelo capsule; 29 of 29 trips stop"
+    },
+    {
+      "page": 1,
+      "serie": "17900",
+      "op": "add_stop",
+      "station": "enschede",
+      "afterStation": "hengelo",
+      "routeIndex": 0,
+      "reason": "line ends at Enschede; 29 of 29 trips; extraction truncated at Nijverdal"
+    },
+    {
+      "page": 1,
+      "serie": "1800",
+      "op": "add_stop",
+      "station": "amersfoort-schothorst",
+      "afterStation": "START",
+      "routeIndex": 0,
+      "reason": "dark-blue 1800 ends at Schothorst with a circle, identical artwork on pages 1, 2 and 4; GTFS 96 to 97 percent"
+    },
+    {
+      "page": 1,
+      "serie": "1800",
+      "op": "add_stop",
+      "station": "duivendrecht",
+      "afterStation": "hilversum",
+      "routeIndex": 0,
+      "reason": "Duivendrecht has an 1800 ring in the connector group; GTFS 96 to 97 percent"
+    },
+    {
+      "page": 1,
+      "serie": "2000",
+      "op": "add_stop",
+      "station": "rotterdam-alexander",
+      "afterStation": "rotterdam-centraal",
+      "routeIndex": 0,
+      "reason": "three-ring chain at Alexander on 2000 lavender, 2800 and 4000; 76 of 76 real IC-2000 trips stop"
+    },
+    {
+      "page": 1,
+      "serie": "2300",
+      "op": "remove_stop",
+      "station": "rilland-bath",
+      "routeIndex": 0,
+      "reason": "the middle pink 2300 passes all six small Zeeland stations; circle pairs belong to 2200 and 3600; GTFS zero 2300 trips stop"
+    },
+    {
+      "page": 1,
+      "serie": "2300",
+      "op": "remove_stop",
+      "station": "krabbendijke",
+      "routeIndex": 0,
+      "reason": "2300 passes; Zeeland circle pairs belong to 2200 and 3600; GTFS zero"
+    },
+    {
+      "page": 1,
+      "serie": "2300",
+      "op": "remove_stop",
+      "station": "kruiningen-yerseke",
+      "routeIndex": 0,
+      "reason": "2300 passes; Zeeland circle pairs belong to 2200 and 3600; GTFS zero"
+    },
+    {
+      "page": 1,
+      "serie": "2300",
+      "op": "remove_stop",
+      "station": "vlissingen-souburg",
+      "routeIndex": 0,
+      "reason": "2300 passes; majority pattern is Vlissingen, Middelburg, Goes, Bergen op Zoom direct"
+    },
+    {
+      "page": 1,
+      "serie": "2400",
+      "op": "add_stop",
+      "station": "almere-buiten",
+      "afterStation": "lelystad-centrum",
+      "routeIndex": 0,
+      "reason": "triple circle at Almere Buiten includes the lavender 2400/9500 line; GTFS 97 percent"
+    },
+    {
+      "page": 1,
+      "serie": "2600",
+      "op": "remove_stop",
+      "station": "amsterdam-muiderpoort",
+      "routeIndex": 0,
+      "reason": "circle pairs at Muiderpoort sit on 4600 plus 5800 only; grey-blue 2600 passes; GTFS never stops (69 nonstop trips)"
+    },
+    {
+      "page": 1,
+      "serie": "2600",
+      "op": "remove_stop",
+      "station": "amsterdam-science-park",
+      "routeIndex": 0,
+      "reason": "circle pairs sit on 4600 plus 5800 only; 2600 passes; GTFS never stops"
+    },
+    {
+      "page": 1,
+      "serie": "2600",
+      "op": "remove_stop",
+      "station": "diemen",
+      "routeIndex": 0,
+      "reason": "circle pairs sit on 4600 plus 5800 only; 2600 passes; GTFS never stops"
+    },
+    {
+      "page": 1,
+      "serie": "2600",
+      "op": "remove_stop",
+      "station": "weesp",
+      "routeIndex": 0,
+      "reason": "the Weesp four-circle cross belongs to 4300, 4600, 5700, 5800; GTFS 2600 does not stop"
+    },
+    {
+      "page": 1,
+      "serie": "2700",
+      "op": "remove_stop",
+      "station": "uitgeest",
+      "routeIndex": 0,
+      "reason": "Uitgeest rings only on 4800, 4000, 7400, 3000; no mint ring; GTFS 2700 never stops Uitgeest"
+    },
+    {
+      "page": 1,
+      "serie": "2700",
+      "op": "add_stop",
+      "station": "amsterdam-amstel",
+      "afterStation": "amsterdam-centraal",
+      "routeIndex": 0,
+      "reason": "GTFS 96 of 96 trips stop Amstel; extraction had it as a pass"
+    },
+    {
+      "page": 1,
+      "serie": "2700",
+      "op": "add_stop",
+      "station": "weert",
+      "afterStation": "eindhoven-centraal",
+      "routeIndex": 0,
+      "reason": "Weert crop shows a ring on the mint 2700 line; GTFS 96 of 96 trips stop"
+    },
+    {
+      "page": 1,
+      "serie": "2800",
+      "op": "add_stop",
+      "station": "rotterdam-alexander",
+      "afterStation": "rotterdam-centraal",
+      "routeIndex": 0,
+      "reason": "ring in the Alexander three-chain; GTFS 84 of 84 trips"
+    },
+    {
+      "page": 1,
+      "serie": "2900",
+      "op": "remove_stop",
+      "station": "zaandam",
+      "routeIndex": 0,
+      "reason": "Zaandam column has no ring on the olive 2900/3900; all 2900 Zaandam stops are after-midnight trips (window 4)"
+    },
+    {
+      "page": 1,
+      "serie": "2900",
+      "op": "add_stop",
+      "station": "amsterdam-amstel",
+      "afterStation": "amsterdam-centraal",
+      "routeIndex": 0,
+      "reason": "corridor drawn as one combined olive line 3900/2900; GTFS 88 percent stop Amstel"
+    },
+    {
+      "page": 1,
+      "serie": "2900",
+      "op": "add_stop",
+      "station": "weert",
+      "afterStation": "eindhoven-centraal",
+      "routeIndex": 0,
+      "reason": "ring on the olive line at Weert; GTFS 84 percent"
+    },
+    {
+      "page": 1,
+      "serie": "30700",
+      "op": "add_stop",
+      "station": "arnhem-velperpoort",
+      "afterStation": "arnhem-centraal",
+      "routeIndex": 0,
+      "reason": "Velperpoort column has rings on 7600, 30900 and 30700; GTFS 100 percent"
+    },
+    {
+      "page": 1,
+      "serie": "30900",
+      "op": "add_stop",
+      "station": "arnhem-velperpoort",
+      "afterStation": "arnhem-centraal",
+      "routeIndex": 0,
+      "reason": "Velperpoort column has rings on 7600, 30900 and 30700; GTFS 100 percent"
+    },
+    {
+      "page": 1,
+      "serie": "3100",
+      "op": "add_stop",
+      "station": "ede-wageningen",
+      "afterStation": "utrecht-centraal",
+      "routeIndex": 0,
+      "reason": "five-circle column at Ede includes the blue 3100, confirmed at zoom 22; GTFS 95 percent"
+    },
+    {
+      "page": 1,
+      "serie": "31500",
+      "op": "remove_stop",
+      "station": "haren",
+      "routeIndex": 0,
+      "reason": "dark-blue RE8/31500 line has no ring at Haren; GTFS 31500 pattern skips it"
+    },
+    {
+      "page": 1,
+      "serie": "31500",
+      "op": "remove_stop",
+      "station": "beilen",
+      "routeIndex": 0,
+      "reason": "Beilen has a single ring on the paars stoptrein line; GTFS 31500 pattern skips Beilen"
+    },
+    {
+      "page": 1,
+      "serie": "3400",
+      "op": "remove_stop",
+      "station": "uitgeest",
+      "routeIndex": 0,
+      "reason": "Uitgeest ring set (4800, 4000, 7400, 3000) contains no 3400; the 9 spits trips skip Uitgeest"
+    },
+    {
+      "page": 1,
+      "serie": "3500",
+      "op": "add_stop",
+      "station": "schiedam-centrum",
+      "afterStation": "rotterdam-blaak",
+      "routeIndex": 0,
+      "reason": "top circle of the Schiedam chain sits on the green 3500 (pixel-sampled); GTFS 94 percent"
+    },
+    {
+      "page": 1,
+      "serie": "3600",
+      "op": "add_stop",
+      "station": "rilland-bath",
+      "afterStation": "bergen-op-zoom",
+      "routeIndex": 0,
+      "reason": "lower circle of each Zeeland pair is on the blue-grey 3600; 37 of 75 trips (the past-Roosendaal half) stop"
+    },
+    {
+      "page": 1,
+      "serie": "3600",
+      "op": "add_stop",
+      "station": "krabbendijke",
+      "afterStation": "rilland-bath",
+      "routeIndex": 0,
+      "reason": "lower circle of the pair is on the 3600; extraction had given it to 2300"
+    },
+    {
+      "page": 1,
+      "serie": "3600",
+      "op": "add_stop",
+      "station": "kruiningen-yerseke",
+      "afterStation": "krabbendijke",
+      "routeIndex": 0,
+      "reason": "lower circle of the pair is on the 3600; extraction had given it to 2300"
+    },
+    {
+      "page": 1,
+      "serie": "3600",
+      "op": "add_stop",
+      "station": "vlissingen-souburg",
+      "afterStation": "middelburg",
+      "routeIndex": 0,
+      "reason": "lower circle of the pair is on the 3600; extraction had given it to 2300"
+    },
+    {
+      "page": 1,
+      "serie": "3700",
+      "op": "replace_route_stops",
+      "routeIndex": 0,
+      "stops": [
+        "enkhuizen",
+        "bovenkarspel-flora",
+        "bovenkarspel-grootebroek",
+        "hoogkarspel",
+        "hoorn-kersenboogerd",
+        "hoorn",
+        "purmerend",
+        "amsterdam-sloterdijk",
+        "amsterdam-centraal"
+      ],
+      "reason": "truncation fix per verdict: dashed 3700 runs to Enkhuizen with circle pairs at Kersenboogerd, Hoogkarspel, Bovenkarspel-Grootebroek, Bovenkarspel Flora and Enkhuizen plus a Purmerend ring; Hoorn endpoint and Zaandam stop were misreads; all 4 GTFS trips serve exactly this sequence"
+    },
+    {
+      "page": 1,
+      "serie": "37000",
+      "op": "remove_stop",
+      "station": "ijlst",
+      "routeIndex": 0,
+      "reason": "the Stavoren tail belongs to 37100 alone; GTFS 37000 trips all end at Sneek"
+    },
+    {
+      "page": 1,
+      "serie": "37000",
+      "op": "remove_stop",
+      "station": "workum",
+      "routeIndex": 0,
+      "reason": "Stavoren tail belongs to 37100 alone; GTFS 37000 ends at Sneek"
+    },
+    {
+      "page": 1,
+      "serie": "37000",
+      "op": "remove_stop",
+      "station": "hindeloopen",
+      "routeIndex": 0,
+      "reason": "Stavoren tail belongs to 37100 alone; GTFS 37000 ends at Sneek"
+    },
+    {
+      "page": 1,
+      "serie": "37000",
+      "op": "remove_stop",
+      "station": "koudum-molkwerum",
+      "routeIndex": 0,
+      "reason": "Stavoren tail belongs to 37100 alone; GTFS 37000 ends at Sneek"
+    },
+    {
+      "page": 1,
+      "serie": "37000",
+      "op": "remove_stop",
+      "station": "stavoren",
+      "routeIndex": 0,
+      "reason": "printed labels put 37100 on the tail and the combined 37000 (dal)/37100 (spits) on the shared part; GTFS 37000 ends at Sneek"
+    },
+    {
+      "page": 1,
+      "serie": "37300",
+      "op": "add_stop",
+      "station": "groningen-europapark",
+      "afterStation": "groningen",
+      "routeIndex": 0,
+      "reason": "magenta 37300 terminates at Europapark with a ring; 63 of 63 trips; route name is Groningen Europapark <-> Leeuwarden"
+    },
+    {
+      "page": 1,
+      "serie": "37400",
+      "op": "add_stop",
+      "station": "groningen-europapark",
+      "afterStation": "groningen",
+      "routeIndex": 0,
+      "reason": "Europapark row contains a second magenta terminus ring for 37400; 20 trips in this window"
+    },
+    {
+      "page": 1,
+      "serie": "37900",
+      "op": "add_stop",
+      "station": "groningen-europapark",
+      "afterStation": "groningen",
+      "routeIndex": 0,
+      "reason": "rings on both pink lines in the Europapark row; the conf=low extraction guessed the route"
+    },
+    {
+      "page": 1,
+      "serie": "3800",
+      "op": "remove_stop",
+      "station": "gramsbergen",
+      "routeIndex": 0,
+      "reason": "Gramsbergen shows a single orange 8000 ring only; GTFS 3800 never stops"
+    },
+    {
+      "page": 1,
+      "serie": "3800",
+      "op": "remove_stop",
+      "station": "dalen",
+      "routeIndex": 0,
+      "reason": "Dalen shows a single orange 8000 ring only; GTFS 3800 never stops"
+    },
+    {
+      "page": 1,
+      "serie": "3800",
+      "op": "add_stop",
+      "station": "marienberg",
+      "afterStation": "ommen",
+      "routeIndex": 0,
+      "reason": "ring on the paars 3800 at Marienberg exists; GTFS 100 percent; extraction had it as a pass"
+    },
+    {
+      "page": 1,
+      "serie": "38000",
+      "op": "remove_stop",
+      "station": "mantgum",
+      "routeIndex": 0,
+      "reason": "Mantgum rings are all on the 37000/37100 green; GTFS 38000 skips Mantgum in both directions"
+    },
+    {
+      "page": 1,
+      "serie": "3900",
+      "op": "remove_stop",
+      "station": "purmerend",
+      "routeIndex": 0,
+      "reason": "Purmerend rings are 4100 x3 plus the 3700 dash; the olive 2900/3900 line has none"
+    },
+    {
+      "page": 1,
+      "serie": "3900",
+      "op": "remove_stop",
+      "station": "zaandam",
+      "routeIndex": 0,
+      "reason": "Zaandam column has no ring on the olive 2900/3900 line"
+    },
+    {
+      "page": 1,
+      "serie": "4000",
+      "op": "add_stop",
+      "station": "amsterdam-muiderpoort",
+      "afterStation": "amsterdam-centraal",
+      "routeIndex": 0,
+      "reason": "pair ring 4000 plus 7400 under the connector at Muiderpoort; GTFS 98 percent"
+    },
+    {
+      "page": 1,
+      "serie": "4000",
+      "op": "add_stop",
+      "station": "gouda-goverwelle",
+      "afterStation": "woerden",
+      "routeIndex": 0,
+      "reason": "ring on the dark-green 4000 at Goverwelle; GTFS 96 percent"
+    },
+    {
+      "page": 1,
+      "serie": "4300",
+      "op": "add_stop",
+      "station": "almere-poort",
+      "afterStation": "weesp",
+      "routeIndex": 0,
+      "reason": "Almere strip shows multi-circle groups at Poort; 4600, 4300 and 4900 all stop per GTFS (91 percent)"
+    },
+    {
+      "page": 1,
+      "serie": "4300",
+      "op": "add_stop",
+      "station": "almere-muziekwijk",
+      "afterStation": "almere-poort",
+      "routeIndex": 0,
+      "reason": "multi-circle group at Muziekwijk; 4600, 4300 and 4900 all stop per GTFS (91 percent)"
+    },
+    {
+      "page": 1,
+      "serie": "4800",
+      "op": "add_stop",
+      "station": "alkmaar-noord",
+      "afterStation": "heerhugowaard",
+      "routeIndex": 0,
+      "reason": "Alkmaar Noord three-ring chain includes the 4800 orange; GTFS 87 percent"
+    },
+    {
+      "page": 1,
+      "serie": "4900",
+      "op": "remove_stop",
+      "station": "hilversum-media-park",
+      "routeIndex": 0,
+      "reason": "pairs at Media Park are 5700 plus 5800; the mauve 4900 passes, clearly visible"
+    },
+    {
+      "page": 1,
+      "serie": "4900",
+      "op": "remove_stop",
+      "station": "bussum-zuid",
+      "routeIndex": 0,
+      "reason": "pairs at Bussum Zuid are 5700 plus 5800; the mauve 4900 passes"
+    },
+    {
+      "page": 1,
+      "serie": "4900",
+      "op": "remove_stop",
+      "station": "weesp",
+      "routeIndex": 0,
+      "reason": "no 4900 ring at Weesp"
+    },
+    {
+      "page": 1,
+      "serie": "5000",
+      "op": "add_stop",
+      "station": "den-haag-hs",
+      "afterStation": "den-haag-centraal",
+      "routeIndex": 0,
+      "reason": "salmon rings at the HS capsule exit plus capsule passage; GTFS 99 of 99 trips; extraction omitted HS for all three Haagse sprinters"
+    },
+    {
+      "page": 1,
+      "serie": "5100",
+      "op": "add_stop",
+      "station": "den-haag-hs",
+      "afterStation": "den-haag-centraal",
+      "routeIndex": 0,
+      "reason": "salmon rings at the HS capsule; GTFS 93 percent"
+    },
+    {
+      "page": 1,
+      "serie": "5200",
+      "op": "replace_route_stops",
+      "routeIndex": 0,
+      "stops": [
+        "den-haag-centraal",
+        "den-haag-hs",
+        "den-haag-moerwijk",
+        "rijswijk",
+        "delft",
+        "delft-campus",
+        "schiedam-centrum",
+        "rotterdam-centraal",
+        "rotterdam-blaak",
+        "rotterdam-zuid",
+        "rotterdam-lombardijen",
+        "barendrecht",
+        "zwijndrecht",
+        "dordrecht"
+      ],
+      "reason": "5200/5900 pattern swap per verdict: 5200 runs Den Haag-Dordrecht all day (57 trips) with circle chains at Blaak, Zuid, Lombardijen, Barendrecht, Zwijndrecht through Dordrecht, plus the omitted HS stop; extraction had assigned the third salmon line's southern leg to 5900"
+    },
+    {
+      "page": 1,
+      "serie": "5700",
+      "op": "add_stop",
+      "station": "hoofddorp",
+      "afterStation": "nieuw-vennep",
+      "routeIndex": 0,
+      "reason": "the Hoofddorp chain has seven circles including one on the 5700 cyaan (pixel-sampled); GTFS 93 percent"
+    },
+    {
+      "page": 1,
+      "serie": "5800",
+      "op": "add_stop",
+      "station": "amsterdam-muiderpoort",
+      "afterStation": "amsterdam-centraal",
+      "routeIndex": 0,
+      "reason": "pairs at Muiderpoort on 4600 plus 5800; GTFS 100 percent; page 1 extraction had them as passes while page 2 had stops on identical artwork"
+    },
+    {
+      "page": 1,
+      "serie": "5800",
+      "op": "add_stop",
+      "station": "amsterdam-science-park",
+      "afterStation": "amsterdam-muiderpoort",
+      "routeIndex": 0,
+      "reason": "pairs at Science Park on 4600 plus 5800; GTFS 100 percent"
+    },
+    {
+      "page": 1,
+      "serie": "5800",
+      "op": "add_stop",
+      "station": "diemen",
+      "afterStation": "amsterdam-science-park",
+      "routeIndex": 0,
+      "reason": "pairs at Diemen on 4600 plus 5800; GTFS 100 percent"
+    },
+    {
+      "page": 1,
+      "serie": "5900",
+      "op": "replace_route_stops",
+      "routeIndex": 0,
+      "stops": [
+        "dordrecht",
+        "dordrecht-zuid",
+        "lage-zwaluwe",
+        "zevenbergen",
+        "oudenbosch",
+        "roosendaal"
+      ],
+      "reason": "5200/5900 pattern swap per verdict: no 5900 line exists north of Dordrecht on the artwork; GTFS 5900 = Dordrecht-Roosendaal only"
+    },
+    {
+      "page": 1,
+      "serie": "6400",
+      "op": "add_stop",
+      "station": "tilburg-universiteit",
+      "afterStation": "START",
+      "routeIndex": 0,
+      "reason": "ring on the purple 6400 at Tilburg Universiteit; GTFS 93 percent; route starts there"
+    },
+    {
+      "page": 1,
+      "serie": "7100",
+      "op": "replace_route_stops",
+      "routeIndex": 0,
+      "stops": [
+        "dordrecht",
+        "dordrecht-stadspolders",
+        "sliedrecht-baanhoek",
+        "sliedrecht",
+        "hardinxveld-giessendam",
+        "boven-hardinxveld",
+        "gorinchem"
+      ],
+      "reason": "7100/7200 pattern swap per verdict (Hardinxveld crop): light-blue 7100 skips Blauwe Zoom (single purple ring there), stops Giessendam and Boven-Hardinxveld, ends at Gorinchem"
+    },
+    {
+      "page": 1,
+      "serie": "7200",
+      "op": "replace_route_stops",
+      "routeIndex": 0,
+      "stops": [
+        "dordrecht",
+        "dordrecht-stadspolders",
+        "sliedrecht-baanhoek",
+        "sliedrecht",
+        "hardinxveld-blauwe-zoom",
+        "hardinxveld-giessendam",
+        "boven-hardinxveld",
+        "gorinchem",
+        "arkel",
+        "leerdam",
+        "beesd",
+        "geldermalsen"
+      ],
+      "reason": "7100/7200 pattern swap per verdict: purple 7200 stops Blauwe Zoom and continues to Geldermalsen with single rings at Arkel and Leerdam; GTFS 96 to 98 percent"
+    },
+    {
+      "page": 1,
+      "serie": "7400",
+      "op": "add_stop",
+      "station": "amsterdam-muiderpoort",
+      "afterStation": "amsterdam-centraal",
+      "routeIndex": 0,
+      "reason": "Muiderpoort pair ring with 4000; GTFS 87 percent"
+    },
+    {
+      "page": 1,
+      "serie": "8800",
+      "op": "remove_stop",
+      "station": "vleuten",
+      "routeIndex": 0,
+      "reason": "Vleuten rings are on the 8900 pink and the 6900/6000 brown; the red 8800 passes; daily pattern runs Woerden-Leidsche Rijn-Utrecht"
+    },
+    {
+      "page": 1,
+      "serie": "8800",
+      "op": "remove_stop",
+      "station": "utrecht-terwijde",
+      "routeIndex": 0,
+      "reason": "Terwijde rings are on 8900 and 6900/6000; the red 8800 passes; only 2 night trips ever stop"
+    },
+    {
+      "page": 1,
+      "serie": "9100",
+      "op": "remove_stop",
+      "station": "schiphol-airport",
+      "routeIndex": 0,
+      "reason": "the purple 9100 visibly bends around the east side of the Schiphol capsule; GTFS: Amsterdam C-Rotterdam nonstop"
+    },
+    {
+      "page": 1,
+      "serie": "9500",
+      "op": "add_stop",
+      "station": "almere-buiten",
+      "afterStation": "lelystad-centrum",
+      "routeIndex": 0,
+      "reason": "lavender ring in the Almere Buiten triple; GTFS 84 percent"
+    },
+    {
+      "page": 1,
+      "serie": "9500",
+      "op": "remove_stop",
+      "station": "breda",
+      "routeIndex": 0,
+      "reason": "no 9500 line via Breda on the artwork (HSL corridor); the 64 Breda-stopping trips cover only 3 works-period days"
+    },
+    {
+      "page": 1,
+      "serie": "32400",
+      "op": "add_stop",
+      "station": "maastricht-randwyck",
+      "afterStation": "maastricht",
+      "routeIndex": 0,
+      "reason": "dark-green RS12 line runs past the Maastricht capsule and terminates at Randwyck with a circle; GTFS 58 of 58 trips"
+    },
+    {
+      "page": 1,
+      "serie": "20000",
+      "op": "rename_serie",
+      "newId": "RE19",
+      "reason": "convention: brand ids uniformly for the German lines; the page 1 entry 20000 is the RE19 Arnhem-Dusseldorf route; printed number 20000 stays documented in notes"
+    },
+    {
+      "page": 2,
+      "serie": "1100",
+      "op": "remove_stop",
+      "station": "dordrecht",
+      "routeIndex": 0,
+      "reason": "no ring on the gold line at Dordrecht (ring set 5000, 5100, 5900, 6600); raw feed 1 of 23 Fridays (works date)"
+    },
+    {
+      "page": 2,
+      "serie": "1800",
+      "op": "add_stop",
+      "station": "hilversum",
+      "afterStation": "duivendrecht",
+      "routeIndex": 0,
+      "reason": "the light-blue 1800 runs straight through the Hilversum capsule (identical artwork pages 1-3); GTFS 98 percent"
+    },
+    {
+      "page": 2,
+      "serie": "2100",
+      "op": "remove_stop",
+      "station": "den-haag-mariahoeve",
+      "routeIndex": 0,
+      "reason": "the two Mariahoeve rings sit on 4200 paars and 4300 grey-teal; raw feed 0 of 23 Fridays"
+    },
+    {
+      "page": 2,
+      "serie": "2200",
+      "op": "add_stop",
+      "station": "schiedam-centrum",
+      "afterStation": "delft",
+      "routeIndex": 0,
+      "reason": "Schiedam four-ring chain includes the pink 2200/2300; GTFS 91 percent"
+    },
+    {
+      "page": 2,
+      "serie": "2200",
+      "op": "add_stop",
+      "station": "rilland-bath",
+      "afterStation": "bergen-op-zoom",
+      "routeIndex": 0,
+      "reason": "page 2 Zeeland crop identical to page 1: circle pairs on 2200 and 3600; extraction dropped the station from 2200; GTFS 2200 stops all six small Zeeland stations"
+    },
+    {
+      "page": 2,
+      "serie": "2200",
+      "op": "add_stop",
+      "station": "krabbendijke",
+      "afterStation": "rilland-bath",
+      "routeIndex": 0,
+      "reason": "Zeeland circle pair on 2200 and 3600; extraction dropped it from 2200"
+    },
+    {
+      "page": 2,
+      "serie": "2200",
+      "op": "add_stop",
+      "station": "kruiningen-yerseke",
+      "afterStation": "krabbendijke",
+      "routeIndex": 0,
+      "reason": "Zeeland circle pair on 2200 and 3600; extraction dropped it from 2200"
+    },
+    {
+      "page": 2,
+      "serie": "2300",
+      "op": "add_stop",
+      "station": "schiedam-centrum",
+      "afterStation": "delft",
+      "routeIndex": 0,
+      "reason": "Schiedam four-ring chain includes the pink 2200/2300; GTFS 2300: 100 percent"
+    },
+    {
+      "page": 2,
+      "serie": "2300",
+      "op": "remove_stop",
+      "station": "rilland-bath",
+      "routeIndex": 0,
+      "reason": "as page 1: 2300 stops only Middelburg, Goes, Bergen op Zoom in Zeeland; the lower pair circles belong to 3600"
+    },
+    {
+      "page": 2,
+      "serie": "2300",
+      "op": "remove_stop",
+      "station": "krabbendijke",
+      "routeIndex": 0,
+      "reason": "as page 1: circles belong to 3600; GTFS 2300 zero"
+    },
+    {
+      "page": 2,
+      "serie": "2300",
+      "op": "remove_stop",
+      "station": "kruiningen-yerseke",
+      "routeIndex": 0,
+      "reason": "as page 1: circles belong to 3600; GTFS 2300 zero"
+    },
+    {
+      "page": 2,
+      "serie": "2300",
+      "op": "remove_stop",
+      "station": "vlissingen-souburg",
+      "routeIndex": 0,
+      "reason": "as page 1: 2300 passes all six small Zeeland stations"
+    },
+    {
+      "page": 2,
+      "serie": "2900",
+      "op": "remove_stop",
+      "station": "zaandam",
+      "routeIndex": 0,
+      "reason": "no olive ring at Zaandam; the stopping Friday 2900 trips are night trips only"
+    },
+    {
+      "page": 2,
+      "serie": "3000",
+      "op": "add_stop",
+      "station": "driebergen-zeist",
+      "afterStation": "utrecht-centraal",
+      "routeIndex": 0,
+      "reason": "page 2 crop shows circles on the light-green 3000 at Driebergen; GTFS Friday 69 of 71 trips (97 percent)"
+    },
+    {
+      "page": 2,
+      "serie": "3000",
+      "op": "add_stop",
+      "station": "ede-wageningen",
+      "afterStation": "driebergen-zeist",
+      "routeIndex": 0,
+      "reason": "page 2 crop shows circles on the light-green 3000 at Ede; GTFS 97 percent"
+    },
+    {
+      "page": 2,
+      "serie": "3500",
+      "op": "add_stop",
+      "station": "schiedam-centrum",
+      "afterStation": "rotterdam-centraal",
+      "routeIndex": 0,
+      "reason": "ring on the green 3500 in the Schiedam chain; GTFS 94 percent"
+    },
+    {
+      "page": 2,
+      "serie": "3800",
+      "op": "remove_stop",
+      "station": "gramsbergen",
+      "routeIndex": 0,
+      "reason": "Gramsbergen shows a single orange 8000 ring; GTFS 3800 never stops"
+    },
+    {
+      "page": 2,
+      "serie": "4000",
+      "op": "add_stop",
+      "station": "amsterdam-muiderpoort",
+      "afterStation": "amsterdam-centraal",
+      "routeIndex": 0,
+      "reason": "pair ring at Muiderpoort as on page 1; GTFS 96 percent"
+    },
+    {
+      "page": 2,
+      "serie": "4300",
+      "op": "add_stop",
+      "station": "den-haag-mariahoeve",
+      "afterStation": "den-haag-laan-van-noi",
+      "routeIndex": 0,
+      "reason": "ring on the 4300 line at Mariahoeve exists; GTFS 97 percent; extraction had passeert while giving the circle to 2100"
+    },
+    {
+      "page": 2,
+      "serie": "5800",
+      "op": "add_stop",
+      "station": "naarden-bussum",
+      "afterStation": "weesp",
+      "routeIndex": 0,
+      "reason": "ring on the 5800 navy in the Naarden-Bussum group (pixel-verified); GTFS 100 percent"
+    },
+    {
+      "page": 2,
+      "serie": "6000",
+      "op": "add_stop",
+      "station": "utrecht-vaartsche-rijn",
+      "afterStation": "utrecht-centraal",
+      "routeIndex": 0,
+      "reason": "GTFS 97 percent (56 of 58); dense Utrecht-zuid knot, corridor stop pattern plus GTFS decisive"
+    },
+    {
+      "page": 2,
+      "serie": "6500",
+      "op": "add_stop",
+      "station": "eindhoven-strijp-s",
+      "afterStation": "best",
+      "routeIndex": 0,
+      "reason": "blue 6500 rings exist adjacent to the purple 6400 ring (pixel-sampled, pages 2 and 3); GTFS 98 percent"
+    },
+    {
+      "page": 2,
+      "serie": "6700",
+      "op": "add_stop",
+      "station": "utrecht-vaartsche-rijn",
+      "afterStation": "utrecht-centraal",
+      "routeIndex": 0,
+      "reason": "ring on the red 6700 line north of the label (pixel-sampled); GTFS 97 percent"
+    },
+    {
+      "page": 2,
+      "serie": "7400",
+      "op": "add_stop",
+      "station": "amsterdam-muiderpoort",
+      "afterStation": "amsterdam-centraal",
+      "routeIndex": 0,
+      "reason": "Muiderpoort pair ring as on page 1; GTFS 88 percent"
+    },
+    {
+      "page": 2,
+      "serie": "7600",
+      "op": "add_stop",
+      "station": "nijmegen-goffert",
+      "afterStation": "nijmegen",
+      "routeIndex": 0,
+      "reason": "the Wijchen branch is drawn with rings; extraction ended 7600 at Nijmegen; GTFS 86 percent"
+    },
+    {
+      "page": 2,
+      "serie": "7600",
+      "op": "add_stop",
+      "station": "nijmegen-dukenburg",
+      "afterStation": "nijmegen-goffert",
+      "routeIndex": 0,
+      "reason": "Dukenburg ring on the 7600 rose (pixel-sampled); GTFS 86 percent"
+    },
+    {
+      "page": 2,
+      "serie": "7600",
+      "op": "add_stop",
+      "station": "wijchen",
+      "afterStation": "nijmegen-dukenburg",
+      "routeIndex": 0,
+      "reason": "Wijchen branch terminus; GTFS 86 percent"
+    },
+    {
+      "page": 2,
+      "serie": "9100",
+      "op": "remove_stop",
+      "station": "amsterdam-zuid",
+      "routeIndex": 0,
+      "reason": "purple line bends around Schiphol and reaches Amsterdam Centraal; GTFS: all trips Amsterdam C, none Zuid"
+    },
+    {
+      "page": 2,
+      "serie": "9100",
+      "op": "remove_stop",
+      "station": "schiphol-airport",
+      "routeIndex": 0,
+      "reason": "purple line bends around the Schiphol capsule (identical to page 1); GTFS: no Schiphol stops"
+    },
+    {
+      "page": 2,
+      "serie": "9100",
+      "op": "add_stop",
+      "station": "amsterdam-centraal",
+      "afterStation": "START",
+      "routeIndex": 0,
+      "reason": "the 9100 line reaches Amsterdam Centraal; GTFS: all trips serve Amsterdam C"
+    },
+    {
+      "page": 2,
+      "serie": "9200",
+      "op": "add_stop",
+      "station": "breda",
+      "afterStation": "rotterdam-centraal",
+      "routeIndex": 0,
+      "reason": "the dark-blue 9200 curves into the Breda capsule (crop); GTFS 28 of 28"
+    },
+    {
+      "page": 2,
+      "serie": "9200",
+      "op": "add_stop",
+      "station": "brussels-airport-zaventem",
+      "afterStation": "mechelen",
+      "routeIndex": 0,
+      "reason": "GTFS 28 of 28; page 3 extraction of the same artwork has the Zaventem stop; the page 2 agent missed it"
+    },
+    {
+      "page": 2,
+      "serie": "9300",
+      "op": "remove_stop",
+      "station": "amsterdam-zuid",
+      "routeIndex": 0,
+      "reason": "the red 9300/9900 line passes through the Schiphol capsule and terminates at Centraal (labels 9300 and 9900 on the red line)"
+    },
+    {
+      "page": 2,
+      "serie": "9300",
+      "op": "add_stop",
+      "station": "amsterdam-centraal",
+      "afterStation": "START",
+      "routeIndex": 0,
+      "reason": "red 9300/9900 line terminates at Amsterdam Centraal; GTFS agrees"
+    },
+    {
+      "page": 2,
+      "serie": "9500",
+      "op": "remove_stop",
+      "station": "brussels-airport-zaventem",
+      "routeIndex": 0,
+      "reason": "the Zaventem circle belongs to the 9200 line; GTFS 9500: zero Zaventem stops; page 3 extraction agrees"
+    },
+    {
+      "page": 2,
+      "serie": "9900",
+      "op": "remove_stop",
+      "station": "amsterdam-zuid",
+      "routeIndex": 0,
+      "reason": "as 9300: departs Centraal, not Zuid"
+    },
+    {
+      "page": 2,
+      "serie": "9900",
+      "op": "add_stop",
+      "station": "amsterdam-centraal",
+      "afterStation": "START",
+      "routeIndex": 0,
+      "reason": "as 9300: the red line terminates at Amsterdam Centraal"
+    },
+    {
+      "page": 2,
+      "serie": "37000",
+      "op": "remove_stop",
+      "station": "ijlst",
+      "routeIndex": 0,
+      "reason": "Stavoren tail belongs to 37100, as page 1; GTFS 37000 ends at Sneek"
+    },
+    {
+      "page": 2,
+      "serie": "37000",
+      "op": "remove_stop",
+      "station": "workum",
+      "routeIndex": 0,
+      "reason": "Stavoren tail belongs to 37100, as page 1"
+    },
+    {
+      "page": 2,
+      "serie": "37000",
+      "op": "remove_stop",
+      "station": "hindeloopen",
+      "routeIndex": 0,
+      "reason": "Stavoren tail belongs to 37100, as page 1"
+    },
+    {
+      "page": 2,
+      "serie": "37000",
+      "op": "remove_stop",
+      "station": "koudum-molkwerum",
+      "routeIndex": 0,
+      "reason": "Stavoren tail belongs to 37100, as page 1"
+    },
+    {
+      "page": 2,
+      "serie": "37000",
+      "op": "remove_stop",
+      "station": "stavoren",
+      "routeIndex": 0,
+      "reason": "Stavoren tail belongs to 37100, as page 1"
+    },
+    {
+      "page": 2,
+      "serie": "zonder-nummer-soestlijn",
+      "op": "rename_serie",
+      "newId": "5500",
+      "reason": "map prints no number on page 2; route, line color and circles pixel-identical to page 1 where the 5500 badge sits on the line; GTFS serie 5500 runs Utrecht-Baarn on Fridays (26 trips); record the print omission as issue plus note per FORMAT name-correction mechanism"
+    },
+    {
+      "page": 3,
+      "serie": "3000",
+      "op": "add_stop",
+      "station": "driebergen-zeist",
+      "afterStation": "utrecht-centraal",
+      "routeIndex": 0,
+      "reason": "page 3 crop: circles on light-green 3000 plus teal 7300 at Driebergen; GTFS 95 percent; extraction had it in via"
+    },
+    {
+      "page": 3,
+      "serie": "500",
+      "op": "remove_stop",
+      "station": "meppel",
+      "routeIndex": 0,
+      "reason": "page 3 crop: four Meppel circles on 9000, 800, 600 and paars 6100; no circle on the 500 rose; raw feed 2 of 45 weekend days"
+    },
+    {
+      "page": 3,
+      "serie": "2800",
+      "op": "remove_stop",
+      "station": "capelle-schollevaar",
+      "routeIndex": 0,
+      "reason": "single rings on the dark-green 4000 only (pixel-sampled); GTFS 2800: zero stops ever"
+    },
+    {
+      "page": 3,
+      "serie": "2800",
+      "op": "remove_stop",
+      "station": "nieuwerkerk-aan-den-ijssel",
+      "routeIndex": 0,
+      "reason": "single rings on the dark-green 4000 only; the cirkelparen claim was wrong; GTFS 2800: zero stops ever"
+    },
+    {
+      "page": 3,
+      "serie": "4000",
+      "op": "add_stop",
+      "station": "zaandam",
+      "afterStation": "koog-aan-de-zaan",
+      "routeIndex": 0,
+      "reason": "ring on the dark-green 4000 at Zaandam exists (pixel-sampled at 229.8,341.6); GTFS 78 of 78; the extraction issue note claimed no circle"
+    },
+    {
+      "page": 3,
+      "serie": "7300",
+      "op": "remove_stop",
+      "station": "duivendrecht",
+      "routeIndex": 0,
+      "reason": "no teal 7300 ring in the Duivendrecht group on page 3; the weekend through-run skips it (GTFS: 1 excluded trip on 1 August only)"
+    },
+    {
+      "page": 3,
+      "serie": "2900",
+      "op": "remove_stop",
+      "station": "zaandam",
+      "routeIndex": 0,
+      "reason": "Zaandam circle belongs to 4000 on page 3; GTFS weekend 2900 does not stop Zaandam"
+    },
+    {
+      "page": 3,
+      "serie": "4100",
+      "op": "add_stop",
+      "station": "hoorn-kersenboogerd",
+      "afterStation": "START",
+      "routeIndex": 0,
+      "reason": "three petrol rings at Hoorn Kersenboogerd; GTFS 100 percent; extraction had it in via"
+    },
+    {
+      "page": 3,
+      "serie": "2200/2300",
+      "op": "add_stop",
+      "station": "den-haag-laan-van-noi",
+      "afterStation": "leiden-centraal",
+      "routeIndex": 0,
+      "reason": "ring chain at Laan van NOI includes the pink 2200/2300; GTFS 92 to 100 percent"
+    },
+    {
+      "page": 3,
+      "serie": "3500",
+      "op": "add_stop",
+      "station": "den-haag-laan-van-noi",
+      "afterStation": "den-haag-hs",
+      "routeIndex": 0,
+      "reason": "green 3500 ring in the Laan van NOI chain; GTFS 81 percent"
+    },
+    {
+      "page": 3,
+      "serie": "5000",
+      "op": "add_stop",
+      "station": "den-haag-hs",
+      "afterStation": "den-haag-centraal",
+      "routeIndex": 0,
+      "reason": "salmon rings at the HS capsule; GTFS 95 percent; the footnote 5000 vanaf circa 10 u was captured, the HS stop was not"
+    },
+    {
+      "page": 3,
+      "serie": "5100",
+      "op": "add_stop",
+      "station": "den-haag-hs",
+      "afterStation": "den-haag-centraal",
+      "routeIndex": 0,
+      "reason": "salmon rings at the HS capsule; GTFS 96 percent"
+    },
+    {
+      "page": 3,
+      "serie": "1100",
+      "op": "remove_stop",
+      "station": "dordrecht",
+      "routeIndex": 0,
+      "reason": "no gold ring at Dordrecht; raw feed 0 of 45 weekend days"
+    },
+    {
+      "page": 3,
+      "serie": "6500",
+      "op": "add_stop",
+      "station": "eindhoven-strijp-s",
+      "afterStation": "best",
+      "routeIndex": 0,
+      "reason": "blue 6500 rings present at Strijp-S; GTFS 96 percent"
+    },
+    {
+      "page": 3,
+      "serie": "6600",
+      "op": "add_stop",
+      "station": "dordrecht-zuid",
+      "afterStation": "dordrecht",
+      "routeIndex": 0,
+      "reason": "Dordrecht Zuid pair sits on 5900 pink and 6600 cyaan (page 4 crop of the same node); GTFS 95 percent; page 3 agent dropped three stations from an otherwise correct 20-stop route"
+    },
+    {
+      "page": 3,
+      "serie": "6600",
+      "op": "add_stop",
+      "station": "tilburg-universiteit",
+      "afterStation": "tilburg-reeshof",
+      "routeIndex": 0,
+      "reason": "Universiteit ring on the 6600 branch as on pages 1-2; GTFS 98 percent"
+    },
+    {
+      "page": 3,
+      "serie": "6600",
+      "op": "add_stop",
+      "station": "nijmegen-goffert",
+      "afterStation": "nijmegen-dukenburg",
+      "routeIndex": 0,
+      "reason": "Goffert ring on the 6600 branch as on pages 1-2; GTFS 98 percent"
+    },
+    {
+      "page": 3,
+      "serie": "6000",
+      "op": "add_stop",
+      "station": "gouda-goverwelle",
+      "afterStation": "gouda",
+      "routeIndex": 0,
+      "reason": "brown ring at Goverwelle on page 3 (pixel-sampled)"
+    },
+    {
+      "page": 3,
+      "serie": "6000",
+      "op": "add_stop",
+      "station": "utrecht-vaartsche-rijn",
+      "afterStation": "utrecht-centraal",
+      "routeIndex": 0,
+      "reason": "GTFS 95 percent at Vaartsche Rijn"
+    },
+    {
+      "page": 3,
+      "serie": "6700",
+      "op": "add_stop",
+      "station": "utrecht-vaartsche-rijn",
+      "afterStation": "utrecht-centraal",
+      "routeIndex": 0,
+      "reason": "red 6700 ring north of the label (pixel-sampled)"
+    },
+    {
+      "page": 3,
+      "serie": "8100",
+      "op": "add_stop",
+      "station": "amsterdam-sloterdijk",
+      "afterStation": "amsterdam-centraal",
+      "routeIndex": 0,
+      "reason": "Sloterdijk is a T-shaped capsule; the westtak verticals run straight through its arm on page 3; GTFS 100 percent; lijn loopt om het stationskader heen was a misread of the box"
+    },
+    {
+      "page": 3,
+      "serie": "8200",
+      "op": "add_stop",
+      "station": "amsterdam-sloterdijk",
+      "afterStation": "amsterdam-centraal",
+      "routeIndex": 0,
+      "reason": "westtak vertical runs straight through the Sloterdijk capsule arm; GTFS 100 percent"
+    },
+    {
+      "page": 3,
+      "serie": "8300",
+      "op": "add_stop",
+      "station": "amsterdam-sloterdijk",
+      "afterStation": "amsterdam-centraal",
+      "routeIndex": 0,
+      "reason": "westtak vertical runs straight through the Sloterdijk capsule arm; GTFS 100 percent"
+    },
+    {
+      "page": 3,
+      "serie": "8400",
+      "op": "add_stop",
+      "station": "amsterdam-sloterdijk",
+      "afterStation": "amsterdam-centraal",
+      "routeIndex": 0,
+      "reason": "westtak vertical runs straight through the Sloterdijk capsule arm; GTFS 100 percent"
+    },
+    {
+      "page": 3,
+      "serie": "9200",
+      "op": "add_stop",
+      "station": "antwerpen-centraal",
+      "afterStation": "noorderkempen",
+      "routeIndex": 0,
+      "reason": "GTFS 29 of 29 trips stop Antwerpen-Centraal; page 2 map file has the stop on identical artwork; page 3 agent gave the circle to Berchem only"
+    },
+    {
+      "page": 3,
+      "serie": "9500",
+      "op": "add_stop",
+      "station": "almere-buiten",
+      "afterStation": "lelystad-centrum",
+      "routeIndex": 0,
+      "reason": "on page 3 the 2400/9500 line is drawn dashed (zaterdag style) and carries a circle at Buiten; GTFS 40 percent (Saturday trips)"
+    },
+    {
+      "page": 3,
+      "serie": "2400",
+      "op": "add_stop",
+      "station": "almere-buiten",
+      "afterStation": "lelystad-centrum",
+      "routeIndex": 0,
+      "reason": "same dashed-line circle at Almere Buiten; GTFS 50 percent (Saturday trips)"
+    },
+    {
+      "page": 3,
+      "serie": "1800",
+      "op": "add_stop",
+      "station": "duivendrecht",
+      "afterStation": "amsterdam-zuid",
+      "routeIndex": 0,
+      "reason": "1800 ring present in the Duivendrecht group (pixel-sampled); GTFS 96 percent"
+    },
+    {
+      "page": 3,
+      "serie": "1800",
+      "op": "add_stop",
+      "station": "hilversum",
+      "afterStation": "duivendrecht",
+      "routeIndex": 0,
+      "reason": "1800 runs through the Hilversum capsule; GTFS 96 percent"
+    },
+    {
+      "page": 3,
+      "serie": "4300",
+      "op": "add_stop",
+      "station": "leiden-centraal",
+      "afterStation": "de-vink",
+      "routeIndex": 0,
+      "reason": "the grey-teal 4300 runs through the Leiden capsule (crop; no bypass bend); GTFS 98 percent"
+    },
+    {
+      "page": 3,
+      "serie": "2600",
+      "op": "remove_stop",
+      "station": "weesp",
+      "routeIndex": 0,
+      "reason": "the Weesp four-circle cross belongs to 4300, 4600, 5700, 5800; GTFS 2600: 0 in window"
+    },
+    {
+      "page": 3,
+      "serie": "5800",
+      "op": "add_stop",
+      "station": "hilversum-media-park",
+      "afterStation": "bussum-zuid",
+      "routeIndex": 0,
+      "reason": "Media Park: 5700 ring plus connector to the 5800 ring (crop); GTFS 100 percent"
+    },
+    {
+      "page": 3,
+      "serie": "1500",
+      "op": "add_stop",
+      "station": "hilversum",
+      "afterStation": "amsterdam-centraal",
+      "routeIndex": 0,
+      "reason": "the blue 1500 passes through the Hilversum capsule; GTFS 48 of 48 weekend trips stop; zonder tussenstops was a capsule misread"
+    },
+    {
+      "page": 3,
+      "serie": "32400",
+      "op": "add_stop",
+      "station": "maastricht-randwyck",
+      "afterStation": "maastricht",
+      "routeIndex": 0,
+      "reason": "Randwyck terminus ring (page 1 crop, same artwork); GTFS 100 percent"
+    },
+    {
+      "page": 3,
+      "serie": "5900",
+      "op": "add_stop",
+      "station": "dordrecht-zuid",
+      "afterStation": "dordrecht",
+      "routeIndex": 0,
+      "reason": "Dordrecht Zuid pair with 6600 (page 4 crop of the same node); GTFS 100 percent"
+    },
+    {
+      "page": 3,
+      "serie": "7100",
+      "op": "remove_stop",
+      "station": "dordrecht-zuid",
+      "routeIndex": 0,
+      "reason": "Dordrecht Zuid lies on the Rotterdam-Roosendaal line, not on the MerwedeLingelijn; the two rings near the label belong to 5900/6600; GTFS 0"
+    },
+    {
+      "page": 3,
+      "serie": "7200",
+      "op": "remove_stop",
+      "station": "dordrecht-zuid",
+      "routeIndex": 0,
+      "reason": "same insertion error as 7100; GTFS 0"
+    },
+    {
+      "page": 3,
+      "serie": "20000",
+      "op": "add_stop",
+      "station": "dusseldorf-flughafen",
+      "afterStation": "duisburg-hbf",
+      "routeIndex": 0,
+      "reason": "page 1 map file includes Flughafen on the same RE19 route; the page 3 agent dropped it; GTFS 32 of 66"
+    },
+    {
+      "page": 3,
+      "serie": "20000",
+      "op": "rename_serie",
+      "newId": "RE19",
+      "reason": "convention: brand ids uniformly; 20000 cannot name two different lines at once, which page 3 worked around with a two-route entry; this entry keeps the Arnhem-Dusseldorf route as RE19"
+    },
+    {
+      "page": 3,
+      "serie": "RE19",
+      "op": "remove_route",
+      "routeIndex": 1,
+      "reason": "convention: split page 3's two-route 20000 entry; route 1 (Venlo-Hamm) is the RE13 drawn line and moves to its own entry"
+    },
+    {
+      "page": 3,
+      "serie": "RE13",
+      "op": "add_route",
+      "routeIndex": 0,
+      "stops": [
+        "venlo",
+        "kaldenkirchen",
+        "breyell",
+        "boisheim",
+        "dulken",
+        "viersen",
+        "monchengladbach-hbf",
+        "neuss-hbf",
+        "dusseldorf-hbf",
+        "wuppertal-vohwinkel",
+        "wuppertal-hbf",
+        "wuppertal-barmen",
+        "wuppertal-oberbarmen",
+        "schwelm",
+        "ennepetal",
+        "hagen-hbf",
+        "schwerte-ruhr",
+        "holzwickede",
+        "unna",
+        "bonen",
+        "hamm-westf"
+      ],
+      "meta": {
+        "kind": "internationaal",
+        "frequency": {
+          "class": "1x_per_uur",
+          "note": "op de lijn staat ook het nummer 20000"
+        },
+        "colorHint": "lichtblauw"
+      },
+      "reason": "convention: create the RE13 entry on page 3 (one entry per drawn line, brand id); stops are page 3's former 20000 route 1 verbatim; meta mirrors the RE13 entries pages 1, 2 and 4"
+    },
+    {
+      "page": 4,
+      "serie": "1100",
+      "op": "add_stop",
+      "station": "den-haag-hs",
+      "afterStation": "den-haag-centraal",
+      "routeIndex": 0,
+      "reason": "the gold line passes through the HS capsule as on every page; GTFS 87 percent; the page 4 agent skipped HS"
+    },
+    {
+      "page": 4,
+      "serie": "12400",
+      "op": "add_stop",
+      "station": "amsterdam-zuid",
+      "afterStation": "START",
+      "routeIndex": 0,
+      "reason": "the lavender 12400/9500 line exists west of the Zuid capsule and is absent east of it, so it terminates at Zuid (color-stack sampling); GTFS 9 of 9 trips"
+    },
+    {
+      "page": 4,
+      "serie": "1800",
+      "op": "add_stop",
+      "station": "amersfoort-schothorst",
+      "afterStation": "START",
+      "routeIndex": 0,
+      "reason": "ring chain at Schothorst on page 4 as on pages 1-2; GTFS 89 percent"
+    },
+    {
+      "page": 4,
+      "serie": "2100",
+      "op": "add_stop",
+      "station": "amsterdam-sloterdijk",
+      "afterStation": "amsterdam-centraal",
+      "routeIndex": 0,
+      "reason": "the 2100 red horizontal passes through the Sloterdijk capsule's vertical arm (page 4 crop); GTFS 92 percent"
+    },
+    {
+      "page": 4,
+      "serie": "2200/2300",
+      "op": "add_stop",
+      "station": "amsterdam-sloterdijk",
+      "afterStation": "amsterdam-centraal",
+      "routeIndex": 0,
+      "reason": "both pink horizontals run through the Sloterdijk capsule; GTFS 76 and 100 percent"
+    },
+    {
+      "page": 4,
+      "serie": "3000",
+      "op": "add_stop",
+      "station": "driebergen-zeist",
+      "afterStation": "utrecht-centraal",
+      "routeIndex": 0,
+      "reason": "page 4 crop shows the circle pair light-green 3000 plus teal 7300 at Driebergen; GTFS 82 percent; extraction had via"
+    },
+    {
+      "page": 4,
+      "serie": "31000",
+      "op": "add_stop",
+      "station": "hardenberg",
+      "afterStation": "START",
+      "routeIndex": 0,
+      "reason": "three chained rings at Hardenberg on 3800, 8000 and the light-green 31000, which continues past Marienberg and terminates at Hardenberg; GTFS 7 of 8 evening trips"
+    },
+    {
+      "page": 4,
+      "serie": "4000",
+      "op": "add_stop",
+      "station": "amsterdam-muiderpoort",
+      "afterStation": "amsterdam-centraal",
+      "routeIndex": 0,
+      "reason": "pairs on 4000 plus 7400 as on pages 1-3 (crops); the page 4 agent dropped it; GTFS 87 percent"
+    },
+    {
+      "page": 4,
+      "serie": "5900",
+      "op": "add_stop",
+      "station": "zevenbergen",
+      "afterStation": "lage-zwaluwe",
+      "routeIndex": 0,
+      "reason": "the pink 5900 continues from Lage Zwaluwe with printed circles at Zevenbergen and Oudenbosch toward Roosendaal (crop); GTFS 17 of 17 evening trips"
+    },
+    {
+      "page": 4,
+      "serie": "5900",
+      "op": "add_stop",
+      "station": "oudenbosch",
+      "afterStation": "zevenbergen",
+      "routeIndex": 0,
+      "reason": "printed circle at Oudenbosch on the continuing 5900; GTFS 17 of 17"
+    },
+    {
+      "page": 4,
+      "serie": "5900",
+      "op": "add_stop",
+      "station": "roosendaal",
+      "afterStation": "oudenbosch",
+      "routeIndex": 0,
+      "reason": "5900 terminates at Roosendaal; extraction truncated the route at Lage Zwaluwe"
+    },
+    {
+      "page": 4,
+      "serie": "6600",
+      "op": "add_stop",
+      "station": "tilburg-universiteit",
+      "afterStation": "tilburg-reeshof",
+      "routeIndex": 0,
+      "reason": "Universiteit ring on the 6600 branch as on other pages; GTFS 82 percent"
+    },
+    {
+      "page": 4,
+      "serie": "7100",
+      "op": "remove_stop",
+      "station": "hardinxveld-blauwe-zoom",
+      "routeIndex": 0,
+      "reason": "single ring on 7200 at Blauwe Zoom as on page 1; GTFS 7100: zero, 7200: 14 evening trips"
+    },
+    {
+      "page": 4,
+      "serie": "9500",
+      "op": "add_stop",
+      "station": "amsterdam-zuid",
+      "afterStation": "START",
+      "routeIndex": 0,
+      "reason": "same lavender terminus at Amsterdam Zuid as 12400 (color-stack); GTFS 12 of 12"
+    }
+  ],
+  "kaartfout": [
+    {
+      "page": 1,
+      "serie": "3200",
+      "station": "schiedam-centrum",
+      "note": "NS artwork misses the circle: the amber 3200 passes Schiedam Centrum without a ring while 57 of 61 trips (93 percent) stop; extraction transcribed the artwork correctly; stays as printed, editorial record"
+    },
+    {
+      "page": 2,
+      "serie": "31500",
+      "station": "haren",
+      "note": "NS drawing slip: page 2 prints a ring on the dark-blue 31500/RE8 at Haren but GTFS has zero 31500 trips stopping there on any day; on page 1 the same ring positions sit on 6100 plus 6200; stays as printed, editorial record"
+    },
+    {
+      "page": 4,
+      "serie": "700/800",
+      "station": "almere-buiten",
+      "note": "NS artwork prints a circle on the 700/800 line at Almere Buiten but GTFS contains zero 700/800 trips stopping there in any window, ever; extraction transcribed faithfully; stays as printed, editorial record"
+    },
+    {
+      "page": 1,
+      "serie": "6200",
+      "station": null,
+      "note": "NS label slip: page 1 prints 6200 twice; the solid Zwolle-Groningen stoptrein line is 6100 per pages 2-4 and GTFS (6200 is the dashed Assen-Groningen spits); the entry faithfully transcribes the wrong label and its stops are the real 6100's; stays as printed, editorial record"
+    },
+    {
+      "page": 2,
+      "serie": "5500",
+      "station": null,
+      "note": "NS print omission: the 5500 number badge is absent on page 2's Soestlijn while pages 1, 3 and 4 print it; the id is fixed by the zonder-nummer-soestlijn rename patch; the omission itself stays recorded as issue plus note"
+    },
+    {
+      "page": 3,
+      "serie": "700",
+      "station": "meppel",
+      "note": "artwork prints no circle on the 700 line at Meppel, yet the raw feed stops there on 45 of 45 weekend days (works-driven date-specific variants plus direction-1 trips); the map file already lists the stop and keeps it; feed reality sides with the map file"
+    }
+  ],
+  "unexpressible": [
+    {
+      "page": 3,
+      "serie": "20200/20350",
+      "note": "page 3 encodes RB51 and RB64 as two routes of entry 20200 and folds RB61 into entry 20350's single Hengelo-Bielefeld route, unlike pages 1, 2 and 4 which have separate RB51/RB64/RB61 entries; the convention text says one entry per drawn line with brand ids, but its Implied edits list only names the 20000 splits (pages 1 and 3) and says do not renumber the RB entries; whether page 3's 20200/20350 must also be split is not concluded in the verdicts document, so no patch is emitted; flagged for the maintainer"
+    }
+  ]
+}
