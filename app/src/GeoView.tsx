@@ -27,6 +27,27 @@ const DOT_BASE = {
   fillOpacity: 0.85,
 }
 
+// Last-mile speeds for the isochrone, km/h.
+const SPEEDS = { fiets: 16, auto: 40 } as const
+type Speed = keyof typeof SPEEDS
+
+// Real routes are longer than the straight line. Measured against Google
+// around the Kite Pharma pin: 16.1 km road vs 10.2 km hemelsbreed (1.58)
+// and 2.5 km walking vs 1.5 km (1.67); Dutch cycle-network average is ~1.4.
+const DETOUR_FACTOR = 1.4
+
+const ISO_BANDS: { limit: number; color: string; label: string }[] = [
+  { limit: 30, color: '#00a650', label: 'onder 30 min' },
+  { limit: 45, color: '#ffc917', label: '30 tot 45 min' },
+  { limit: 60, color: '#f36f21', label: '45 tot 60 min' },
+  { limit: Infinity, color: '#e8112d', label: 'boven 60 min' },
+]
+
+function isoColor(t: number): string {
+  for (const b of ISO_BANDS) if (t < b.limit) return b.color
+  return ISO_BANDS[ISO_BANDS.length - 1].color
+}
+
 // RdT station type -> chip label. Sneltrein stays its own category on purpose:
 // a knooppuntSneltreinstation (Ommen, Valkenburg) is neither IC nor sprinter.
 function typeChip(t?: string): 'IC' | 'SNEL' | 'SPR' | null {
@@ -99,6 +120,8 @@ export default function GeoView({ stations, active = true }: Props) {
   const [target, setTarget] = useState<[number, number] | null>(null)
   const [radiusKm, setRadiusKm] = useState(14)
   const [colorBase, setColorBase] = useState(false)
+  const [isoMode, setIsoMode] = useState(false)
+  const [speed, setSpeed] = useState<Speed>('fiets')
   const [coordText, setCoordText] = useState('')
   const [coordError, setCoordError] = useState(false)
 
@@ -241,6 +264,56 @@ export default function GeoView({ stations, active = true }: Props) {
     return m
   }, [target, radiusKm, geoStations])
 
+  // Door-to-door minutes per station: best candidate arrival station plus
+  // last-mile from there to the pin at the chosen speed. The breakdown is
+  // kept so the tooltip can show which assumptions produced the number.
+  const isoTimes = useMemo(() => {
+    if (!isoMode || !target || !timeIndex || inside.size === 0) return null
+    const lastMile = new Map<string, number>()
+    for (const [d, km] of inside)
+      lastMile.set(d, ((km * DETOUR_FACTOR) / SPEEDS[speed]) * 60)
+    const out = new Map<
+      string,
+      {
+        total: number
+        train: number
+        lm: number
+        lmKm: number
+        via: string
+        transfer: boolean
+      }
+    >()
+    for (const s of geoStations) {
+      let best: {
+        total: number
+        train: number
+        lm: number
+        lmKm: number
+        via: string
+        transfer: boolean
+      } | null = null
+      for (const [d, lm] of lastMile) {
+        const pair = timeIndex.fastest1(s.id, d)
+        const direct = pair.direct ?? Infinity
+        const viaTransfer = (pair.transfer ?? Infinity) < direct
+        const train = viaTransfer ? (pair.transfer as number) : direct
+        if (train === Infinity) continue
+        const total = train + lm
+        if (best === null || total < best.total)
+          best = {
+            total,
+            train,
+            lm,
+            lmKm: (inside.get(d) as number) * DETOUR_FACTOR,
+            via: d,
+            transfer: viaTransfer,
+          }
+      }
+      if (best !== null) out.set(s.id, best)
+    }
+    return out
+  }, [isoMode, target, timeIndex, inside, speed, geoStations])
+
   // Redraw series polylines when selection, pins or hover change.
   // Pair tracing: with a station selected and another station hovered, only
   // the series whose route contains both stay hot.
@@ -339,6 +412,20 @@ export default function GeoView({ stations, active = true }: Props) {
           fillOpacity: 1,
         })
         m.setRadius(base + 1)
+      } else if (isoTimes) {
+        const t = isoTimes.get(id)
+        if (t === undefined) {
+          m.setStyle({ ...DOT_BASE, fillOpacity: 0.4 })
+          m.setRadius(base)
+        } else {
+          m.setStyle({
+            fillColor: isoColor(t.total),
+            color: '#ffffff',
+            weight: 1,
+            fillOpacity: 1,
+          })
+          m.setRadius(base + 1)
+        }
       } else {
         const inCircle = inside.has(id)
         const chip = inCircle ? typeChip(st.type) : null
@@ -367,8 +454,26 @@ export default function GeoView({ stations, active = true }: Props) {
         m.setStyle({ fillColor: fill, color: ring, weight, fillOpacity })
         m.setRadius(radius)
       }
+      // Tooltip carries the door-to-door breakdown while the isochrone is
+      // on, so every assumption behind the number is readable on the dot.
+      const t = isoTimes?.get(id)
+      if (t === undefined || !isoTimes) {
+        m.setTooltipContent(st.name)
+      } else if (t.train === 0) {
+        m.setTooltipContent(
+          `${st.name} · ${Math.round(t.total)} min: ${speed} rechtstreeks naar het ` +
+            `geprikte punt (±${t.lmKm.toFixed(1)} km geschat)`,
+        )
+      } else {
+        m.setTooltipContent(
+          `${st.name} · ${Math.round(t.total)} min: trein ${Math.round(t.train)} min ` +
+            `(${t.transfer ? '1 overstap' : 'direct'}) naar ${name(t.via)}, ` +
+            `vandaar ${speed} ${Math.round(t.lm)} min naar het geprikte punt ` +
+            `(±${t.lmKm.toFixed(1)} km geschat)`,
+        )
+      }
     }
-  }, [selected, hovered, hoveredStation, hoveredStops, pinnedStops, inside, direct, colors, byId])
+  }, [selected, hovered, hoveredStation, hoveredStops, pinnedStops, inside, direct, isoTimes, speed, colors, byId])
 
   // Hovering a station row in the panel shows its name tooltip on the map.
   useEffect(() => {
@@ -493,6 +598,7 @@ export default function GeoView({ stations, active = true }: Props) {
                 setTarget(null)
                 setCoordText('')
                 setCoordError(false)
+                setIsoMode(false)
               }}
             >
               wis
@@ -518,6 +624,31 @@ export default function GeoView({ stations, active = true }: Props) {
           />{' '}
           kaartkleur
         </label>
+        <label
+          className="radius"
+          title={target ? '' : 'prik eerst een punt'}
+        >
+          <input
+            type="checkbox"
+            checked={isoMode}
+            disabled={!target}
+            onChange={(e) => setIsoMode(e.target.checked)}
+          />{' '}
+          isochroon
+        </label>
+        {isoMode && target && (
+          <nav className="tabs">
+            {(Object.keys(SPEEDS) as Speed[]).map((sp) => (
+              <button
+                key={sp}
+                className={speed === sp ? 'active' : ''}
+                onClick={() => setSpeed(sp)}
+              >
+                {sp} {SPEEDS[sp]} km/u
+              </button>
+            ))}
+          </nav>
+        )}
       </div>
       <div className="geo-body">
         <div
@@ -530,6 +661,24 @@ export default function GeoView({ stations, active = true }: Props) {
               Klik een station voor zijn directe series, of prik een GPS-punt en
               zie welke stations binnen de straal liggen.
             </p>
+          )}
+          {isoTimes && (
+            <div className="iso-legend">
+              <h3>Deur-tot-deur vanaf elk station</h3>
+              {ISO_BANDS.map((b) => (
+                <div key={b.label}>
+                  <span className="swatch" style={{ background: b.color }} />
+                  {b.label}
+                </div>
+              ))}
+              <p className="muted">
+                aannames: treintijd (direct of 1 overstap, mediaan plus halve
+                frequentie bij overstap) plus {speed} {SPEEDS[speed]} km/u
+                vanaf het beste aankomststation binnen de cirkel, over
+                hemelsbreed maal {DETOUR_FACTOR} als benadering van de echte
+                route. Hover een dot voor de opbouw van het getal.
+              </p>
+            </div>
           )}
           {target && (
             <>

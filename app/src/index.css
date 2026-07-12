@@ -347,6 +347,16 @@ h1 {
   filter: grayscale(0.9) brightness(1.06) contrast(0.9);
 }
 
+.iso-legend {
+  border-bottom: 1px solid #2a323b;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
 .chip {
   display: inline-block;
   font-size: 10px;
