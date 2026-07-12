@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Spoorkaart page series file",
+  "type": "object",
+  "required": ["schemaVersion", "page", "timeWindow", "series"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "page": {"type": "integer", "minimum": 1, "maximum": 4},
+    "timeWindow": {
+      "enum": ["ma-do tot 20 uur", "vrijdag tot 20 uur", "weekend tot 20 uur", "ma-zo na 20 uur"]
+    },
+    "series": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/series"}
+    },
+    "corrections": {"type": "array", "items": {"$ref": "#/$defs/correction"}},
+    "unknownStations": {"type": "array", "items": {"$ref": "#/$defs/unknownStation"}},
+    "legendVerbatim": {"type": "array", "items": {"type": "string"}},
+    "notes": {"type": "array", "items": {"type": "string"}}
+  },
+  "$defs": {
+    "stationId": {"type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"},
+    "series": {
+      "type": "object",
+      "required": ["id", "kind", "frequency", "routes", "confidence"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "kind": {"enum": ["binnenland", "internationaal", "buitenland"]},
+        "product": {"type": "string"},
+        "frequency": {
+          "type": "object",
+          "required": ["class", "note"],
+          "additionalProperties": false,
+          "properties": {
+            "class": {
+              "enum": [
+                "1x_per_uur",
+                "2x_per_uur",
+                "spits_1x",
+                "spits_2x",
+                "dal_1x",
+                "zomer_2x",
+                "za_1x",
+                "za_2x",
+                "x_per_dag",
+                "overig"
+              ]
+            },
+            "note": {"type": "string"}
+          }
+        },
+        "routes": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/route"}
+        },
+        "exceptions": {"type": "array", "items": {"$ref": "#/$defs/exception"}},
+        "colorHint": {"type": "string"},
+        "confidence": {"enum": ["high", "medium", "low"]},
+        "issues": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "route": {
+      "type": "object",
+      "required": ["stops"],
+      "additionalProperties": false,
+      "properties": {
+        "stops": {
+          "type": "array",
+          "minItems": 2,
+          "items": {"$ref": "#/$defs/stationId"}
+        },
+        "via": {"type": "array", "items": {"$ref": "#/$defs/stationId"}},
+        "note": {"type": "string"}
+      }
+    },
+    "exception": {
+      "type": "object",
+      "required": ["type", "note"],
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "enum": ["direction_only_stop", "spits_only_stop", "seasonal", "splits_combines", "other"]
+        },
+        "station": {"$ref": "#/$defs/stationId"},
+        "note": {"type": "string", "minLength": 1}
+      }
+    },
+    "correction": {
+      "type": "object",
+      "required": ["stationId", "field", "value", "evidence"],
+      "additionalProperties": false,
+      "properties": {
+        "stationId": {"$ref": "#/$defs/stationId"},
+        "field": {"enum": ["name", "country", "major", "delete"]},
+        "value": {"type": "string"},
+        "evidence": {"type": "string", "minLength": 1}
+      }
+    },
+    "unknownStation": {
+      "type": "object",
+      "required": ["nameAsSeen"],
+      "additionalProperties": false,
+      "properties": {
+        "nameAsSeen": {"type": "string", "minLength": 1},
+        "betweenStops": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/stationId"},
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "series": {"type": "array", "items": {"type": "string"}},
+        "note": {"type": "string"}
+      }
+    }
+  }
+}

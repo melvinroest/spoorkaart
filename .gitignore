@@ -1,0 +1,19 @@
+# dependencies and build output
+node_modules/
+dist/
+__pycache__/
+.DS_Store
+
+# NS-copyrighted source artifacts, personal use only, regenerable
+spoorkaart2026.pdf
+map/
+
+# local working files, not source
+.claude/
+experiments/
+research/
+BACKLOG.md
+GEO_VIEW_HANDOFF.md
+MESSAGES.md
+REFLECTION.md
+REFLECTION_PROMPT.md

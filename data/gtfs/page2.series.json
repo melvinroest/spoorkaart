@@ -1,0 +1,3008 @@
+{
+ "schemaVersion": 1,
+ "page": 2,
+ "timeWindow": "vrijdag tot 20 uur",
+ "series": [
+  {
+   "id": "1100",
+   "product": "Intercity",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~26 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "den-haag-centraal",
+      "den-haag-hs",
+      "delft",
+      "rotterdam-centraal",
+      "breda",
+      "tilburg",
+      "eindhoven-centraal"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "13800",
+   "product": "Sneltrein RE20",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~20 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "zwolle",
+      "dalfsen",
+      "ommen",
+      "hardenberg",
+      "coevorden",
+      "emmen-zuid",
+      "emmen"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "13900",
+   "product": "Intercity",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "overig",
+    "note": "GTFS-afgeleid: ~11 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "eindhoven-centraal",
+      "weert",
+      "roermond",
+      "sittard",
+      "heerlen"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "1400",
+   "product": "Intercity",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "overig",
+    "note": "GTFS-afgeleid: ~2 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "utrecht-centraal",
+      "amsterdam-centraal",
+      "schiphol-airport",
+      "leiden-centraal",
+      "den-haag-hs",
+      "delft",
+      "rotterdam-centraal"
+     ]
+    }
+   ],
+   "confidence": "low",
+   "issues": []
+  },
+  {
+   "id": "1500",
+   "product": "Intercity",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~24 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "amsterdam-centraal",
+      "hilversum",
+      "amersfoort-centraal",
+      "apeldoorn",
+      "deventer"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "16900",
+   "product": "Sneltrein RE18",
+   "kind": "internationaal",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~28 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "liege-guillemins",
+      "bressoux",
+      "vise",
+      "eijsden",
+      "maastricht-randwyck",
+      "maastricht"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "1700",
+   "product": "Intercity",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~27 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "den-haag-centraal",
+      "gouda",
+      "utrecht-centraal",
+      "amersfoort-centraal",
+      "apeldoorn",
+      "deventer",
+      "almelo",
+      "hengelo",
+      "enschede"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "17800",
+   "product": "Stoptrein RS30",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": "GTFS-afgeleid: ~53 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "apeldoorn",
+      "apeldoorn-de-maten",
+      "klarenbeek",
+      "voorst-empe",
+      "zutphen"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "17900",
+   "product": "Intercity IC23",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~28 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "zwolle",
+      "raalte",
+      "nijverdal",
+      "almelo",
+      "hengelo",
+      "enschede"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "1800",
+   "product": "Intercity direct",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~24 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "breda",
+      "rotterdam-centraal",
+      "schiphol-airport",
+      "amsterdam-zuid",
+      "duivendrecht",
+      "hilversum",
+      "amersfoort-centraal",
+      "amersfoort-schothorst"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "18900",
+   "product": "Sneltrein RE18",
+   "kind": "internationaal",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~31 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "liege-guillemins",
+      "bressoux",
+      "vise",
+      "eijsden",
+      "maastricht-randwyck",
+      "maastricht",
+      "meerssen",
+      "valkenburg",
+      "heerlen",
+      "landgraaf",
+      "eygelshoven-markt",
+      "herzogenrath",
+      "aachen-west",
+      "aachen-hbf"
+     ]
+    }
+   ],
+   "confidence": "low",
+   "issues": [
+    "stations met weinig ritten (mogelijk variant of spitsstop): liege-guillemins, bressoux, vise, eijsden, maastricht-randwyck"
+   ]
+  },
+  {
+   "id": "2000",
+   "product": "Stoptrein RS18",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~31 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "valkenburg",
+      "houthem-sint-gerlach",
+      "meerssen",
+      "maastricht-noord",
+      "maastricht",
+      "maastricht-randwyck"
+     ]
+    },
+    {
+     "stops": [
+      "rotterdam-centraal",
+      "rotterdam-alexander",
+      "gouda",
+      "utrecht-centraal"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": [
+    "1 extra routevariant(en) met eigen traject"
+   ]
+  },
+  {
+   "id": "20000",
+   "product": "Stoptrein RE19",
+   "kind": "internationaal",
+   "frequency": {
+    "class": "overig",
+    "note": "GTFS-afgeleid: ~12 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "venlo",
+      "kaldenkirchen",
+      "breyell",
+      "boisheim",
+      "dulken",
+      "viersen",
+      "monchengladbach-hbf",
+      "neuss-hbf",
+      "dusseldorf-hbf",
+      "wuppertal-vohwinkel",
+      "wuppertal-hbf",
+      "wuppertal-barmen",
+      "wuppertal-oberbarmen",
+      "schwelm",
+      "ennepetal",
+      "hagen-hbf",
+      "schwerte-ruhr",
+      "holzwickede",
+      "unna",
+      "bonen",
+      "hamm-westf"
+     ]
+    },
+    {
+     "stops": [
+      "arnhem-centraal",
+      "zevenaar",
+      "emmerich-elten",
+      "emmerich",
+      "praest",
+      "wesel",
+      "oberhausen-sterkrade",
+      "oberhausen-hbf",
+      "duisburg-hbf",
+      "dusseldorf-flughafen",
+      "dusseldorf-hbf"
+     ]
+    }
+   ],
+   "confidence": "low",
+   "issues": [
+    "1 extra routevariant(en) met eigen traject",
+    "stations met weinig ritten (mogelijk variant of spitsstop): schwelm, ennepetal, schwerte-ruhr, holzwickede, unna, bonen, hamm-westf"
+   ]
+  },
+  {
+   "id": "20200",
+   "product": "Stoptrein",
+   "kind": "internationaal",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~18 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "enschede",
+      "enschede-de-eschmarke",
+      "glanerbrug",
+      "gronau",
+      "epe-westf",
+      "ochtrup",
+      "ahaus",
+      "metelen-land",
+      "legden",
+      "steinfurt-burgsteinfurt",
+      "rosendahl-holtwick",
+      "steinfurt-grottenkamp",
+      "steinfurt-borghorst",
+      "coesfeld",
+      "nordwalde",
+      "altenberge",
+      "lette",
+      "munster-hager",
+      "dulmen",
+      "munster-zentrum-nord",
+      "munster-westf-hbf",
+      "ludinghausen",
+      "selm",
+      "selm-beifang",
+      "bork",
+      "lunen-hbf",
+      "lunen-preussen",
+      "dortmund-derne",
+      "dortmund-kirchderne",
+      "dortmund-hbf"
+     ]
+    }
+   ],
+   "confidence": "low",
+   "issues": [
+    "stations met weinig ritten (mogelijk variant of spitsstop): epe-westf, ahaus, legden, rosendahl-holtwick, steinfurt-grottenkamp, steinfurt-borghorst, coesfeld, nordwalde, altenberge, lette, munster-hager, dulmen"
+   ]
+  },
+  {
+   "id": "20300",
+   "product": "Stoptrein RB61",
+   "kind": "internationaal",
+   "frequency": {
+    "class": "overig",
+    "note": "GTFS-afgeleid: ~4 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "hengelo",
+      "oldenzaal",
+      "bad-bentheim",
+      "rheine",
+      "osnabruck-altstadt",
+      "osnabruck-hbf",
+      "bunde-westfalen",
+      "bielefeld-hbf"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "2100",
+   "product": "Intercity",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": "GTFS-afgeleid: ~43 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "amsterdam-centraal",
+      "amsterdam-sloterdijk",
+      "haarlem",
+      "heemstede-aerdenhout",
+      "leiden-centraal",
+      "den-haag-centraal"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "2200",
+   "product": "Intercity",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "overig",
+    "note": "GTFS-afgeleid: ~12 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "amsterdam-centraal",
+      "amsterdam-sloterdijk",
+      "haarlem",
+      "heemstede-aerdenhout",
+      "leiden-centraal",
+      "den-haag-laan-van-noi",
+      "den-haag-hs",
+      "delft",
+      "schiedam-centrum",
+      "rotterdam-centraal",
+      "rotterdam-blaak",
+      "dordrecht",
+      "roosendaal",
+      "bergen-op-zoom",
+      "rilland-bath",
+      "krabbendijke",
+      "kruiningen-yerseke",
+      "kapelle-biezelinge",
+      "goes",
+      "arnemuiden",
+      "middelburg",
+      "vlissingen-souburg",
+      "vlissingen"
+     ]
+    },
+    {
+     "stops": [
+      "venlo",
+      "tegelen",
+      "reuver",
+      "swalmen",
+      "roermond"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": [
+    "1 extra routevariant(en) met eigen traject"
+   ]
+  },
+  {
+   "id": "2300",
+   "product": "Intercity",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "overig",
+    "note": "GTFS-afgeleid: ~11 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "amsterdam-centraal",
+      "amsterdam-sloterdijk",
+      "haarlem",
+      "heemstede-aerdenhout",
+      "leiden-centraal",
+      "den-haag-laan-van-noi",
+      "den-haag-hs",
+      "delft",
+      "schiedam-centrum",
+      "rotterdam-centraal",
+      "rotterdam-blaak",
+      "dordrecht",
+      "roosendaal",
+      "bergen-op-zoom",
+      "goes",
+      "middelburg",
+      "vlissingen"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "2400",
+   "product": "Intercity direct",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "overig",
+    "note": "GTFS-afgeleid: ~9 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "rotterdam-centraal",
+      "schiphol-airport",
+      "amsterdam-zuid",
+      "duivendrecht",
+      "almere-centrum",
+      "almere-buiten",
+      "lelystad-centrum"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "2550",
+   "product": "Stoptrein",
+   "kind": "internationaal",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": "GTFS-afgeleid: ~43 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "puurs",
+      "ruisbroek-sauvegarde",
+      "boom",
+      "niel",
+      "schelle",
+      "hemiksem",
+      "hoboken-polder",
+      "antwerpen-zuid",
+      "antwerpen-berchem",
+      "antwerpen-centraal",
+      "antwerpen-luchtbal",
+      "antwerpen-noorderdokken",
+      "ekeren",
+      "sint-mariaburg",
+      "kapellen",
+      "heide",
+      "kijkuit",
+      "kalmthout",
+      "wildert",
+      "essen",
+      "roosendaal"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "2600",
+   "product": "Intercity",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~35 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "amsterdam-centraal",
+      "almere-centrum"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "2700",
+   "product": "Intercity",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~30 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "den-helder",
+      "den-helder-zuid",
+      "anna-paulowna",
+      "schagen",
+      "heerhugowaard",
+      "alkmaar-noord",
+      "alkmaar",
+      "castricum",
+      "zaandam",
+      "amsterdam-sloterdijk",
+      "amsterdam-centraal",
+      "amsterdam-amstel",
+      "utrecht-centraal",
+      "s-hertogenbosch",
+      "eindhoven-centraal",
+      "weert",
+      "roermond",
+      "sittard",
+      "maastricht"
+     ]
+    }
+   ],
+   "confidence": "low",
+   "issues": [
+    "stations met weinig ritten (mogelijk variant of spitsstop): den-helder, den-helder-zuid, anna-paulowna, schagen, heerhugowaard, alkmaar-noord"
+   ]
+  },
+  {
+   "id": "2800",
+   "product": "Intercity",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~29 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "rotterdam-centraal",
+      "rotterdam-alexander",
+      "gouda",
+      "utrecht-centraal"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "2900",
+   "product": "Intercity",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~29 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "enkhuizen",
+      "bovenkarspel-flora",
+      "bovenkarspel-grootebroek",
+      "hoogkarspel",
+      "hoorn-kersenboogerd",
+      "hoorn",
+      "amsterdam-sloterdijk",
+      "amsterdam-centraal",
+      "amsterdam-amstel",
+      "utrecht-centraal",
+      "s-hertogenbosch",
+      "eindhoven-centraal",
+      "weert",
+      "roermond",
+      "sittard",
+      "maastricht"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "300",
+   "product": "GoVolta",
+   "kind": "internationaal",
+   "frequency": {
+    "class": "overig",
+    "note": "GTFS-afgeleid: ~4 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "amsterdam-centraal",
+      "amersfoort-centraal",
+      "deventer",
+      "hengelo",
+      "bad-bentheim",
+      "osnabruck-hbf",
+      "hannover-hbf",
+      "berlin-spandau"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "3000",
+   "product": "Intercity",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~19 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "den-helder",
+      "den-helder-zuid",
+      "anna-paulowna",
+      "schagen",
+      "heerhugowaard",
+      "alkmaar-noord",
+      "alkmaar",
+      "heiloo",
+      "castricum",
+      "zaandam",
+      "amsterdam-sloterdijk",
+      "amsterdam-centraal",
+      "amsterdam-amstel",
+      "utrecht-centraal",
+      "driebergen-zeist",
+      "veenendaal-de-klomp",
+      "ede-wageningen",
+      "arnhem-centraal",
+      "nijmegen"
+     ]
+    }
+   ],
+   "confidence": "low",
+   "issues": [
+    "stations met weinig ritten (mogelijk variant of spitsstop): veenendaal-de-klomp"
+   ]
+  },
+  {
+   "id": "30700",
+   "product": "Stoptrein RS32",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": "GTFS-afgeleid: ~57 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "arnhem-centraal",
+      "arnhem-velperpoort",
+      "westervoort",
+      "duiven",
+      "zevenaar",
+      "didam",
+      "wehl",
+      "doetinchem-de-huet",
+      "doetinchem"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "30800",
+   "product": "Stoptrein RS31",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": "GTFS-afgeleid: ~40 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "zutphen",
+      "vorden",
+      "ruurlo",
+      "lichtenvoorde-groenlo",
+      "winterswijk-west",
+      "winterswijk"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "30900",
+   "product": "Stoptrein RS32",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~28 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "arnhem-centraal",
+      "arnhem-velperpoort",
+      "westervoort",
+      "duiven",
+      "zevenaar",
+      "didam",
+      "wehl",
+      "doetinchem-de-huet",
+      "doetinchem",
+      "gaanderen",
+      "terborg",
+      "varsseveld",
+      "aalten",
+      "winterswijk"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "3100",
+   "product": "Intercity",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~19 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "den-haag-centraal",
+      "leiden-centraal",
+      "schiphol-airport",
+      "amsterdam-zuid",
+      "amsterdam-bijlmer-arena",
+      "utrecht-centraal",
+      "veenendaal-de-klomp",
+      "ede-wageningen",
+      "arnhem-centraal",
+      "nijmegen"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "31000",
+   "product": "Stoptrein RS21",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~32 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "almelo",
+      "vriezenveen",
+      "daarlerveen",
+      "vroomshoop",
+      "marienberg",
+      "hardenberg"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "31100",
+   "product": "Stoptrein RS33",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~31 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "tiel",
+      "kesteren",
+      "opheusden",
+      "hemmen-dodewaard",
+      "zetten-andelst",
+      "elst",
+      "arnhem-centraal"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "31200",
+   "product": "Stoptrein RS24",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~30 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "zutphen",
+      "lochem",
+      "goor",
+      "delden",
+      "hengelo-gezondheidspark",
+      "hengelo",
+      "hengelo-oost",
+      "oldenzaal"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "31300",
+   "product": "Sprinter RS34",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "overig",
+    "note": "GTFS-afgeleid: ~7 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "amersfoort-centraal",
+      "hoevelaken",
+      "barneveld-noord",
+      "barneveld-centrum",
+      "barneveld-zuid",
+      "lunteren",
+      "ede-centrum",
+      "ede-wageningen"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "31400",
+   "product": "Sprinter RS34",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": "GTFS-afgeleid: ~55 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "amersfoort-centraal",
+      "hoevelaken",
+      "barneveld-noord",
+      "barneveld-centrum",
+      "barneveld-zuid"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "31500",
+   "product": "Sneltrein RE8",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~16 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "zwolle",
+      "meppel",
+      "hoogeveen",
+      "assen",
+      "groningen-europapark",
+      "groningen"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "32000",
+   "product": "Stoptrein RS18",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~21 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "kerkrade-centrum",
+      "chevremont",
+      "eygelshoven",
+      "landgraaf",
+      "heerlen",
+      "heerlen-woonboulevard",
+      "voerendaal",
+      "klimmen-ransdaal",
+      "schin-op-geul",
+      "valkenburg",
+      "houthem-sint-gerlach",
+      "meerssen",
+      "maastricht-noord",
+      "maastricht",
+      "maastricht-randwyck"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "32200",
+   "product": "Stoptrein RS11",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~24 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "nijmegen",
+      "nijmegen-heyendaal",
+      "mook-molenhoek",
+      "cuijk",
+      "boxmeer",
+      "vierlingsbeek",
+      "venray",
+      "blerick",
+      "venlo",
+      "tegelen",
+      "reuver",
+      "swalmen",
+      "roermond"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "32300",
+   "product": "Stoptrein RS11",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": "GTFS-afgeleid: ~45 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "nijmegen",
+      "nijmegen-heyendaal",
+      "mook-molenhoek",
+      "cuijk",
+      "boxmeer",
+      "vierlingsbeek",
+      "venray",
+      "blerick",
+      "venlo"
+     ]
+    }
+   ],
+   "confidence": "low",
+   "issues": [
+    "stations met weinig ritten (mogelijk variant of spitsstop): blerick, venlo"
+   ]
+  },
+  {
+   "id": "32400",
+   "product": "Stoptrein RS12",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "overig",
+    "note": "GTFS-afgeleid: ~8 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "roermond",
+      "echt",
+      "susteren",
+      "sittard",
+      "geleen-lutterade",
+      "beek-elsloo",
+      "bunde",
+      "maastricht",
+      "maastricht-randwyck"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "32500",
+   "product": "Stoptrein RS15",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "overig",
+    "note": "GTFS-afgeleid: ~10 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "sittard",
+      "geleen-oost",
+      "spaubeek",
+      "schinnen",
+      "nuth",
+      "hoensbroek",
+      "heerlen"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "3500",
+   "product": "Intercity",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~25 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "dordrecht",
+      "rotterdam-blaak",
+      "rotterdam-centraal",
+      "schiedam-centrum",
+      "delft",
+      "den-haag-hs",
+      "den-haag-laan-van-noi",
+      "leiden-centraal",
+      "schiphol-airport",
+      "amsterdam-zuid",
+      "amsterdam-bijlmer-arena",
+      "utrecht-centraal",
+      "s-hertogenbosch",
+      "eindhoven-centraal",
+      "helmond",
+      "deurne",
+      "horst-sevenum",
+      "blerick",
+      "venlo"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "3600",
+   "product": "Intercity",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~21 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "zwolle",
+      "wijhe",
+      "olst",
+      "deventer",
+      "zutphen",
+      "dieren",
+      "arnhem-centraal",
+      "nijmegen",
+      "oss",
+      "s-hertogenbosch",
+      "tilburg",
+      "breda",
+      "etten-leur",
+      "roosendaal",
+      "bergen-op-zoom",
+      "rilland-bath",
+      "krabbendijke",
+      "kruiningen-yerseke",
+      "kapelle-biezelinge",
+      "goes",
+      "arnemuiden",
+      "middelburg",
+      "vlissingen-souburg",
+      "vlissingen"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "37000",
+   "product": "Stoptrein RS3",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~19 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "leeuwarden",
+      "mantgum",
+      "sneek-noord",
+      "sneek"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "37100",
+   "product": "Stoptrein RS3",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~25 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "leeuwarden",
+      "mantgum",
+      "sneek-noord",
+      "sneek",
+      "ijlst",
+      "workum",
+      "hindeloopen",
+      "koudum-molkwerum",
+      "stavoren"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "37200",
+   "product": "Stoptrein RS2",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "overig",
+    "note": "GTFS-afgeleid: ~9 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "leeuwarden",
+      "deinum",
+      "dronryp",
+      "franeker",
+      "harlingen",
+      "harlingen-haven"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "37300",
+   "product": "Sneltrein RE1",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": "GTFS-afgeleid: ~48 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "groningen-europapark",
+      "groningen",
+      "zuidhorn",
+      "buitenpost",
+      "feanwalden",
+      "leeuwarden"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "37400",
+   "product": "Stoptrein RS1",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": "GTFS-afgeleid: ~49 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "groningen-europapark",
+      "groningen",
+      "zuidhorn",
+      "grijpskerk",
+      "buitenpost",
+      "de-westereen",
+      "feanwalden",
+      "hurdegaryp",
+      "leeuwarden-camminghaburen",
+      "leeuwarden"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "37600",
+   "product": "Stoptrein RS4",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": "GTFS-afgeleid: ~61 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "bad-nieuweschans",
+      "winschoten",
+      "scheemda",
+      "zuidbroek",
+      "hoogezand-sappemeer",
+      "martenshoek",
+      "kropswolde",
+      "groningen-europapark",
+      "groningen",
+      "groningen-noord",
+      "sauwerd",
+      "winsum",
+      "baflo",
+      "warffum",
+      "usquert",
+      "uithuizen",
+      "uithuizermeeden",
+      "roodeschool",
+      "eemshaven"
+     ]
+    }
+   ],
+   "confidence": "low",
+   "issues": [
+    "stations met weinig ritten (mogelijk variant of spitsstop): bad-nieuweschans"
+   ]
+  },
+  {
+   "id": "37800",
+   "product": "Stoptrein RS5",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": "GTFS-afgeleid: ~59 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "veendam",
+      "zuidbroek",
+      "hoogezand-sappemeer",
+      "martenshoek",
+      "kropswolde",
+      "groningen-europapark",
+      "groningen",
+      "groningen-noord",
+      "sauwerd",
+      "bedum",
+      "stedum",
+      "loppersum",
+      "appingedam",
+      "delfzijl-west",
+      "delfzijl"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "37900",
+   "product": "Sneltrein RE6",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~38 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "bad-nieuweschans",
+      "winschoten",
+      "scheemda",
+      "groningen-europapark",
+      "groningen"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "3800",
+   "product": "Sneltrein RE20",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "overig",
+    "note": "GTFS-afgeleid: ~14 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "zwolle",
+      "dalfsen",
+      "ommen",
+      "marienberg",
+      "hardenberg",
+      "coevorden",
+      "nieuw-amsterdam",
+      "emmen-zuid",
+      "emmen"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "38000",
+   "product": "Sneltrein RE3",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "overig",
+    "note": "GTFS-afgeleid: ~13 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "leeuwarden",
+      "sneek-noord",
+      "sneek"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "3900",
+   "product": "Intercity",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "overig",
+    "note": "GTFS-afgeleid: ~15 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "eindhoven-centraal",
+      "weert",
+      "roermond",
+      "sittard",
+      "heerlen"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "400",
+   "product": "Nightjet",
+   "kind": "internationaal",
+   "frequency": {
+    "class": "overig",
+    "note": "GTFS-afgeleid: ~3 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "brussel-zuid-midi",
+      "antwerpen-centraal",
+      "roosendaal",
+      "rotterdam-centraal",
+      "den-haag-hs",
+      "amsterdam-centraal",
+      "amersfoort-centraal",
+      "deventer",
+      "berlin-hbf",
+      "berlin-ostbahnhof"
+     ]
+    },
+    {
+     "stops": [
+      "amsterdam-centraal",
+      "utrecht-centraal",
+      "arnhem-centraal",
+      "oberhausen-hbf",
+      "dortmund-hbf"
+     ]
+    }
+   ],
+   "confidence": "low",
+   "issues": [
+    "1 extra routevariant(en) met eigen traject"
+   ]
+  },
+  {
+   "id": "4000",
+   "product": "Sprinter",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~25 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "alkmaar",
+      "heiloo",
+      "castricum",
+      "uitgeest",
+      "krommenie-assendelft",
+      "wormerveer",
+      "zaandijk-zaanse-schans",
+      "koog-aan-de-zaan",
+      "zaandam",
+      "amsterdam-sloterdijk",
+      "amsterdam-centraal",
+      "amsterdam-muiderpoort",
+      "amsterdam-amstel",
+      "duivendrecht",
+      "amsterdam-bijlmer-arena",
+      "amsterdam-holendrecht",
+      "abcoude",
+      "breukelen",
+      "woerden",
+      "gouda-goverwelle",
+      "gouda",
+      "nieuwerkerk-aan-den-ijssel",
+      "capelle-schollevaar",
+      "rotterdam-alexander",
+      "rotterdam-noord",
+      "rotterdam-centraal"
+     ]
+    }
+   ],
+   "confidence": "low",
+   "issues": [
+    "stations met weinig ritten (mogelijk variant of spitsstop): alkmaar, heiloo, castricum"
+   ]
+  },
+  {
+   "id": "4100",
+   "product": "Sprinter",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~26 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "enkhuizen",
+      "bovenkarspel-flora",
+      "bovenkarspel-grootebroek",
+      "hoogkarspel",
+      "hoorn-kersenboogerd",
+      "hoorn",
+      "purmerend-overwhere",
+      "purmerend",
+      "purmerend-weidevenne",
+      "zaandam-kogerveld",
+      "zaandam",
+      "amsterdam-sloterdijk",
+      "amsterdam-lelylaan",
+      "schiphol-airport",
+      "hoofddorp"
+     ]
+    }
+   ],
+   "confidence": "low",
+   "issues": [
+    "stations met weinig ritten (mogelijk variant of spitsstop): enkhuizen, bovenkarspel-flora, bovenkarspel-grootebroek, hoogkarspel"
+   ]
+  },
+  {
+   "id": "4200",
+   "product": "Sprinter",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "overig",
+    "note": "GTFS-afgeleid: ~11 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "haarlem",
+      "heemstede-aerdenhout",
+      "hillegom",
+      "voorhout",
+      "leiden-centraal",
+      "de-vink",
+      "voorschoten",
+      "den-haag-mariahoeve",
+      "den-haag-laan-van-noi",
+      "den-haag-centraal"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "4300",
+   "product": "Sprinter",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~20 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "den-haag-centraal",
+      "den-haag-laan-van-noi",
+      "den-haag-mariahoeve",
+      "voorschoten",
+      "de-vink",
+      "leiden-centraal",
+      "sassenheim",
+      "nieuw-vennep",
+      "hoofddorp",
+      "schiphol-airport",
+      "amsterdam-zuid",
+      "amsterdam-rai",
+      "duivendrecht",
+      "diemen-zuid",
+      "weesp",
+      "almere-poort",
+      "almere-muziekwijk",
+      "almere-centrum",
+      "almere-parkwijk",
+      "almere-buiten",
+      "almere-oostvaarders",
+      "lelystad-centrum"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "4600",
+   "product": "Sprinter",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~32 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "amsterdam-centraal",
+      "amsterdam-muiderpoort",
+      "amsterdam-science-park",
+      "diemen",
+      "weesp",
+      "almere-poort",
+      "almere-muziekwijk",
+      "almere-centrum",
+      "almere-parkwijk",
+      "almere-buiten",
+      "almere-oostvaarders"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "4800",
+   "product": "Sprinter",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~27 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "amsterdam-centraal",
+      "amsterdam-sloterdijk",
+      "halfweg-zwanenburg",
+      "haarlem-spaarnwoude",
+      "haarlem",
+      "bloemendaal",
+      "santpoort-zuid",
+      "santpoort-noord",
+      "driehuis",
+      "beverwijk",
+      "heemskerk",
+      "uitgeest",
+      "castricum",
+      "heiloo",
+      "alkmaar",
+      "alkmaar-noord",
+      "heerhugowaard",
+      "obdam",
+      "hoorn"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "4900",
+   "product": "Sprinter",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": "GTFS-afgeleid: ~45 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "almere-centrum",
+      "almere-muziekwijk",
+      "almere-poort",
+      "naarden-bussum",
+      "hilversum",
+      "hilversum-sportpark",
+      "hollandsche-rading",
+      "utrecht-overvecht",
+      "utrecht-centraal"
+     ]
+    }
+   ],
+   "confidence": "low",
+   "issues": [
+    "stations met weinig ritten (mogelijk variant of spitsstop): hollandsche-rading"
+   ]
+  },
+  {
+   "id": "500",
+   "product": "Intercity",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "overig",
+    "note": "GTFS-afgeleid: ~11 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "den-haag-centraal",
+      "gouda",
+      "utrecht-centraal",
+      "amersfoort-centraal",
+      "zwolle",
+      "assen",
+      "groningen"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "5000",
+   "product": "Sprinter",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "overig",
+    "note": "GTFS-afgeleid: ~13 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "den-haag-centraal",
+      "den-haag-hs",
+      "den-haag-moerwijk",
+      "rijswijk",
+      "delft",
+      "delft-campus",
+      "schiedam-centrum",
+      "rotterdam-centraal",
+      "rotterdam-blaak",
+      "rotterdam-zuid",
+      "rotterdam-lombardijen",
+      "barendrecht",
+      "zwijndrecht",
+      "dordrecht"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "5100",
+   "product": "Sprinter",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~25 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "den-haag-centraal",
+      "den-haag-hs",
+      "den-haag-moerwijk",
+      "rijswijk",
+      "delft",
+      "delft-campus",
+      "schiedam-centrum",
+      "rotterdam-centraal",
+      "rotterdam-blaak",
+      "rotterdam-zuid",
+      "rotterdam-lombardijen",
+      "barendrecht",
+      "zwijndrecht",
+      "dordrecht"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "5400",
+   "product": "Sprinter",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "overig",
+    "note": "GTFS-afgeleid: ~12 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "amsterdam-centraal",
+      "amsterdam-sloterdijk",
+      "halfweg-zwanenburg",
+      "haarlem-spaarnwoude",
+      "haarlem",
+      "overveen",
+      "zandvoort-aan-zee"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "5500",
+   "product": "Sprinter",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~19 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "utrecht-centraal",
+      "utrecht-overvecht",
+      "bilthoven",
+      "den-dolder",
+      "soest-zuid",
+      "soest",
+      "soestdijk",
+      "baarn"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "5600",
+   "product": "Sprinter",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": "GTFS-afgeleid: ~43 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "utrecht-maliebaan",
+      "utrecht-centraal",
+      "utrecht-overvecht",
+      "bilthoven",
+      "den-dolder",
+      "amersfoort-centraal",
+      "amersfoort-schothorst",
+      "amersfoort-vathorst",
+      "nijkerk",
+      "putten",
+      "ermelo",
+      "harderwijk",
+      "nunspeet",
+      "t-harde",
+      "wezep",
+      "zwolle"
+     ]
+    }
+   ],
+   "confidence": "low",
+   "issues": [
+    "stations met weinig ritten (mogelijk variant of spitsstop): utrecht-maliebaan"
+   ]
+  },
+  {
+   "id": "5700",
+   "product": "Sprinter",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~28 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "leiden-centraal",
+      "sassenheim",
+      "nieuw-vennep",
+      "hoofddorp",
+      "schiphol-airport",
+      "amsterdam-zuid",
+      "amsterdam-rai",
+      "duivendrecht",
+      "diemen-zuid",
+      "weesp",
+      "naarden-bussum",
+      "bussum-zuid",
+      "hilversum-media-park",
+      "hilversum",
+      "hilversum-sportpark",
+      "hollandsche-rading",
+      "utrecht-overvecht",
+      "utrecht-centraal"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "5800",
+   "product": "Sprinter",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~34 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "amsterdam-centraal",
+      "amsterdam-muiderpoort",
+      "amsterdam-science-park",
+      "diemen",
+      "weesp",
+      "naarden-bussum",
+      "bussum-zuid",
+      "hilversum-media-park",
+      "hilversum",
+      "baarn",
+      "amersfoort-centraal",
+      "amersfoort-schothorst",
+      "amersfoort-vathorst"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "5900",
+   "product": "Sprinter",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~24 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "dordrecht",
+      "dordrecht-zuid",
+      "lage-zwaluwe",
+      "zevenbergen",
+      "oudenbosch",
+      "roosendaal"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "600",
+   "product": "Intercity",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "overig",
+    "note": "GTFS-afgeleid: ~15 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "den-haag-centraal",
+      "gouda",
+      "utrecht-centraal",
+      "amersfoort-centraal",
+      "zwolle",
+      "meppel",
+      "steenwijk",
+      "heerenveen",
+      "leeuwarden"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "6000",
+   "product": "Sprinter",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~22 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "den-haag-centraal",
+      "voorburg",
+      "den-haag-ypenburg",
+      "zoetermeer",
+      "zoetermeer-oost",
+      "lansingerland-zoetermeer",
+      "gouda",
+      "gouda-goverwelle",
+      "woerden",
+      "vleuten",
+      "utrecht-terwijde",
+      "utrecht-leidsche-rijn",
+      "utrecht-centraal",
+      "utrecht-vaartsche-rijn",
+      "utrecht-lunetten",
+      "houten",
+      "houten-castellum",
+      "culemborg",
+      "geldermalsen",
+      "zaltbommel",
+      "s-hertogenbosch"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "6100",
+   "product": "Sprinter",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~34 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "zwolle",
+      "meppel",
+      "hoogeveen",
+      "beilen",
+      "assen",
+      "haren",
+      "groningen-europapark",
+      "groningen"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "6400",
+   "product": "Sprinter",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~24 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "tilburg-universiteit",
+      "tilburg",
+      "oisterwijk",
+      "boxtel",
+      "best",
+      "eindhoven-strijp-s",
+      "eindhoven-centraal",
+      "geldrop",
+      "heeze",
+      "maarheeze",
+      "weert"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "6500",
+   "product": "Sprinter",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~26 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "s-hertogenbosch",
+      "vught",
+      "boxtel",
+      "best",
+      "eindhoven-strijp-s",
+      "eindhoven-centraal",
+      "helmond-brandevoort",
+      "helmond-t-hout",
+      "helmond",
+      "helmond-brouwhuis",
+      "deurne"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "6600",
+   "product": "Sprinter",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": "GTFS-afgeleid: ~44 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "arnhem-centraal",
+      "arnhem-zuid",
+      "elst",
+      "nijmegen-lent",
+      "nijmegen",
+      "nijmegen-goffert",
+      "nijmegen-dukenburg",
+      "wijchen",
+      "ravenstein",
+      "oss",
+      "oss-west",
+      "rosmalen",
+      "s-hertogenbosch-oost",
+      "s-hertogenbosch",
+      "tilburg",
+      "tilburg-universiteit",
+      "tilburg-reeshof",
+      "gilze-rijen",
+      "breda",
+      "breda-prinsenbeek",
+      "lage-zwaluwe",
+      "dordrecht-zuid",
+      "dordrecht"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "6700",
+   "product": "Sprinter",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~20 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "leiden-centraal",
+      "leiden-lammenschans",
+      "alphen-aan-den-rijn",
+      "bodegraven",
+      "woerden",
+      "utrecht-centraal",
+      "utrecht-vaartsche-rijn",
+      "utrecht-lunetten",
+      "houten",
+      "houten-castellum",
+      "culemborg",
+      "geldermalsen",
+      "tiel-passewaaij",
+      "tiel"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "700",
+   "product": "Intercity",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "overig",
+    "note": "GTFS-afgeleid: ~10 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "schiphol-airport",
+      "amsterdam-zuid",
+      "almere-centrum",
+      "lelystad-centrum",
+      "zwolle",
+      "assen",
+      "groningen"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "7000",
+   "product": "Sprinter",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": "GTFS-afgeleid: ~42 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "apeldoorn",
+      "apeldoorn-osseveld",
+      "twello",
+      "deventer",
+      "deventer-colmschate",
+      "holten",
+      "rijssen",
+      "wierden",
+      "almelo",
+      "almelo-de-riet",
+      "borne",
+      "hengelo",
+      "enschede-kennispark",
+      "enschede"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "7100",
+   "product": "Stoptrein",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": "GTFS-afgeleid: ~52 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "dordrecht",
+      "dordrecht-stadspolders",
+      "sliedrecht-baanhoek",
+      "sliedrecht",
+      "hardinxveld-giessendam",
+      "boven-hardinxveld",
+      "gorinchem"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "7200",
+   "product": "Stoptrein",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": "GTFS-afgeleid: ~43 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "dordrecht",
+      "dordrecht-stadspolders",
+      "sliedrecht-baanhoek",
+      "sliedrecht",
+      "hardinxveld-blauwe-zoom",
+      "hardinxveld-giessendam",
+      "boven-hardinxveld",
+      "gorinchem",
+      "arkel",
+      "leerdam",
+      "beesd",
+      "geldermalsen"
+     ]
+    }
+   ],
+   "confidence": "low",
+   "issues": [
+    "stations met weinig ritten (mogelijk variant of spitsstop): hardinxveld-giessendam"
+   ]
+  },
+  {
+   "id": "7300",
+   "product": "Sprinter",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~36 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "amsterdam-centraal",
+      "amsterdam-muiderpoort",
+      "amsterdam-amstel",
+      "duivendrecht",
+      "amsterdam-bijlmer-arena",
+      "amsterdam-holendrecht",
+      "abcoude",
+      "breukelen",
+      "maarssen",
+      "utrecht-zuilen",
+      "utrecht-centraal",
+      "utrecht-vaartsche-rijn",
+      "bunnik",
+      "driebergen-zeist",
+      "maarn",
+      "veenendaal-west",
+      "veenendaal-centrum",
+      "rhenen"
+     ]
+    }
+   ],
+   "confidence": "low",
+   "issues": [
+    "stations met weinig ritten (mogelijk variant of spitsstop): amsterdam-centraal, amsterdam-muiderpoort, amsterdam-amstel, duivendrecht, amsterdam-bijlmer-arena, amsterdam-holendrecht, abcoude"
+   ]
+  },
+  {
+   "id": "7400",
+   "product": "Sprinter",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "overig",
+    "note": "GTFS-afgeleid: ~13 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "uitgeest",
+      "krommenie-assendelft",
+      "wormerveer",
+      "zaandijk-zaanse-schans",
+      "koog-aan-de-zaan",
+      "zaandam",
+      "amsterdam-sloterdijk",
+      "amsterdam-centraal",
+      "amsterdam-muiderpoort",
+      "amsterdam-amstel",
+      "duivendrecht",
+      "amsterdam-bijlmer-arena",
+      "amsterdam-holendrecht",
+      "abcoude",
+      "breukelen",
+      "maarssen",
+      "utrecht-zuilen",
+      "utrecht-centraal",
+      "utrecht-vaartsche-rijn",
+      "bunnik",
+      "driebergen-zeist"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "7500",
+   "product": "Sprinter",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~34 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "ede-wageningen",
+      "wolfheze",
+      "oosterbeek",
+      "arnhem-centraal"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "7600",
+   "product": "Sprinter",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": "GTFS-afgeleid: ~53 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "wijchen",
+      "nijmegen-dukenburg",
+      "nijmegen-goffert",
+      "nijmegen",
+      "nijmegen-lent",
+      "elst",
+      "arnhem-zuid",
+      "arnhem-centraal",
+      "arnhem-velperpoort",
+      "arnhem-presikhaaf",
+      "velp",
+      "rheden",
+      "dieren",
+      "brummen",
+      "zutphen"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "7900",
+   "product": "Sprinter RS23",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~34 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "zwolle",
+      "heino",
+      "raalte",
+      "nijverdal",
+      "wierden",
+      "almelo",
+      "almelo-de-riet",
+      "borne",
+      "hengelo",
+      "enschede-kennispark",
+      "enschede"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "800",
+   "product": "Intercity",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "overig",
+    "note": "GTFS-afgeleid: ~11 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "schiphol-airport",
+      "amsterdam-zuid",
+      "almere-centrum",
+      "lelystad-centrum",
+      "zwolle",
+      "meppel",
+      "steenwijk",
+      "heerenveen",
+      "leeuwarden"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "8000",
+   "product": "Stoptrein RS20",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~26 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "zwolle",
+      "dalfsen",
+      "ommen",
+      "marienberg",
+      "hardenberg",
+      "gramsbergen",
+      "coevorden",
+      "dalen",
+      "nieuw-amsterdam",
+      "emmen-zuid",
+      "emmen"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "8100",
+   "product": "Sprinter",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "overig",
+    "note": "GTFS-afgeleid: ~3 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "amsterdam-centraal",
+      "amsterdam-sloterdijk",
+      "amsterdam-lelylaan",
+      "schiphol-airport",
+      "hoofddorp"
+     ]
+    }
+   ],
+   "confidence": "low",
+   "issues": []
+  },
+  {
+   "id": "8200",
+   "product": "Sprinter",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": "GTFS-afgeleid: ~46 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "amsterdam-centraal",
+      "amsterdam-sloterdijk",
+      "amsterdam-lelylaan",
+      "schiphol-airport",
+      "hoofddorp"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "8300",
+   "product": "Sprinter",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": "GTFS-afgeleid: ~47 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "amsterdam-centraal",
+      "amsterdam-sloterdijk",
+      "amsterdam-lelylaan",
+      "schiphol-airport",
+      "hoofddorp"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "8400",
+   "product": "Sprinter",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~36 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "amsterdam-centraal",
+      "amsterdam-sloterdijk",
+      "amsterdam-lelylaan",
+      "schiphol-airport",
+      "hoofddorp"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "8500",
+   "product": "Sprinter RS22",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~30 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "zwolle",
+      "zwolle-stadshagen",
+      "kampen"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "8600",
+   "product": "Sprinter",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "overig",
+    "note": "GTFS-afgeleid: ~7 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "alphen-aan-den-rijn",
+      "boskoop",
+      "boskoop-snijdelwijk",
+      "waddinxveen-noord",
+      "waddinxveen",
+      "waddinxveen-triangel",
+      "gouda"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "8700",
+   "product": "Sprinter",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": "GTFS-afgeleid: ~52 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "alphen-aan-den-rijn",
+      "boskoop",
+      "boskoop-snijdelwijk",
+      "waddinxveen-noord",
+      "waddinxveen",
+      "waddinxveen-triangel",
+      "gouda"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "8800",
+   "product": "Sprinter",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "overig",
+    "note": "GTFS-afgeleid: ~1 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "utrecht-centraal",
+      "utrecht-vaartsche-rijn",
+      "utrecht-lunetten",
+      "houten",
+      "houten-castellum",
+      "culemborg",
+      "geldermalsen",
+      "zaltbommel",
+      "s-hertogenbosch"
+     ]
+    }
+   ],
+   "confidence": "low",
+   "issues": []
+  },
+  {
+   "id": "8900",
+   "product": "Sprinter",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": "GTFS-afgeleid: ~49 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "leiden-centraal",
+      "leiden-lammenschans",
+      "alphen-aan-den-rijn",
+      "bodegraven",
+      "woerden",
+      "vleuten",
+      "utrecht-terwijde",
+      "utrecht-leidsche-rijn",
+      "utrecht-centraal"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "900",
+   "product": "Intercity",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "overig",
+    "note": "GTFS-afgeleid: ~2 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "schiphol-airport",
+      "amsterdam-zuid",
+      "duivendrecht",
+      "hilversum",
+      "amersfoort-centraal",
+      "amersfoort-schothorst"
+     ]
+    }
+   ],
+   "confidence": "low",
+   "issues": []
+  },
+  {
+   "id": "9000",
+   "product": "Sprinter",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~32 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "lelystad-centrum",
+      "dronten",
+      "kampen-zuid",
+      "zwolle",
+      "meppel",
+      "steenwijk",
+      "wolvega",
+      "heerenveen",
+      "akkrum",
+      "grou-jirnsum",
+      "leeuwarden"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "9100",
+   "product": "Eurostar",
+   "kind": "internationaal",
+   "frequency": {
+    "class": "overig",
+    "note": "GTFS-afgeleid: ~6 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "amsterdam-centraal",
+      "rotterdam-centraal",
+      "antwerpen-centraal",
+      "brussel-zuid-midi",
+      "london-st-pancras-international"
+     ]
+    }
+   ],
+   "confidence": "low",
+   "issues": [
+    "stations met weinig ritten (mogelijk variant of spitsstop): antwerpen-centraal"
+   ]
+  },
+  {
+   "id": "9200",
+   "product": "EuroCity",
+   "kind": "internationaal",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": "GTFS-afgeleid: ~17 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "brussel-zuid-midi",
+      "brussel-centraal",
+      "brussel-noord",
+      "brussels-airport-zaventem",
+      "mechelen",
+      "antwerpen-berchem",
+      "antwerpen-centraal",
+      "noorderkempen",
+      "breda",
+      "rotterdam-centraal"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "9300",
+   "product": "Eurostar",
+   "kind": "internationaal",
+   "frequency": {
+    "class": "overig",
+    "note": "GTFS-afgeleid: ~9 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "paris-nord",
+      "brussel-zuid-midi",
+      "antwerpen-centraal",
+      "rotterdam-centraal",
+      "schiphol-airport",
+      "amsterdam-centraal"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "9500",
+   "product": "Eurocity Direct",
+   "kind": "internationaal",
+   "frequency": {
+    "class": "overig",
+    "note": "GTFS-afgeleid: ~7 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "brussel-zuid-midi",
+      "antwerpen-centraal",
+      "rotterdam-centraal",
+      "schiphol-airport",
+      "amsterdam-zuid",
+      "almere-centrum",
+      "almere-buiten",
+      "lelystad-centrum"
+     ]
+    }
+   ],
+   "confidence": "medium",
+   "issues": []
+  },
+  {
+   "id": "9700",
+   "product": "Intercity direct",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "overig",
+    "note": "GTFS-afgeleid: ~1 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "rotterdam-centraal",
+      "schiphol-airport",
+      "amsterdam-zuid",
+      "duivendrecht",
+      "almere-centrum",
+      "almere-buiten",
+      "lelystad-centrum"
+     ]
+    }
+   ],
+   "confidence": "low",
+   "issues": []
+  },
+  {
+   "id": "9900",
+   "product": "Eurostar",
+   "kind": "internationaal",
+   "frequency": {
+    "class": "overig",
+    "note": "GTFS-afgeleid: ~2 ritten per dag (beide richtingen) in dit venster"
+   },
+   "routes": [
+    {
+     "stops": [
+      "paris-marne-la-vallee-chessy",
+      "paris-aeroport-roissy-charles-de-gaulle",
+      "brussel-zuid-midi",
+      "antwerpen-centraal",
+      "rotterdam-centraal",
+      "schiphol-airport",
+      "amsterdam-centraal"
+     ]
+    }
+   ],
+   "confidence": "low",
+   "issues": []
+  }
+ ],
+ "notes": [
+  "Afgeleid uit OVapi GTFS (gtfs.ovapi.nl, CC0-bron), niet uit de kaart.",
+  "Parameters: min 10 rijdagen per rit, dagklasse-drempel 0.15, venster 4 = vertrek 20:00 of later.",
+  "Frequentieklasse is een benadering op ritaantallen."
+ ]
+}

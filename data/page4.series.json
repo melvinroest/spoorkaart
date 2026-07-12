@@ -1,0 +1,2735 @@
+{
+ "schemaVersion": 1,
+ "page": 4,
+ "timeWindow": "ma-zo na 20 uur",
+ "series": [
+  {
+   "id": "3000",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "den-helder",
+      "den-helder-zuid",
+      "anna-paulowna",
+      "schagen",
+      "heerhugowaard",
+      "alkmaar-noord",
+      "alkmaar",
+      "heiloo",
+      "castricum",
+      "zaandam",
+      "amsterdam-sloterdijk",
+      "amsterdam-centraal",
+      "amsterdam-amstel",
+      "utrecht-centraal",
+      "veenendaal-de-klomp",
+      "ede-wageningen",
+      "arnhem-centraal",
+      "nijmegen"
+     ],
+     "via": [
+      "uitgeest",
+      "breukelen",
+      "maarssen",
+      "utrecht-zuilen"
+     ],
+     "note": ""
+    }
+   ],
+   "colorHint": "lichtgroen",
+   "confidence": "high",
+   "issues": [
+    "Passeert Uitgeest zonder stop (cirkels bij Uitgeest liggen op 4800 en 4000)."
+   ]
+  },
+  {
+   "id": "4800",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "hoorn",
+      "obdam",
+      "heerhugowaard",
+      "alkmaar-noord",
+      "alkmaar",
+      "heiloo",
+      "castricum",
+      "uitgeest",
+      "heemskerk",
+      "beverwijk",
+      "driehuis",
+      "santpoort-noord",
+      "santpoort-zuid",
+      "bloemendaal",
+      "haarlem",
+      "haarlem-spaarnwoude",
+      "halfweg-zwanenburg",
+      "amsterdam-sloterdijk",
+      "amsterdam-centraal"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "oranje",
+   "confidence": "high",
+   "issues": [
+    "Segment Hoorn-Obdam-Heerhugowaard is dun getekend (1x per uur), rest dik (2x per uur)."
+   ]
+  },
+  {
+   "id": "4000",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "uitgeest",
+      "krommenie-assendelft",
+      "wormerveer",
+      "zaandijk-zaanse-schans",
+      "koog-aan-de-zaan",
+      "zaandam",
+      "amsterdam-sloterdijk",
+      "amsterdam-centraal",
+      "amsterdam-amstel",
+      "duivendrecht",
+      "amsterdam-bijlmer-arena",
+      "amsterdam-holendrecht",
+      "abcoude",
+      "breukelen",
+      "woerden",
+      "gouda-goverwelle",
+      "gouda",
+      "nieuwerkerk-aan-den-ijssel",
+      "capelle-schollevaar",
+      "rotterdam-alexander",
+      "rotterdam-noord",
+      "rotterdam-centraal"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "donkergroen",
+   "confidence": "high"
+  },
+  {
+   "id": "2900",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "enkhuizen",
+      "bovenkarspel-flora",
+      "bovenkarspel-grootebroek",
+      "hoogkarspel",
+      "hoorn-kersenboogerd",
+      "hoorn",
+      "zaandam",
+      "amsterdam-sloterdijk",
+      "amsterdam-centraal",
+      "amsterdam-amstel",
+      "utrecht-centraal",
+      "s-hertogenbosch",
+      "eindhoven-centraal",
+      "weert",
+      "roermond",
+      "sittard",
+      "maastricht"
+     ],
+     "via": [
+      "purmerend",
+      "abcoude",
+      "breukelen",
+      "geldrop",
+      "echt",
+      "susteren",
+      "bunde"
+     ],
+     "note": ""
+    }
+   ],
+   "colorHint": "olijfgroen",
+   "confidence": "high",
+   "issues": [
+    "Passeert de Purmerend-stations, Geldrop-Maarheeze en Echt/Susteren/Bunde zonder stop (cirkels daar op 4100, 6400 resp. 32400)."
+   ]
+  },
+  {
+   "id": "4100",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "hoorn-kersenboogerd",
+      "hoorn",
+      "purmerend-overwhere",
+      "purmerend",
+      "purmerend-weidevenne",
+      "zaandam-kogerveld",
+      "zaandam",
+      "amsterdam-sloterdijk",
+      "amsterdam-lelylaan",
+      "schiphol-airport",
+      "hoofddorp"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "zeegroen",
+   "confidence": "high"
+  },
+  {
+   "id": "5400",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "zandvoort-aan-zee",
+      "overveen",
+      "haarlem",
+      "haarlem-spaarnwoude",
+      "halfweg-zwanenburg",
+      "amsterdam-sloterdijk",
+      "amsterdam-centraal"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "bruin",
+   "confidence": "high"
+  },
+  {
+   "id": "15400",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "zomer_2x",
+    "note": "15400 juni t/m sept tot circa 23 u"
+   },
+   "routes": [
+    {
+     "stops": [
+      "zandvoort-aan-zee",
+      "overveen",
+      "haarlem"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "beige",
+   "confidence": "high",
+   "exceptions": [
+    {
+     "type": "seasonal",
+     "note": "* 15400 juni t/m sept tot circa 23 u (gestippelde lijn)"
+    }
+   ]
+  },
+  {
+   "id": "2100",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": "vr & za: hele avond. zo t/m do: tot 21 u"
+   },
+   "routes": [
+    {
+     "stops": [
+      "amsterdam-centraal",
+      "haarlem",
+      "heemstede-aerdenhout",
+      "leiden-centraal",
+      "den-haag-centraal"
+     ],
+     "via": [
+      "amsterdam-sloterdijk"
+     ],
+     "note": ""
+    }
+   ],
+   "colorHint": "rood",
+   "confidence": "high",
+   "exceptions": [
+    {
+     "type": "other",
+     "note": "vr & za: hele avond. zo t/m do: tot 21 u (vlagmarkering op de lijn bij Haarlem en bij Den Haag Mariahoeve)"
+    }
+   ],
+   "issues": [
+    "Passeert Amsterdam Sloterdijk zonder stop (lijn loopt buiten de stationsbox om)."
+   ]
+  },
+  {
+   "id": "2200/2300",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "amsterdam-centraal",
+      "haarlem",
+      "heemstede-aerdenhout",
+      "leiden-centraal",
+      "den-haag-laan-van-noi",
+      "den-haag-hs",
+      "delft",
+      "schiedam-centrum",
+      "rotterdam-centraal",
+      "rotterdam-blaak",
+      "dordrecht",
+      "roosendaal",
+      "bergen-op-zoom",
+      "rilland-bath",
+      "krabbendijke",
+      "kruiningen-yerseke",
+      "kapelle-biezelinge",
+      "goes",
+      "arnemuiden",
+      "middelburg",
+      "vlissingen-souburg",
+      "vlissingen"
+     ],
+     "via": [
+      "amsterdam-sloterdijk",
+      "hillegom",
+      "voorhout"
+     ],
+     "note": ""
+    }
+   ],
+   "colorHint": "roze",
+   "confidence": "high",
+   "issues": [
+    "Traject Roosendaal-Vlissingen is dun getekend (1x per uur) en daar alleen gelabeld '2200'; gecombineerd label 2200/2300 op het dikke (2x per uur) noordelijke deel.",
+    "Passeert Amsterdam Sloterdijk zonder stop."
+   ]
+  },
+  {
+   "id": "4200",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "haarlem",
+      "heemstede-aerdenhout",
+      "hillegom",
+      "voorhout",
+      "leiden-centraal"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "paars",
+   "confidence": "high"
+  },
+  {
+   "id": "8100",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "amsterdam-centraal",
+      "amsterdam-sloterdijk",
+      "amsterdam-lelylaan",
+      "schiphol-airport",
+      "hoofddorp"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "donkerrood",
+   "confidence": "high"
+  },
+  {
+   "id": "8200",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "amsterdam-centraal",
+      "amsterdam-sloterdijk",
+      "amsterdam-lelylaan",
+      "schiphol-airport",
+      "hoofddorp"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "zalmrood",
+   "confidence": "medium",
+   "issues": [
+    "Cirkels bij Lelylaan en Hoofddorp liggen dicht op die van 8100; toewijzing per lijn gecontroleerd op de tegels maar 8100/8200 lopen strak parallel."
+   ]
+  },
+  {
+   "id": "2600",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "amsterdam-centraal",
+      "almere-centrum"
+     ],
+     "via": [
+      "weesp",
+      "amsterdam-muiderpoort"
+     ],
+     "note": ""
+    }
+   ],
+   "colorHint": "cyaan",
+   "confidence": "high",
+   "issues": [
+    "Bij Amsterdam Muiderpoort raakt een verbindingsstreepje de 2600, maar er staat geen cirkel op de 2600-lijn; getranscribeerd als passeren."
+   ]
+  },
+  {
+   "id": "5800",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "amsterdam-centraal",
+      "amsterdam-muiderpoort",
+      "amsterdam-science-park",
+      "diemen",
+      "weesp",
+      "naarden-bussum",
+      "bussum-zuid",
+      "hilversum-media-park",
+      "hilversum",
+      "baarn",
+      "amersfoort-centraal",
+      "amersfoort-schothorst",
+      "amersfoort-vathorst"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "blauw",
+   "confidence": "high"
+  },
+  {
+   "id": "1500",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "amsterdam-centraal",
+      "hilversum",
+      "amersfoort-centraal"
+     ],
+     "via": [
+      "weesp",
+      "naarden-bussum"
+     ],
+     "note": ""
+    }
+   ],
+   "colorHint": "donkerblauw",
+   "confidence": "high"
+  },
+  {
+   "id": "4900",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "utrecht-centraal",
+      "utrecht-overvecht",
+      "hollandsche-rading",
+      "hilversum-sportpark",
+      "hilversum",
+      "naarden-bussum",
+      "almere-poort",
+      "almere-muziekwijk",
+      "almere-centrum"
+     ],
+     "via": [
+      "weesp",
+      "bussum-zuid",
+      "hilversum-media-park"
+     ],
+     "note": ""
+    }
+   ],
+   "colorHint": "grijspaars",
+   "confidence": "high",
+   "issues": [
+    "Passeert Weesp zonder stop (kruist de Weesp-cirkels zonder eigen onderbreking)."
+   ]
+  },
+  {
+   "id": "1800",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "amersfoort-centraal",
+      "hilversum",
+      "duivendrecht",
+      "amsterdam-zuid",
+      "schiphol-airport",
+      "rotterdam-centraal"
+     ],
+     "via": [
+      "naarden-bussum",
+      "weesp",
+      "leiden-centraal"
+     ],
+     "note": "tussen Schiphol en Rotterdam via de HSL-corridor, langs Leiden zonder stop"
+    }
+   ],
+   "colorHint": "helderblauw",
+   "confidence": "high"
+  },
+  {
+   "id": "700/800",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "schiphol-airport",
+      "amsterdam-zuid",
+      "almere-centrum",
+      "almere-buiten",
+      "lelystad-centrum",
+      "zwolle",
+      "meppel",
+      "assen",
+      "groningen"
+     ],
+     "via": [],
+     "note": "noordtak gelabeld 700"
+    },
+    {
+     "stops": [
+      "schiphol-airport",
+      "amsterdam-zuid",
+      "almere-centrum",
+      "almere-buiten",
+      "lelystad-centrum",
+      "zwolle",
+      "meppel",
+      "steenwijk",
+      "heerenveen",
+      "leeuwarden"
+     ],
+     "via": [],
+     "note": "noordtak gelabeld 800"
+    }
+   ],
+   "colorHint": "blauw",
+   "confidence": "high",
+   "exceptions": [
+    {
+     "type": "splits_combines",
+     "station": "zwolle",
+     "note": "gecombineerd label 700/800 tot Zwolle; daarna 700 naar Groningen en 800 naar Leeuwarden"
+    }
+   ],
+   "issues": [
+    "Takken Zwolle-Groningen (label 700) en Zwolle-Leeuwarden (label 800) zijn dun getekend (1x per uur); kerntraject dik (2x per uur)."
+   ]
+  },
+  {
+   "id": "4300",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "den-haag-centraal",
+      "den-haag-laan-van-noi",
+      "den-haag-mariahoeve",
+      "voorschoten",
+      "de-vink",
+      "leiden-centraal",
+      "sassenheim",
+      "nieuw-vennep",
+      "hoofddorp",
+      "schiphol-airport",
+      "amsterdam-zuid",
+      "amsterdam-rai",
+      "duivendrecht",
+      "diemen-zuid",
+      "weesp",
+      "almere-poort",
+      "almere-muziekwijk",
+      "almere-centrum",
+      "almere-parkwijk",
+      "almere-buiten",
+      "almere-oostvaarders",
+      "lelystad-centrum"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "grijsblauw",
+   "confidence": "high"
+  },
+  {
+   "id": "9000",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "overig",
+    "note": "na 21 u: 1 x per uur"
+   },
+   "routes": [
+    {
+     "stops": [
+      "leeuwarden",
+      "grou-jirnsum",
+      "akkrum",
+      "heerenveen",
+      "wolvega",
+      "steenwijk",
+      "meppel",
+      "zwolle",
+      "kampen-zuid",
+      "dronten",
+      "lelystad-centrum"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "cyaan",
+   "confidence": "high",
+   "issues": [
+    "Traject Zwolle-Lelystad dik getekend (2x per uur) met noot 'na 21 u: 1 x per uur'; traject Leeuwarden-Zwolle dun (1x per uur)."
+   ]
+  },
+  {
+   "id": "3100",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "den-haag-centraal",
+      "leiden-centraal",
+      "schiphol-airport",
+      "amsterdam-zuid",
+      "amsterdam-bijlmer-arena",
+      "utrecht-centraal",
+      "ede-wageningen",
+      "arnhem-centraal",
+      "nijmegen"
+     ],
+     "via": [
+      "den-haag-laan-van-noi",
+      "veenendaal-de-klomp",
+      "elst"
+     ],
+     "note": ""
+    }
+   ],
+   "colorHint": "blauw",
+   "confidence": "high"
+  },
+  {
+   "id": "3500",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "dordrecht",
+      "rotterdam-blaak",
+      "rotterdam-centraal",
+      "schiedam-centrum",
+      "delft",
+      "den-haag-hs",
+      "den-haag-laan-van-noi",
+      "leiden-centraal",
+      "schiphol-airport",
+      "amsterdam-zuid",
+      "amsterdam-bijlmer-arena",
+      "utrecht-centraal",
+      "s-hertogenbosch",
+      "eindhoven-centraal",
+      "helmond",
+      "deurne",
+      "horst-sevenum",
+      "blerick",
+      "venlo"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "groen",
+   "confidence": "high",
+   "issues": [
+    "Loopt via Den Haag HS en Den Haag Laan van NOI, niet via Den Haag Centraal."
+   ]
+  },
+  {
+   "id": "7300",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "breukelen",
+      "maarssen",
+      "utrecht-zuilen",
+      "utrecht-centraal",
+      "utrecht-vaartsche-rijn",
+      "bunnik",
+      "driebergen-zeist",
+      "maarn",
+      "veenendaal-west",
+      "veenendaal-centrum",
+      "rhenen"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "zeegroen",
+   "confidence": "high"
+  },
+  {
+   "id": "5500",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": "na 22 u: 1 x per uur"
+   },
+   "routes": [
+    {
+     "stops": [
+      "utrecht-centraal",
+      "utrecht-overvecht",
+      "bilthoven",
+      "den-dolder",
+      "soest-zuid",
+      "soest",
+      "soestdijk",
+      "baarn"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "framboosrood",
+   "confidence": "high",
+   "exceptions": [
+    {
+     "type": "other",
+     "note": "na 22 u: 1 x per uur (vlagmarkering bij Soestdijk)"
+    }
+   ]
+  },
+  {
+   "id": "5600",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "utrecht-centraal",
+      "utrecht-overvecht",
+      "bilthoven",
+      "den-dolder",
+      "amersfoort-centraal",
+      "amersfoort-schothorst",
+      "amersfoort-vathorst",
+      "nijkerk",
+      "putten",
+      "ermelo",
+      "harderwijk",
+      "nunspeet",
+      "t-harde",
+      "wezep",
+      "zwolle"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "bruin",
+   "confidence": "high"
+  },
+  {
+   "id": "500/600",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "den-haag-centraal",
+      "gouda",
+      "utrecht-centraal",
+      "amersfoort-centraal",
+      "zwolle",
+      "meppel",
+      "assen",
+      "groningen"
+     ],
+     "via": [
+      "zoetermeer",
+      "woerden"
+     ],
+     "note": "noordtak gelabeld 500"
+    },
+    {
+     "stops": [
+      "den-haag-centraal",
+      "gouda",
+      "utrecht-centraal",
+      "amersfoort-centraal",
+      "zwolle",
+      "meppel",
+      "steenwijk",
+      "heerenveen",
+      "leeuwarden"
+     ],
+     "via": [
+      "zoetermeer",
+      "woerden"
+     ],
+     "note": "noordtak gelabeld 600"
+    }
+   ],
+   "colorHint": "roze",
+   "confidence": "high",
+   "exceptions": [
+    {
+     "type": "splits_combines",
+     "station": "zwolle",
+     "note": "gecombineerd label 500/600 tot Zwolle; daarna 500 naar Groningen en 600 naar Leeuwarden"
+    }
+   ],
+   "issues": [
+    "Takken naar Groningen (label 500) en Leeuwarden (label 600) dun getekend (1x per uur); kerntraject dik (2x per uur)."
+   ]
+  },
+  {
+   "id": "6000",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "den-haag-centraal",
+      "voorburg",
+      "den-haag-ypenburg",
+      "zoetermeer",
+      "zoetermeer-oost",
+      "lansingerland-zoetermeer",
+      "gouda",
+      "gouda-goverwelle",
+      "woerden",
+      "vleuten",
+      "utrecht-terwijde",
+      "utrecht-leidsche-rijn",
+      "utrecht-centraal",
+      "utrecht-vaartsche-rijn",
+      "utrecht-lunetten",
+      "houten",
+      "houten-castellum",
+      "culemborg",
+      "geldermalsen",
+      "zaltbommel",
+      "s-hertogenbosch"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "goudbruin",
+   "confidence": "high"
+  },
+  {
+   "id": "6700",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "leiden-centraal",
+      "leiden-lammenschans",
+      "alphen-aan-den-rijn",
+      "bodegraven",
+      "woerden",
+      "utrecht-centraal",
+      "utrecht-vaartsche-rijn",
+      "utrecht-lunetten",
+      "houten",
+      "houten-castellum",
+      "culemborg",
+      "geldermalsen",
+      "tiel-passewaaij",
+      "tiel"
+     ],
+     "via": [
+      "gouda"
+     ],
+     "note": "sluit oostelijk van Gouda aan op de corridor en doet station Gouda niet aan"
+    }
+   ],
+   "colorHint": "rood",
+   "confidence": "high"
+  },
+  {
+   "id": "8600",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "gouda",
+      "waddinxveen-triangel",
+      "waddinxveen",
+      "waddinxveen-noord",
+      "boskoop-snijdelwijk",
+      "boskoop",
+      "alphen-aan-den-rijn"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "geel",
+   "confidence": "high"
+  },
+  {
+   "id": "2800",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "utrecht-centraal",
+      "gouda",
+      "rotterdam-alexander",
+      "rotterdam-centraal"
+     ],
+     "via": [
+      "woerden"
+     ],
+     "note": ""
+    }
+   ],
+   "colorHint": "oranje",
+   "confidence": "high"
+  },
+  {
+   "id": "31300",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "amersfoort-centraal",
+      "hoevelaken",
+      "barneveld-noord",
+      "barneveld-centrum",
+      "barneveld-zuid",
+      "lunteren",
+      "ede-centrum",
+      "ede-wageningen"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "donkergroen",
+   "confidence": "high"
+  },
+  {
+   "id": "7500",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "ede-wageningen",
+      "wolfheze",
+      "oosterbeek",
+      "arnhem-centraal"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "goudgeel",
+   "confidence": "high"
+  },
+  {
+   "id": "12400",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "overig",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "schiphol-airport",
+      "rotterdam-centraal"
+     ],
+     "via": [
+      "leiden-centraal"
+     ],
+     "note": "via de HSL-corridor, langs Leiden zonder stop"
+    }
+   ],
+   "colorHint": "lavendelpaars",
+   "confidence": "medium",
+   "issues": [
+    "Gecombineerd label '12400/9500' op een dikke (2x per uur) lijn Schiphol-Rotterdam; zuidelijk van Rotterdam loopt alleen 9500 door (daar dun getekend). Frequentie per afzonderlijke serie niet uit het kaartbeeld af te leiden."
+   ]
+  },
+  {
+   "id": "9500",
+   "kind": "internationaal",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "schiphol-airport",
+      "rotterdam-centraal",
+      "antwerpen-centraal",
+      "brussel-zuid-midi"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "lavendelpaars",
+   "confidence": "medium",
+   "issues": [
+    "Ten noorden van Rotterdam gecombineerd gelabeld '12400/9500' op een dikke lijn; het Belgische deel is dun (1x per uur)."
+   ]
+  },
+  {
+   "id": "5100",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "den-haag-centraal",
+      "den-haag-hs",
+      "den-haag-moerwijk",
+      "rijswijk",
+      "delft",
+      "delft-campus",
+      "schiedam-centrum",
+      "rotterdam-centraal",
+      "rotterdam-blaak",
+      "rotterdam-zuid",
+      "rotterdam-lombardijen",
+      "barendrecht",
+      "zwijndrecht",
+      "dordrecht"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "roestrood",
+   "confidence": "high"
+  },
+  {
+   "id": "1100",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "den-haag-centraal",
+      "delft",
+      "rotterdam-centraal",
+      "breda",
+      "tilburg",
+      "eindhoven-centraal"
+     ],
+     "via": [
+      "dordrecht",
+      "oisterwijk",
+      "boxtel"
+     ],
+     "note": "passeert Dordrecht: lijn loopt om de stationsbox heen"
+    }
+   ],
+   "colorHint": "kaki",
+   "confidence": "high",
+   "issues": [
+    "Lijn loopt buiten de Dordrecht-box om: geen stop Dordrecht volgens het kaartbeeld."
+   ]
+  },
+  {
+   "id": "5900",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "dordrecht",
+      "dordrecht-zuid",
+      "lage-zwaluwe"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "felroze",
+   "confidence": "high"
+  },
+  {
+   "id": "7100",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "dordrecht",
+      "dordrecht-stadspolders",
+      "sliedrecht-baanhoek",
+      "sliedrecht",
+      "hardinxveld-blauwe-zoom",
+      "hardinxveld-giessendam",
+      "boven-hardinxveld",
+      "gorinchem"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "lichtblauw",
+   "confidence": "medium",
+   "issues": [
+    "Oostelijk eindpunt bij Gorinchem afgeleid uit het einde van de lichtblauwe lijn; cirkels van 7100 en 7200 liggen strak naast elkaar."
+   ]
+  },
+  {
+   "id": "7200",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "dordrecht",
+      "dordrecht-stadspolders",
+      "sliedrecht-baanhoek",
+      "sliedrecht",
+      "hardinxveld-blauwe-zoom",
+      "hardinxveld-giessendam",
+      "boven-hardinxveld",
+      "gorinchem",
+      "arkel",
+      "leerdam",
+      "beesd",
+      "geldermalsen"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "paars",
+   "confidence": "high"
+  },
+  {
+   "id": "9300",
+   "kind": "internationaal",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "amsterdam-centraal",
+      "schiphol-airport",
+      "rotterdam-centraal",
+      "antwerpen-centraal",
+      "brussel-zuid-midi"
+     ],
+     "via": [],
+     "note": "loopt door met pijl 'Eurostar Paris Nord'"
+    }
+   ],
+   "colorHint": "donkerrood",
+   "confidence": "high"
+  },
+  {
+   "id": "9900",
+   "kind": "internationaal",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "amsterdam-centraal",
+      "schiphol-airport",
+      "rotterdam-centraal",
+      "antwerpen-centraal",
+      "brussel-zuid-midi"
+     ],
+     "via": [],
+     "note": "loopt door met pijl 'Eurostar Paris Aeroport Roissy Charles-de-Gaulle / Paris Marne-la-Vallee-Chessy / Bourg-St-Maurice'"
+    }
+   ],
+   "colorHint": "donkerrood",
+   "confidence": "high",
+   "exceptions": [
+    {
+     "type": "seasonal",
+     "note": "Bourg-St-Maurice (alleen in de wintermaanden)"
+    }
+   ]
+  },
+  {
+   "id": "9100",
+   "kind": "internationaal",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "amsterdam-centraal",
+      "schiphol-airport",
+      "rotterdam-centraal",
+      "brussel-zuid-midi"
+     ],
+     "via": [
+      "antwerpen-centraal"
+     ],
+     "note": "loopt door met pijl 'Eurostar London St. Pancras International'"
+    }
+   ],
+   "colorHint": "magenta",
+   "confidence": "high"
+  },
+  {
+   "id": "9200",
+   "kind": "internationaal",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "rotterdam-centraal",
+      "noorderkempen",
+      "antwerpen-centraal",
+      "antwerpen-berchem",
+      "mechelen",
+      "brussels-airport-zaventem",
+      "brussel-noord",
+      "brussel-centraal",
+      "brussel-zuid-midi"
+     ],
+     "via": [],
+     "note": ""
+    },
+    {
+     "stops": [
+      "rotterdam-centraal",
+      "breda"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "marineblauw",
+   "confidence": "high",
+   "issues": [
+    "Twee takken vanaf Rotterdam Centraal: over de HSL naar Brussel en naar Breda; kaart toont geen 9200-lijn ten noorden van Rotterdam."
+   ]
+  },
+  {
+   "id": "2500",
+   "kind": "internationaal",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "roosendaal",
+      "essen",
+      "wildert",
+      "kalmthout",
+      "kijkuit",
+      "heide",
+      "kapellen",
+      "sint-mariaburg",
+      "ekeren",
+      "antwerpen-noorderdokken",
+      "antwerpen-luchtbal",
+      "antwerpen-centraal",
+      "antwerpen-berchem",
+      "antwerpen-zuid",
+      "hoboken-polder",
+      "hemiksem",
+      "schelle",
+      "niel",
+      "boom",
+      "ruisbroek-sauvegarde",
+      "puurs"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "oranje",
+   "confidence": "high"
+  },
+  {
+   "id": "3600",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "vlissingen",
+      "vlissingen-souburg",
+      "middelburg",
+      "arnemuiden",
+      "goes",
+      "kapelle-biezelinge",
+      "kruiningen-yerseke",
+      "krabbendijke",
+      "rilland-bath",
+      "bergen-op-zoom",
+      "roosendaal",
+      "etten-leur",
+      "breda",
+      "tilburg",
+      "s-hertogenbosch",
+      "oss",
+      "nijmegen",
+      "arnhem-centraal",
+      "dieren",
+      "zutphen",
+      "deventer",
+      "olst",
+      "wijhe",
+      "zwolle"
+     ],
+     "via": [
+      "arnhem-velperpoort",
+      "brummen"
+     ],
+     "note": ""
+    }
+   ],
+   "colorHint": "staalblauw",
+   "confidence": "high",
+   "issues": [
+    "Traject Vlissingen-Bergen op Zoom dun getekend (1x per uur); rest dik (2x per uur)."
+   ]
+  },
+  {
+   "id": "6600",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "dordrecht",
+      "dordrecht-zuid",
+      "lage-zwaluwe",
+      "breda-prinsenbeek",
+      "breda",
+      "gilze-rijen",
+      "tilburg-reeshof",
+      "tilburg",
+      "s-hertogenbosch",
+      "s-hertogenbosch-oost",
+      "rosmalen",
+      "oss-west",
+      "oss",
+      "ravenstein",
+      "wijchen",
+      "nijmegen-dukenburg",
+      "nijmegen-goffert",
+      "nijmegen"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "hemelsblauw",
+   "confidence": "high"
+  },
+  {
+   "id": "6400",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "tilburg",
+      "tilburg-universiteit",
+      "oisterwijk",
+      "boxtel",
+      "best",
+      "eindhoven-strijp-s",
+      "eindhoven-centraal",
+      "geldrop",
+      "heeze",
+      "maarheeze",
+      "weert"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "paars",
+   "confidence": "high"
+  },
+  {
+   "id": "6500",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "s-hertogenbosch",
+      "vught",
+      "boxtel",
+      "best",
+      "eindhoven-strijp-s",
+      "eindhoven-centraal",
+      "helmond-brandevoort",
+      "helmond-t-hout",
+      "helmond",
+      "helmond-brouwhuis",
+      "deurne"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "blauw",
+   "confidence": "high",
+   "issues": [
+    "Segment Eindhoven-Deurne dun getekend (1x per uur); segment 's-Hertogenbosch-Eindhoven dik (2x per uur)."
+   ]
+  },
+  {
+   "id": "32200",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "nijmegen",
+      "nijmegen-heyendaal",
+      "mook-molenhoek",
+      "cuijk",
+      "boxmeer",
+      "vierlingsbeek",
+      "venray",
+      "blerick",
+      "venlo",
+      "tegelen",
+      "reuver",
+      "swalmen",
+      "roermond"
+     ],
+     "via": [
+      "horst-sevenum"
+     ],
+     "note": ""
+    }
+   ],
+   "colorHint": "okergeel",
+   "confidence": "high"
+  },
+  {
+   "id": "32400",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "roermond",
+      "echt",
+      "susteren",
+      "sittard",
+      "geleen-lutterade",
+      "beek-elsloo",
+      "bunde",
+      "maastricht",
+      "maastricht-randwyck"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "donkergroen",
+   "confidence": "high"
+  },
+  {
+   "id": "3900",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "sittard",
+      "heerlen"
+     ],
+     "via": [
+      "geleen-oost",
+      "spaubeek",
+      "schinnen",
+      "nuth",
+      "hoensbroek"
+     ],
+     "note": ""
+    }
+   ],
+   "colorHint": "lichtgroen",
+   "confidence": "medium",
+   "issues": [
+    "Dunne lichtgroene lijn zonder tussenstops naast 32500; tussenstations hebben alleen cirkels op 32500."
+   ]
+  },
+  {
+   "id": "32500",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "sittard",
+      "geleen-oost",
+      "spaubeek",
+      "schinnen",
+      "nuth",
+      "hoensbroek",
+      "heerlen"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "groen",
+   "confidence": "high"
+  },
+  {
+   "id": "32000",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "maastricht-randwyck",
+      "maastricht",
+      "maastricht-noord",
+      "meerssen",
+      "houthem-sint-gerlach",
+      "valkenburg",
+      "schin-op-geul",
+      "klimmen-ransdaal",
+      "voerendaal",
+      "heerlen-woonboulevard",
+      "heerlen",
+      "landgraaf",
+      "eygelshoven",
+      "chevremont",
+      "kerkrade-centrum"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "indigoblauw",
+   "confidence": "high"
+  },
+  {
+   "id": "18900",
+   "kind": "internationaal",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "liege-guillemins",
+      "bressoux",
+      "vise",
+      "eijsden",
+      "maastricht-randwyck",
+      "maastricht",
+      "meerssen",
+      "valkenburg",
+      "heerlen",
+      "landgraaf",
+      "eygelshoven-markt",
+      "herzogenrath",
+      "aachen-west",
+      "aachen-hbf"
+     ],
+     "via": [
+      "maastricht-noord",
+      "houthem-sint-gerlach",
+      "schin-op-geul",
+      "klimmen-ransdaal",
+      "voerendaal",
+      "heerlen-woonboulevard",
+      "eygelshoven"
+     ],
+     "note": ""
+    }
+   ],
+   "colorHint": "lichtcyaan",
+   "confidence": "high"
+  },
+  {
+   "id": "8500",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "kampen",
+      "zwolle-stadshagen",
+      "zwolle"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "donkerblauw",
+   "confidence": "high"
+  },
+  {
+   "id": "6100",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "zwolle",
+      "meppel",
+      "hoogeveen",
+      "beilen",
+      "assen",
+      "haren",
+      "groningen-europapark",
+      "groningen"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "paarsblauw",
+   "confidence": "high"
+  },
+  {
+   "id": "3800",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "zwolle",
+      "dalfsen",
+      "ommen",
+      "marienberg",
+      "hardenberg",
+      "coevorden",
+      "nieuw-amsterdam",
+      "emmen-zuid",
+      "emmen"
+     ],
+     "via": [
+      "gramsbergen",
+      "dalen"
+     ],
+     "note": ""
+    }
+   ],
+   "colorHint": "magentapaars",
+   "confidence": "high"
+  },
+  {
+   "id": "8000",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "zwolle",
+      "dalfsen",
+      "ommen",
+      "marienberg",
+      "hardenberg",
+      "gramsbergen",
+      "coevorden",
+      "dalen",
+      "nieuw-amsterdam",
+      "emmen-zuid",
+      "emmen"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "oranje",
+   "confidence": "high"
+  },
+  {
+   "id": "31000",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "marienberg",
+      "vroomshoop",
+      "daarlerveen",
+      "vriezenveen",
+      "almelo"
+     ],
+     "via": [
+      "wierden"
+     ],
+     "note": ""
+    }
+   ],
+   "colorHint": "lichtgroen",
+   "confidence": "high"
+  },
+  {
+   "id": "7900",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "zwolle",
+      "heino",
+      "raalte",
+      "nijverdal",
+      "wierden",
+      "almelo",
+      "almelo-de-riet",
+      "borne",
+      "hengelo",
+      "enschede-kennispark",
+      "enschede"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "zeegroen",
+   "confidence": "high"
+  },
+  {
+   "id": "7000",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "apeldoorn",
+      "apeldoorn-osseveld",
+      "twello",
+      "deventer",
+      "deventer-colmschate",
+      "holten",
+      "rijssen",
+      "wierden",
+      "almelo"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "lila",
+   "confidence": "high",
+   "issues": [
+    "Segment Apeldoorn-Deventer dun getekend (1x per uur); segment Deventer-Almelo dik (2x per uur)."
+   ]
+  },
+  {
+   "id": "1700",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "utrecht-centraal",
+      "amersfoort-centraal",
+      "apeldoorn",
+      "deventer",
+      "almelo",
+      "hengelo",
+      "enschede"
+     ],
+     "via": [
+      "twello",
+      "borne",
+      "enschede-kennispark"
+     ],
+     "note": ""
+    }
+   ],
+   "colorHint": "oranje",
+   "confidence": "high"
+  },
+  {
+   "id": "17800",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "apeldoorn",
+      "apeldoorn-de-maten",
+      "klarenbeek",
+      "voorst-empe",
+      "zutphen"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "grijsgroen",
+   "confidence": "high"
+  },
+  {
+   "id": "30400",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "overig",
+    "note": "30400: 1 x per uur Apeldoorn náár Winterswijk, 1 x per uur Zutphen náár Apeldoorn."
+   },
+   "routes": [
+    {
+     "stops": [
+      "apeldoorn",
+      "zutphen",
+      "vorden",
+      "ruurlo",
+      "lichtenvoorde-groenlo",
+      "winterswijk-west",
+      "winterswijk"
+     ],
+     "via": [
+      "apeldoorn-de-maten",
+      "klarenbeek",
+      "voorst-empe"
+     ],
+     "note": ""
+    }
+   ],
+   "colorHint": "turquoise",
+   "confidence": "high",
+   "exceptions": [
+    {
+     "type": "other",
+     "note": "** 30400: 1 x per uur Apeldoorn náár Winterswijk, 1 x per uur Zutphen náár Apeldoorn."
+    }
+   ]
+  },
+  {
+   "id": "30800",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "overig",
+    "note": "1 x per uur -> / <- 2 x per uur"
+   },
+   "routes": [
+    {
+     "stops": [
+      "zutphen",
+      "vorden",
+      "ruurlo",
+      "lichtenvoorde-groenlo",
+      "winterswijk-west",
+      "winterswijk"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "grijsgroen",
+   "confidence": "high",
+   "exceptions": [
+    {
+     "type": "other",
+     "note": "richtingsafhankelijke frequentie op de kaart: pijl oostwaarts '1 x per uur', pijl westwaarts '2 x per uur'"
+    }
+   ]
+  },
+  {
+   "id": "7600",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "zutphen",
+      "brummen",
+      "dieren",
+      "rheden",
+      "velp",
+      "arnhem-presikhaaf",
+      "arnhem-velperpoort",
+      "arnhem-centraal",
+      "arnhem-zuid",
+      "elst",
+      "nijmegen-lent",
+      "nijmegen"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "oudroze",
+   "confidence": "high",
+   "issues": [
+    "Segment Zutphen-Arnhem dun getekend (1x per uur); segment Arnhem-Nijmegen dik (2x per uur)."
+   ]
+  },
+  {
+   "id": "30900",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "arnhem-centraal",
+      "arnhem-velperpoort",
+      "westervoort",
+      "duiven",
+      "zevenaar",
+      "didam",
+      "wehl",
+      "doetinchem-de-huet",
+      "doetinchem",
+      "gaanderen",
+      "terborg",
+      "varsseveld",
+      "aalten",
+      "winterswijk"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "groen",
+   "confidence": "high",
+   "issues": [
+    "Bij Westervoort, Duiven en Zevenaar staat direct naast de cirkel op de 30900-lijn een tweede cirkel die aan geen enkele lijn vastzit; mogelijk bedoeld als stop van RE19/20000, niet toewijsbaar."
+   ]
+  },
+  {
+   "id": "31100",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "arnhem-centraal",
+      "elst",
+      "zetten-andelst",
+      "hemmen-dodewaard",
+      "opheusden",
+      "kesteren",
+      "tiel"
+     ],
+     "via": [
+      "arnhem-zuid"
+     ],
+     "note": ""
+    }
+   ],
+   "colorHint": "cyaan",
+   "confidence": "high"
+  },
+  {
+   "id": "31200",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "zutphen",
+      "lochem",
+      "goor",
+      "delden",
+      "hengelo-gezondheidspark",
+      "hengelo",
+      "hengelo-oost",
+      "oldenzaal"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "mosterdgeel",
+   "confidence": "high"
+  },
+  {
+   "id": "20350",
+   "kind": "internationaal",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "hengelo",
+      "oldenzaal",
+      "bad-bentheim"
+     ],
+     "via": [
+      "hengelo-oost"
+     ],
+     "note": "loopt op de kaart door als RB61 richting Bielefeld Hbf"
+    }
+   ],
+   "colorHint": "blauw",
+   "confidence": "high",
+   "issues": [
+    "Zelfde doorgaande lijn draagt in Duitsland het label RB61; hier gesplitst op de labelgrens Bad Bentheim."
+   ]
+  },
+  {
+   "id": "RB61",
+   "kind": "buitenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "bad-bentheim",
+      "schuttorf",
+      "salzbergen",
+      "rheine",
+      "horstel",
+      "ibbenburen-esch",
+      "ibbenburen",
+      "ibbenburen-laggenbeck",
+      "osnabruck-altstadt",
+      "osnabruck-hbf",
+      "wissingen",
+      "westerhausen",
+      "melle",
+      "bruchmuhlen",
+      "bunde-westfalen"
+     ],
+     "via": [],
+     "note": "loopt door met pijl 'Bielefeld Hbf' buiten de kaartrand"
+    }
+   ],
+   "colorHint": "blauw",
+   "confidence": "high"
+  },
+  {
+   "id": "20200",
+   "kind": "internationaal",
+   "frequency": {
+    "class": "2x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "enschede",
+      "enschede-de-eschmarke",
+      "glanerbrug",
+      "gronau"
+     ],
+     "via": [],
+     "note": "splitst in Gronau in RB51 (Dortmund) en RB64 (Munster)"
+    }
+   ],
+   "colorHint": "blauw",
+   "confidence": "high"
+  },
+  {
+   "id": "RB51",
+   "kind": "buitenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "gronau",
+      "epe-westf",
+      "ahaus",
+      "legden",
+      "rosendahl-holtwick",
+      "coesfeld",
+      "lette",
+      "dulmen",
+      "ludinghausen",
+      "selm",
+      "selm-beifang",
+      "bork",
+      "lunen-hbf",
+      "lunen-preussen",
+      "dortmund-derne",
+      "dortmund-kirchderne",
+      "dortmund-hbf"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "blauw",
+   "confidence": "high"
+  },
+  {
+   "id": "RB64",
+   "kind": "buitenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "gronau",
+      "ochtrup",
+      "metelen-land",
+      "steinfurt-burgsteinfurt",
+      "steinfurt-grottenkamp",
+      "steinfurt-borghorst",
+      "nordwalde",
+      "altenberge",
+      "munster-hager",
+      "munster-zentrum-nord",
+      "munster-westf-hbf"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "blauw",
+   "confidence": "high"
+  },
+  {
+   "id": "RE19",
+   "kind": "internationaal",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "arnhem-centraal",
+      "zevenaar",
+      "emmerich-elten",
+      "emmerich",
+      "praest",
+      "millingen-b-rees",
+      "empel-rees",
+      "haldern-rheinland",
+      "mehrhoog",
+      "wesel-feldmark",
+      "wesel",
+      "friedrichsfeld",
+      "voerde",
+      "dinslaken",
+      "oberhausen-holten",
+      "oberhausen-sterkrade",
+      "oberhausen-hbf",
+      "duisburg-hbf",
+      "dusseldorf-flughafen",
+      "dusseldorf-hbf"
+     ],
+     "via": [
+      "westervoort",
+      "duiven"
+     ],
+     "note": ""
+    }
+   ],
+   "colorHint": "turkooisgroen",
+   "confidence": "high",
+   "issues": [
+    "Op het NL-deel draagt de lijn ook het nummer 20000; zelfde nummer staat bij de RE13-lijn bij Neuss.",
+    "Losse tweede cirkels bij Westervoort/Duiven/Zevenaar naast de 30900-lijn zijn niet aan de RE19-lijn verbonden; als passeren getranscribeerd."
+   ]
+  },
+  {
+   "id": "RE13",
+   "kind": "internationaal",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "venlo",
+      "kaldenkirchen",
+      "breyell",
+      "boisheim",
+      "dulken",
+      "viersen",
+      "monchengladbach-hbf",
+      "neuss-hbf",
+      "dusseldorf-hbf",
+      "wuppertal-vohwinkel",
+      "wuppertal-hbf",
+      "wuppertal-barmen",
+      "wuppertal-oberbarmen",
+      "schwelm",
+      "ennepetal",
+      "hagen-hbf",
+      "schwerte-ruhr",
+      "holzwickede",
+      "unna",
+      "bonen",
+      "hamm-westf"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "lichtblauw",
+   "confidence": "high",
+   "issues": [
+    "Tussen Monchengladbach en Neuss draagt de lijn ook het nummer 20000; zelfde nummer staat bij de RE19-lijn bij Duiven."
+   ]
+  },
+  {
+   "id": "120/220",
+   "kind": "internationaal",
+   "frequency": {
+    "class": "x_per_dag",
+    "note": "7x per dag"
+   },
+   "routes": [
+    {
+     "stops": [
+      "amsterdam-centraal",
+      "utrecht-centraal",
+      "arnhem-centraal",
+      "oberhausen-hbf",
+      "duisburg-hbf",
+      "dusseldorf-hbf",
+      "koln-hbf",
+      "frankfurt-m-flughafen-fernbhf",
+      "frankfurt-m-hbf"
+     ],
+     "via": [
+      "amsterdam-amstel",
+      "zevenaar",
+      "emmerich"
+     ],
+     "note": "op de kaart gelabeld '120/220 ICE'; loopt door met pijl 'Muenchen Hbf' buiten de kaartrand"
+    }
+   ],
+   "colorHint": "grijs",
+   "confidence": "high",
+   "exceptions": [
+    {
+     "type": "other",
+     "note": "* Omleiding ICE in april, juli, augustus en oktober 2025 via Venlo"
+    }
+   ]
+  },
+  {
+   "id": "140/240",
+   "kind": "internationaal",
+   "frequency": {
+    "class": "x_per_dag",
+    "note": "7x per dag"
+   },
+   "routes": [
+    {
+     "stops": [
+      "amsterdam-centraal",
+      "hilversum",
+      "amersfoort-centraal",
+      "deventer",
+      "hengelo",
+      "bad-bentheim",
+      "rheine",
+      "osnabruck-hbf",
+      "hannover-hbf",
+      "berlin-spandau",
+      "berlin-hbf",
+      "berlin-ostbahnhof"
+     ],
+     "via": [
+      "weesp",
+      "apeldoorn",
+      "almelo",
+      "oldenzaal"
+     ],
+     "note": ""
+    }
+   ],
+   "colorHint": "lichtgrijs",
+   "confidence": "high",
+   "issues": [
+    "Lijn loopt om de boxen van Apeldoorn en Almelo heen: volgens het kaartbeeld daar geen stop."
+   ]
+  },
+  {
+   "id": "37100",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "leeuwarden",
+      "mantgum",
+      "sneek-noord",
+      "sneek",
+      "ijlst",
+      "workum",
+      "hindeloopen",
+      "koudum-molkwerum",
+      "stavoren"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "lichtgroen",
+   "confidence": "high"
+  },
+  {
+   "id": "37200",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "leeuwarden",
+      "deinum",
+      "dronryp",
+      "franeker",
+      "harlingen",
+      "harlingen-haven"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "grijspaars",
+   "confidence": "high"
+  },
+  {
+   "id": "37300",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "leeuwarden",
+      "feanwalden",
+      "buitenpost",
+      "groningen",
+      "groningen-europapark"
+     ],
+     "via": [
+      "leeuwarden-camminghaburen",
+      "hurdegaryp",
+      "de-westereen",
+      "grijpskerk",
+      "zuidhorn"
+     ],
+     "note": ""
+    }
+   ],
+   "colorHint": "paars",
+   "confidence": "high"
+  },
+  {
+   "id": "37400",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "leeuwarden",
+      "leeuwarden-camminghaburen",
+      "hurdegaryp",
+      "feanwalden",
+      "de-westereen",
+      "buitenpost",
+      "grijpskerk",
+      "zuidhorn",
+      "groningen"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "roze",
+   "confidence": "high"
+  },
+  {
+   "id": "37600",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "groningen",
+      "groningen-noord",
+      "sauwerd",
+      "winsum",
+      "baflo",
+      "warffum",
+      "usquert",
+      "uithuizen",
+      "uithuizermeeden",
+      "roodeschool",
+      "eemshaven"
+     ],
+     "via": [],
+     "note": ""
+    },
+    {
+     "stops": [
+      "groningen",
+      "groningen-europapark",
+      "kropswolde",
+      "martenshoek",
+      "hoogezand-sappemeer",
+      "zuidbroek",
+      "scheemda",
+      "winschoten"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "lichtblauw",
+   "confidence": "high"
+  },
+  {
+   "id": "37800",
+   "kind": "binnenland",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "groningen",
+      "groningen-noord",
+      "sauwerd",
+      "bedum",
+      "stedum",
+      "loppersum",
+      "appingedam",
+      "delfzijl-west",
+      "delfzijl"
+     ],
+     "via": [],
+     "note": ""
+    },
+    {
+     "stops": [
+      "groningen",
+      "groningen-europapark",
+      "kropswolde",
+      "martenshoek",
+      "hoogezand-sappemeer",
+      "zuidbroek",
+      "veendam"
+     ],
+     "via": [],
+     "note": ""
+    }
+   ],
+   "colorHint": "marineblauw",
+   "confidence": "high"
+  },
+  {
+   "id": "20100",
+   "kind": "internationaal",
+   "frequency": {
+    "class": "1x_per_uur",
+    "note": ""
+   },
+   "routes": [
+    {
+     "stops": [
+      "groningen",
+      "groningen-europapark",
+      "scheemda",
+      "winschoten",
+      "bad-nieuweschans",
+      "bunde-de",
+      "weener",
+      "ihrhove",
+      "leer"
+     ],
+     "via": [
+      "kropswolde",
+      "martenshoek",
+      "hoogezand-sappemeer",
+      "zuidbroek"
+     ],
+     "note": ""
+    }
+   ],
+   "colorHint": "roze",
+   "confidence": "high"
+  }
+ ],
+ "corrections": [],
+ "unknownStations": [],
+ "legendVerbatim": [
+  "1x per uur",
+  "2x per uur",
+  "Rijdt niet na 21:00 uur",
+  "21:00",
+  "Station",
+  "Lijn onderbroken bij station: trein stopt op station",
+  "Lijn loopt door station: trein stopt niet op dit station",
+  "Trein stopt alleen in deze richting (pijl naar links)",
+  "Trein stopt alleen in deze richting (pijl naar rechts)",
+  "Op ma t/m do, vrijdag en in het weekeind voor 20 u rijden er meer treinen: kijk hiervoor op de aparte kaarten.",
+  "Dit is versie 26.02 (oktober 2025) van de spoorkaart",
+  "Pagina 4: treinseries ma-zo na 20 uur",
+  "Copyright Nederlandse Spoorwegen"
+ ],
+ "notes": [
+  "Niet-serie tokens uit de tekstlaag: '2025' en '2026' (jaartallen in titel/colofon), 'en' (Nederlands voegwoord in notitieteksten), 'ICE' (onderdeel van het label '120/220 ICE'), '140/' en '240' (regelafbraak van het serielabel 140/240), '21:00' (legenda-markering 'Rijdt niet na 21:00 uur').",
+  "Token '20000' staat op twee verschillende lijnen: bij Duiven op de RE19-lijn (Arnhem-Dusseldorf) en bij Neuss op de RE13-lijn (Venlo-Hamm). Omdat een serie-id maar een keer mag voorkomen zijn deze lijnen opgenomen als RE19 en RE13, met 20000 als co-label.",
+  "Arriva/regionale letter-codes zijn co-labels op dezelfde lijn als het cijfernummer en zijn zo opgenomen: RS1=37400, RS2=37200, RS3=37100, RS4=37600, RS5=37800, RE1=37300, RE6=20100, RS11=32200, RS12=32400, RS15=32500, RS18=32000, RE18=18900, RS20=8000, RE20=3800, RS21=31000, RS24=31200, RE30=30400, RS30=17800, RS31=30800, RS32=30900, RS33=31100, RS34=31300. RB61 hoort bij dezelfde doorgaande lijn als 20350 (gesplitst op Bad Bentheim).",
+  "Tokens '500', '600', '700', '800' zijn taklabels van de gecombineerde series 500/600 en 700/800 ten noorden van Zwolle; token '2200' is het taklabel van 2200/2300 in Zeeland; token '9500' komt ook los voor als onderdeel van het gecombineerde label '12400/9500'.",
+  "De legenda-markering 'Rijdt niet na 21:00 uur' (driehoek met 21:00) komt op het kaartbeeld van pagina 4 niet als losse tijdmarkering voor; wel dragen de series 2100 en 5500 een vlag-vormig serielabel met een eigen tijdnotitie ('vr & za: hele avond. zo t/m do: tot 21 u' resp. 'na 22 u: 1 x per uur').",
+  "De richtingsmarkering 'Trein stopt alleen in deze richting' komt op pagina 4 alleen in de legenda voor; op het kaartbeeld zijn geen richtingsmarkeringen gevonden.",
+  "Station Wolfheze staat op het kaartbeeld gedrukt als 'Wolfeze' (drukfout op de kaart); vocabulaire-id wolfheze is gebruikt.",
+  "Offkaart-pijlen (geen stations in het vocabulaire): 'Eurostar London St. Pancras International' (9100), 'Eurostar Paris Nord' (9300), 'Eurostar Paris Aeroport Roissy Charles-de-Gaulle / Paris Marne-la-Vallee-Chessy / Bourg-St-Maurice (alleen in de wintermaanden)' (9900), 'Muenchen Hbf' (120/220), 'Bielefeld Hbf' (RB61).",
+  "Zelfde spoor, twee entrees: het gecombineerde label '12400/9500' (Schiphol-Rotterdam) is gesplitst in series 12400 en 9500 omdat 9500 zuidelijk van Rotterdam los doorloopt naar Brussel."
+ ]
+}
