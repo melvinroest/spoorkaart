@@ -12,8 +12,9 @@ map/
 .claude/
 experiments/
 research/
+archive/
 BACKLOG.md
-GEO_VIEW_HANDOFF.md
 MESSAGES.md
 REFLECTION.md
+REFLECTION-GEO.md
 REFLECTION_PROMPT.md

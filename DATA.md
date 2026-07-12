@@ -54,7 +54,7 @@ And the mirror image, where GTFS is sharper: exact times (the future minutes-per
 | research/2026-07-12 map-vs-gtfs-diff.md | disagreement report for hand review | uv run scripts/diff_map_gtfs.py > "research/2026-07-12 map-vs-gtfs-diff.md" |
 | data/sources/stations-2023-09.csv | vendored RdT station list | re-download from opendata.rijdendetreinen.nl if ever needed |
 
-Regeneration order after a vocabulary change: build_stations -> merge_public -> build_gtfs_series -> extract_serie_colors -> extract_highlights -> diff_map_gtfs -> validate everything.
+Regeneration order after a vocabulary change: build_stations -> merge_public -> build_gtfs_series -> build_gtfs_minutes -> extract_serie_colors -> extract_highlights -> diff_map_gtfs -> validate everything (series AND minutes files; the minutes are index-aligned with the series stop arrays, so they must regenerate together).
 
 ## Refresh policy
 

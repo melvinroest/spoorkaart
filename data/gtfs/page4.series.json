@@ -388,6 +388,7 @@
       "eijsden",
       "maastricht-randwyck",
       "maastricht",
+      "sittard",
       "meerssen",
       "valkenburg",
       "heerlen",
@@ -399,8 +400,10 @@
      ]
     }
    ],
-   "confidence": "medium",
-   "issues": []
+   "confidence": "low",
+   "issues": [
+    "stations met weinig ritten (mogelijk variant of spitsstop): sittard"
+   ]
   },
   {
    "id": "2000",
@@ -1306,12 +1309,17 @@
     {
      "stops": [
       "maastricht",
+      "groningen",
       "sittard",
+      "assen",
       "roermond",
       "weert",
       "eindhoven-centraal",
+      "zwolle",
       "s-hertogenbosch",
+      "lelystad-centrum",
       "utrecht-centraal",
+      "almere-centrum",
       "amsterdam-bijlmer-arena",
       "amsterdam-centraal",
       "schiphol-airport"
@@ -1540,6 +1548,7 @@
       "groningen",
       "groningen-noord",
       "sauwerd",
+      "eemshaven",
       "winsum",
       "baflo",
       "warffum",
@@ -1550,8 +1559,10 @@
      ]
     }
    ],
-   "confidence": "medium",
-   "issues": []
+   "confidence": "low",
+   "issues": [
+    "stations met weinig ritten (mogelijk variant of spitsstop): eemshaven"
+   ]
   },
   {
    "id": "37600",
@@ -1581,12 +1592,15 @@
       "usquert",
       "uithuizen",
       "uithuizermeeden",
-      "roodeschool"
+      "roodeschool",
+      "eemshaven"
      ]
     }
    ],
-   "confidence": "medium",
-   "issues": []
+   "confidence": "low",
+   "issues": [
+    "stations met weinig ritten (mogelijk variant of spitsstop): eemshaven"
+   ]
   },
   {
    "id": "37700",
@@ -1743,6 +1757,7 @@
       "duisburg-hbf",
       "dusseldorf-hbf",
       "koln-hbf",
+      "dortmund-hbf",
       "frankfurt-m-hbf",
       "frankfurt-m-flughafen-fernbhf"
      ]
@@ -1828,6 +1843,10 @@
    "routes": [
     {
      "stops": [
+      "enkhuizen",
+      "bovenkarspel-flora",
+      "bovenkarspel-grootebroek",
+      "hoogkarspel",
       "hoorn-kersenboogerd",
       "hoorn",
       "purmerend-overwhere",
@@ -1842,8 +1861,10 @@
      ]
     }
    ],
-   "confidence": "medium",
-   "issues": []
+   "confidence": "low",
+   "issues": [
+    "stations met weinig ritten (mogelijk variant of spitsstop): enkhuizen, bovenkarspel-flora, bovenkarspel-grootebroek, hoogkarspel"
+   ]
   },
   {
    "id": "4200",
@@ -2484,7 +2505,10 @@
     {
      "stops": [
       "schiphol-airport",
+      "amsterdam-lelylaan",
+      "amsterdam-sloterdijk",
       "amsterdam-zuid",
+      "amsterdam-centraal",
       "duivendrecht",
       "almere-centrum",
       "lelystad-centrum",
@@ -2496,7 +2520,7 @@
    ],
    "confidence": "low",
    "issues": [
-    "stations met weinig ritten (mogelijk variant of spitsstop): duivendrecht"
+    "stations met weinig ritten (mogelijk variant of spitsstop): amsterdam-lelylaan, amsterdam-sloterdijk, amsterdam-centraal, duivendrecht"
    ]
   },
   {

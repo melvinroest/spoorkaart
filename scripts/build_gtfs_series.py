@@ -246,6 +246,38 @@ def main():
         if not pos:
             return [], {}
         order = {s: sum(v) / len(v) for s, v in pos.items()}
+        # Stations served only in direction 1 have no direction-0 ordering key
+        # and were silently dropped (proven: meppel on the weekend 700). Map
+        # their direction-1 keys onto the direction-0 axis with a linear fit
+        # over the stations both directions serve.
+        missing = [s for s in count if s not in order]
+        if missing and dir0:
+            pos1 = defaultdict(list)
+            for tid in trip_ids:
+                if trips[tid][2] != "1":
+                    continue
+                stops_raw = sorted(per_trip[tid])
+                n = len(stops_raw)
+                for k, (_seq, stop_id, dist) in enumerate(stops_raw):
+                    code = stop_code.get(stop_id)
+                    st = by_code.get(code) if code else None
+                    if st is not None:
+                        pos1[st["id"]].append(
+                            dist if dist is not None else k / max(n - 1, 1)
+                        )
+            common = [s for s in order if s in pos1]
+            if len(common) >= 2:
+                xs = [sum(pos1[s]) / len(pos1[s]) for s in common]
+                ys = [order[s] for s in common]
+                mx = sum(xs) / len(xs)
+                my = sum(ys) / len(ys)
+                var = sum((x - mx) ** 2 for x in xs)
+                if var > 0:
+                    b = sum((x - mx) * (y - my) for x, y in zip(xs, ys)) / var
+                    a = my - b * mx
+                    for s in missing:
+                        if s in pos1:
+                            order[s] = a + b * (sum(pos1[s]) / len(pos1[s]))
         ordered = sorted(order, key=lambda s: order[s])
         if reverse_final:
             ordered.reverse()

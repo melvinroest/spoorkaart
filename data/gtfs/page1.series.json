@@ -758,6 +758,11 @@
       "alkmaar",
       "heiloo",
       "castricum",
+      "uitgeest",
+      "krommenie-assendelft",
+      "wormerveer",
+      "zaandijk-zaanse-schans",
+      "koog-aan-de-zaan",
       "zaandam",
       "amsterdam-sloterdijk",
       "amsterdam-centraal",
@@ -773,7 +778,7 @@
    ],
    "confidence": "low",
    "issues": [
-    "stations met weinig ritten (mogelijk variant of spitsstop): veenendaal-de-klomp"
+    "stations met weinig ritten (mogelijk variant of spitsstop): uitgeest, krommenie-assendelft, wormerveer, zaandijk-zaanse-schans, koog-aan-de-zaan, veenendaal-de-klomp"
    ]
   },
   {
@@ -813,6 +818,10 @@
    "routes": [
     {
      "stops": [
+      "apeldoorn",
+      "apeldoorn-de-maten",
+      "klarenbeek",
+      "voorst-empe",
       "zutphen",
       "vorden",
       "ruurlo",
@@ -822,8 +831,10 @@
      ]
     }
    ],
-   "confidence": "medium",
-   "issues": []
+   "confidence": "low",
+   "issues": [
+    "stations met weinig ritten (mogelijk variant of spitsstop): apeldoorn, apeldoorn-de-maten, klarenbeek, voorst-empe"
+   ]
   },
   {
    "id": "30900",
@@ -873,6 +884,7 @@
       "amsterdam-zuid",
       "amsterdam-bijlmer-arena",
       "utrecht-centraal",
+      "driebergen-zeist",
       "veenendaal-de-klomp",
       "ede-wageningen",
       "arnhem-centraal",
@@ -882,7 +894,7 @@
    ],
    "confidence": "low",
    "issues": [
-    "stations met weinig ritten (mogelijk variant of spitsstop): veenendaal-de-klomp"
+    "stations met weinig ritten (mogelijk variant of spitsstop): driebergen-zeist, veenendaal-de-klomp"
    ]
   },
   {
@@ -1646,6 +1658,7 @@
    "routes": [
     {
      "stops": [
+      "brussel-centraal",
       "brussel-zuid-midi",
       "antwerpen-centraal",
       "roosendaal",
@@ -1811,12 +1824,17 @@
       "almere-parkwijk",
       "almere-buiten",
       "almere-oostvaarders",
-      "lelystad-centrum"
+      "amsterdam-lelylaan",
+      "amsterdam-sloterdijk",
+      "lelystad-centrum",
+      "amsterdam-centraal"
      ]
     }
    ],
-   "confidence": "medium",
-   "issues": []
+   "confidence": "low",
+   "issues": [
+    "stations met weinig ritten (mogelijk variant of spitsstop): amsterdam-lelylaan, amsterdam-sloterdijk, amsterdam-centraal"
+   ]
   },
   {
    "id": "4600",
@@ -1839,12 +1857,15 @@
       "almere-centrum",
       "almere-parkwijk",
       "almere-buiten",
-      "almere-oostvaarders"
+      "almere-oostvaarders",
+      "lelystad-centrum"
      ]
     }
    ],
-   "confidence": "medium",
-   "issues": []
+   "confidence": "low",
+   "issues": [
+    "stations met weinig ritten (mogelijk variant of spitsstop): lelystad-centrum"
+   ]
   },
   {
    "id": "4800",
@@ -2159,12 +2180,15 @@
       "hilversum-sportpark",
       "hollandsche-rading",
       "utrecht-overvecht",
-      "utrecht-centraal"
+      "utrecht-centraal",
+      "utrecht-maliebaan"
      ]
     }
    ],
-   "confidence": "medium",
-   "issues": []
+   "confidence": "low",
+   "issues": [
+    "stations met weinig ritten (mogelijk variant of spitsstop): utrecht-maliebaan"
+   ]
   },
   {
    "id": "5800",
@@ -2807,13 +2831,18 @@
       "zwolle",
       "meppel",
       "steenwijk",
+      "wolvega",
       "heerenveen",
+      "akkrum",
+      "grou-jirnsum",
       "leeuwarden"
      ]
     }
    ],
-   "confidence": "medium",
-   "issues": []
+   "confidence": "low",
+   "issues": [
+    "stations met weinig ritten (mogelijk variant of spitsstop): wolvega, akkrum, grou-jirnsum"
+   ]
   },
   {
    "id": "8000",

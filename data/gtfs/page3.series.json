@@ -87,6 +87,8 @@
      "stops": [
       "utrecht-centraal",
       "amsterdam-centraal",
+      "amsterdam-sloterdijk",
+      "haarlem",
       "schiphol-airport",
       "leiden-centraal",
       "den-haag-hs",
@@ -95,8 +97,10 @@
      ]
     }
    ],
-   "confidence": "medium",
-   "issues": []
+   "confidence": "low",
+   "issues": [
+    "stations met weinig ritten (mogelijk variant of spitsstop): amsterdam-sloterdijk, haarlem"
+   ]
   },
   {
    "id": "1500",
@@ -111,12 +115,16 @@
      "stops": [
       "amsterdam-centraal",
       "hilversum",
-      "amersfoort-centraal"
+      "amersfoort-centraal",
+      "apeldoorn",
+      "deventer"
      ]
     }
    ],
-   "confidence": "medium",
-   "issues": []
+   "confidence": "low",
+   "issues": [
+    "stations met weinig ritten (mogelijk variant of spitsstop): apeldoorn, deventer"
+   ]
   },
   {
    "id": "16900",
@@ -692,8 +700,10 @@
     {
      "stops": [
       "amsterdam-centraal",
+      "osnabruck-hbf",
       "amersfoort-centraal",
       "deventer",
+      "hannover-hbf",
       "hengelo",
       "bad-bentheim",
       "berlin-spandau"
@@ -727,6 +737,7 @@
       "amsterdam-sloterdijk",
       "amsterdam-centraal",
       "amsterdam-amstel",
+      "duivendrecht",
       "utrecht-centraal",
       "driebergen-zeist",
       "veenendaal-de-klomp",
@@ -736,8 +747,10 @@
      ]
     }
    ],
-   "confidence": "medium",
-   "issues": []
+   "confidence": "low",
+   "issues": [
+    "stations met weinig ritten (mogelijk variant of spitsstop): duivendrecht"
+   ]
   },
   {
    "id": "30400",
@@ -834,15 +847,19 @@
       "amsterdam-zuid",
       "amsterdam-bijlmer-arena",
       "utrecht-centraal",
+      "duivendrecht",
       "veenendaal-de-klomp",
       "ede-wageningen",
       "arnhem-centraal",
+      "hilversum",
       "nijmegen"
      ]
     }
    ],
-   "confidence": "medium",
-   "issues": []
+   "confidence": "low",
+   "issues": [
+    "stations met weinig ritten (mogelijk variant of spitsstop): duivendrecht, hilversum"
+   ]
   },
   {
    "id": "31000",
@@ -1088,11 +1105,19 @@
      "stops": [
       "schiphol-airport",
       "amsterdam-centraal",
+      "amsterdam-bijlmer-arena",
       "almere-centrum",
+      "utrecht-centraal",
       "lelystad-centrum",
+      "s-hertogenbosch",
       "zwolle",
+      "eindhoven-centraal",
+      "weert",
+      "roermond",
       "assen",
-      "groningen"
+      "sittard",
+      "groningen",
+      "maastricht"
      ]
     }
    ],
@@ -1941,12 +1966,15 @@
       "hilversum-sportpark",
       "hollandsche-rading",
       "utrecht-overvecht",
-      "utrecht-centraal"
+      "utrecht-centraal",
+      "utrecht-maliebaan"
      ]
     }
    ],
-   "confidence": "medium",
-   "issues": []
+   "confidence": "low",
+   "issues": [
+    "stations met weinig ritten (mogelijk variant of spitsstop): utrecht-maliebaan"
+   ]
   },
   {
    "id": "5800",
@@ -2019,13 +2047,18 @@
       "zwolle",
       "meppel",
       "steenwijk",
+      "wolvega",
       "heerenveen",
+      "akkrum",
+      "grou-jirnsum",
       "leeuwarden"
      ]
     }
    ],
-   "confidence": "medium",
-   "issues": []
+   "confidence": "low",
+   "issues": [
+    "stations met weinig ritten (mogelijk variant of spitsstop): wolvega, akkrum, grou-jirnsum"
+   ]
   },
   {
    "id": "6000",
@@ -2233,13 +2266,20 @@
       "almere-centrum",
       "lelystad-centrum",
       "zwolle",
+      "meppel",
+      "hoogeveen",
+      "beilen",
       "assen",
+      "haren",
+      "groningen-europapark",
       "groningen"
      ]
     }
    ],
-   "confidence": "medium",
-   "issues": []
+   "confidence": "low",
+   "issues": [
+    "stations met weinig ritten (mogelijk variant of spitsstop): meppel, hoogeveen, beilen, haren, groningen-europapark"
+   ]
   },
   {
    "id": "7000",
