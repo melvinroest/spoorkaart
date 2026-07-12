@@ -1,4 +1,4 @@
-import type { MinutesFile, StationsFile, SeriesFile } from './types'
+import type { MinutesFile, ShapesFile, StationsFile, SeriesFile } from './types'
 
 export interface SeriesResult {
   file: SeriesFile
@@ -34,6 +34,10 @@ export async function loadGtfsSeries(page: number): Promise<SeriesFile | null> {
 
 export async function loadMinutes(page: number): Promise<MinutesFile | null> {
   return fetchJson<MinutesFile>(`/data/gtfs/page${page}.minutes.json`)
+}
+
+export async function loadShapes(page: number): Promise<ShapesFile | null> {
+  return fetchJson<ShapesFile>(`/data/gtfs/page${page}.shapes.json`)
 }
 
 // Serie id -> product (Intercity, Sprinter, ...) unioned over the four GTFS

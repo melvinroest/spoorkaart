@@ -141,9 +141,37 @@ def validate_minutes_file(doc, target):
     return errors, f"{len(doc['series'])} series aligned with page{page}.series.json"
 
 
+def validate_shapes_file(doc, target):
+    errors = schema_errors(doc, "shapes.schema.json")
+    if errors:
+        return errors, ""
+    page = doc["page"]
+    if doc["timeWindow"] != EXPECTED_TIME_WINDOWS[page]:
+        errors.append(
+            f"timeWindow '{doc['timeWindow']}' does not match page {page} "
+            f"('{EXPECTED_TIME_WINDOWS[page]}')"
+        )
+    series_doc = load(target.parent / f"page{page}.series.json")
+    by_id = {s["id"]: s for s in series_doc["series"]}
+    n_geo = 0
+    for sid, entry in doc["series"].items():
+        s = by_id.get(sid)
+        if s is None:
+            errors.append(f"shapes for unknown serie '{sid}'")
+            continue
+        if len(entry["routes"]) != len(s["routes"]):
+            errors.append(
+                f"serie '{sid}': {len(entry['routes'])} shape routes vs "
+                f"{len(s['routes'])} series routes"
+            )
+            continue
+        n_geo += sum(1 for r in entry["routes"] if r is not None)
+    return errors, f"{n_geo} routes with geometry, aligned with page{page}.series.json"
+
+
 def main():
     if len(sys.argv) != 2:
-        print("usage: validate.py <data/stations.json | data/pageN.series.json | data/gtfs/pageN.minutes.json>")
+        print("usage: validate.py <data/stations.json | data/pageN.series.json | data/gtfs/pageN.minutes.json | data/gtfs/pageN.shapes.json>")
         sys.exit(2)
     target = Path(sys.argv[1])
     doc = load(target)
@@ -151,6 +179,8 @@ def main():
         errors, summary = validate_stations(doc)
     elif target.name.endswith(".minutes.json"):
         errors, summary = validate_minutes_file(doc, target)
+    elif target.name.endswith(".shapes.json"):
+        errors, summary = validate_shapes_file(doc, target)
     else:
         errors, summary = validate_series_file(doc, target)
     if errors:

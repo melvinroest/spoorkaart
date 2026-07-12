@@ -14,6 +14,7 @@ The format is producer-agnostic on purpose: the same series files can later be f
 | `data/page3.series.json` | agent 3 | series weekend tot 20 uur |
 | `data/page4.series.json` | agent 4 | series ma-zo na 20 uur |
 | `data/gtfs/pageN.minutes.json` | scripts/build_gtfs_minutes.py | per serie per route: cumulative arr/dep minutes, index-aligned with the stops array of `data/gtfs/pageN.series.json`, plus median headway per serie; minutes(a, b) = arr[b] - dep[a] |
+| `data/gtfs/pageN.shapes.json` | scripts/build_gtfs_shapes.py | per serie per route: real track polyline ([lat, lon] list, Douglas-Peucker 25 m) from the best anchor-passing trip shape, route-index-aligned with `data/gtfs/pageN.series.json`; null = no shape passed the 500 m stop-to-line anchor, consumer falls back to straight lines |
 | `schema/*.schema.json` | fixed | JSON Schema, machine validation |
 | `scripts/validate.py` | fixed | schema plus referential validation |
 

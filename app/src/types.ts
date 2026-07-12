@@ -66,6 +66,14 @@ export interface MinutesFile {
   notes?: string[]
 }
 
+export interface ShapesFile {
+  schemaVersion: 1
+  page: number
+  timeWindow: string
+  series: Record<string, { routes: ([number, number][] | null)[] }>
+  notes?: string[]
+}
+
 export const PAGE_LABELS: Record<number, string> = {
   1: 'ma-do tot 20u',
   2: 'vrijdag tot 20u',

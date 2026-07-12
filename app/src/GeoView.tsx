@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import * as L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
+import 'leaflet-polylineoffset'
 import type { Series, Station } from './types'
 import { PAGE_LABELS } from './types'
 import {
@@ -9,8 +10,10 @@ import {
   loadProductMap,
   loadSerieColors,
   loadSeries,
+  loadShapes,
   type SeriesResult,
 } from './data'
+import type { SeriesFile, ShapesFile } from './types'
 import { buildTimeIndex, type TimeIndex } from './minutes'
 import { fallbackColor } from './color'
 import { haversineKm, parseLatLon } from './geo'
@@ -46,6 +49,15 @@ const ISO_BANDS: { limit: number; color: string; label: string }[] = [
 function isoColor(t: number): string {
   for (const b of ISO_BANDS) if (t < b.limit) return b.color
   return ISO_BANDS[ISO_BANDS.length - 1].color
+}
+
+// Stable per-serie sideways offset in pixels so series sharing the same
+// track render as parallel strands instead of hiding each other. Five slots
+// keep the worst off-track error bounded to 8 px.
+function offsetFor(id: string): number {
+  let h = 0
+  for (const c of id) h = (h * 31 + c.charCodeAt(0)) % 997
+  return ((h % 5) - 2) * 4
 }
 
 // RdT station type -> chip label. Sneltrein stays its own category on purpose:
@@ -111,6 +123,8 @@ export default function GeoView({ stations, active = true }: Props) {
   const [win, setWin] = useState(1)
   const [series, setSeries] = useState<SeriesResult | null>(null)
   const [timeIndex, setTimeIndex] = useState<TimeIndex | null>(null)
+  const [gtfsSeries, setGtfsSeries] = useState<SeriesFile | null>(null)
+  const [shapes, setShapes] = useState<ShapesFile | null>(null)
   const [colors, setColors] = useState<Record<string, string>>({})
   const [products, setProducts] = useState<Record<string, string>>({})
   const [selected, setSelected] = useState<string | null>(null)
@@ -194,12 +208,19 @@ export default function GeoView({ stations, active = true }: Props) {
     let alive = true
     setSeries(null)
     setTimeIndex(null)
+    setGtfsSeries(null)
+    setShapes(null)
     setHovered(null)
     loadSeries(win).then((f) => {
       if (alive) setSeries(f)
     })
     Promise.all([loadGtfsSeries(win), loadMinutes(win)]).then(([s, m]) => {
-      if (alive) setTimeIndex(s && m ? buildTimeIndex(s, m) : null)
+      if (!alive) return
+      setGtfsSeries(s)
+      setTimeIndex(s && m ? buildTimeIndex(s, m) : null)
+    })
+    loadShapes(win).then((sh) => {
+      if (alive) setShapes(sh)
     })
     return () => {
       alive = false
@@ -337,7 +358,7 @@ export default function GeoView({ stations, active = true }: Props) {
       if (pinned.length) return pinned.includes(s.id) ? 'hot' : 'cold'
       return ''
     }
-    const routePts = (r: { stops: string[] }): [number, number][] => {
+    const chordPts = (r: { stops: string[] }): [number, number][] => {
       const pts: [number, number][] = []
       for (const id of r.stops) {
         const g = byId.get(id)?.geo
@@ -345,45 +366,71 @@ export default function GeoView({ stations, active = true }: Props) {
       }
       return pts
     }
-    // Pass 1: white casing under everything (transit map style).
+    // Real track geometry when a gtfs shape matches this route (by serie id
+    // plus best stop overlap; the displayed series may be kaart-sourced with
+    // its own route indexing), otherwise straight chords between stops.
+    const shapePts = (
+      s: Series,
+      r: { stops: string[] },
+    ): [number, number][] | null => {
+      const sh = shapes?.series[s.id]
+      const gs = gtfsSeries?.series.find((x) => x.id === s.id)
+      if (!sh || !gs) return null
+      const want = new Set(r.stops)
+      let bestIdx = -1
+      let bestScore = 0
+      gs.routes.forEach((gr, j) => {
+        let n = 0
+        for (const st of gr.stops) if (want.has(st)) n++
+        const score = n / want.size
+        if (score > bestScore) {
+          bestScore = score
+          bestIdx = j
+        }
+      })
+      if (bestIdx < 0 || bestScore < 0.5) return null
+      return sh.routes[bestIdx] ?? null
+    }
+    const geoms: { s: Series; state: '' | 'hot' | 'cold'; pts: [number, number][] }[] = []
     for (const s of renderSeries) {
       const state = serieState(s)
       for (const r of s.routes) {
-        const pts = routePts(r)
+        const pts = shapePts(s, r) ?? chordPts(r)
         if (pts.length < 2) continue
-        group.addLayer(
-          L.polyline(pts, {
-            renderer,
-            color: '#ffffff',
-            weight: (state === 'hot' ? 5 : 3) + 3,
-            opacity: state === 'cold' ? 0.08 : 0.9,
-            interactive: false,
-          }),
-        )
+        geoms.push({ s, state, pts })
       }
+    }
+    // Pass 1: white casing under everything (transit map style).
+    for (const g of geoms) {
+      group.addLayer(
+        L.polyline(g.pts, {
+          renderer,
+          color: '#ffffff',
+          weight: (g.state === 'hot' ? 5 : 3) + 3,
+          opacity: g.state === 'cold' ? 0.08 : 0.9,
+          interactive: false,
+          offset: offsetFor(g.s.id),
+        } as L.PolylineOptions),
+      )
     }
     // Pass 2: the colored lines.
-    for (const s of renderSeries) {
-      const color = colors[s.id] ?? fallbackColor(s.id)
-      const state = serieState(s)
-      for (const r of s.routes) {
-        const pts = routePts(r)
-        if (pts.length < 2) continue
-        const line = L.polyline(pts, {
-          renderer,
-          color,
-          weight: state === 'hot' ? 5 : 3,
-          opacity: state === 'cold' ? 0.15 : 0.9,
-          bubblingMouseEvents: false,
-        })
-        line.bindTooltip(s.id, { sticky: true })
-        line.on('mouseover', () => setHovered(s.id))
-        line.on('mouseout', () => setHovered(null))
-        line.on('click', () => togglePin(s.id))
-        group.addLayer(line)
-      }
+    for (const g of geoms) {
+      const color = colors[g.s.id] ?? fallbackColor(g.s.id)
+      const line = L.polyline(g.pts, {
+        renderer,
+        color,
+        weight: g.state === 'hot' ? 5 : 3,
+        opacity: g.state === 'cold' ? 0.15 : 0.9,
+        bubblingMouseEvents: false,
+        offset: offsetFor(g.s.id),
+      } as L.PolylineOptions)
+      line.bindTooltip(g.s.id, { sticky: true })
+      line.on('mouseover', () => setHovered(g.s.id))
+      line.on('mouseout', () => setHovered(null))
+      line.on('click', () => togglePin(g.s.id))
+      group.addLayer(line)
     }
-  }, [renderSeries, colors, hovered, pinned, byId, selected, hoveredStation])
+  }, [renderSeries, colors, hovered, pinned, byId, selected, hoveredStation, shapes, gtfsSeries])
 
   // Restyle dots from the current interaction state. With a selection
   // active, directly reachable stations get a yellow ring and in-circle
