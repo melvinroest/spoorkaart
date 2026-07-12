@@ -150,6 +150,8 @@ export default function GeoView({ stations, active = true }: Props) {
   const [colorBase, setColorBase] = useState(false)
   const [isoMode, setIsoMode] = useState(false)
   const [speed, setSpeed] = useState<Speed>('fiets')
+  const [showIc, setShowIc] = useState(true)
+  const [showSpr, setShowSpr] = useState(true)
   const [coordText, setCoordText] = useState('')
   const [coordError, setCoordError] = useState(false)
 
@@ -252,9 +254,14 @@ export default function GeoView({ stations, active = true }: Props) {
 
   const direct = useMemo(() => {
     if (!selected || !series) return null
-    const hits = series.file.series.filter((s) =>
-      s.routes.some((r) => r.stops.includes(selected)),
-    )
+    const hits = series.file.series.filter((s) => {
+      if (!s.routes.some((r) => r.stops.includes(selected))) return false
+      // Sneltrein counts as intercity-class; unclassifiable series always show.
+      const chip = serieChip(s, products)
+      if (chip === 'SPR') return showSpr
+      if (chip === 'IC' || chip === 'SNEL') return showIc
+      return true
+    })
     const reachable = new Set<string>()
     for (const s of hits) {
       for (const r of s.routes) {
@@ -263,7 +270,7 @@ export default function GeoView({ stations, active = true }: Props) {
     }
     reachable.delete(selected)
     return { series: hits, reachable }
-  }, [selected, series])
+  }, [selected, series, products, showIc, showSpr])
 
   const pinnedSeries = useMemo<Series[]>(() => {
     if (!series) return []
@@ -689,6 +696,22 @@ export default function GeoView({ stations, active = true }: Props) {
             value={radiusKm}
             onChange={(e) => setRadiusKm(Number(e.target.value))}
           />
+        </label>
+        <label className="radius">
+          <input
+            type="checkbox"
+            checked={showIc}
+            onChange={(e) => setShowIc(e.target.checked)}
+          />{' '}
+          intercity
+        </label>
+        <label className="radius">
+          <input
+            type="checkbox"
+            checked={showSpr}
+            onChange={(e) => setShowSpr(e.target.checked)}
+          />{' '}
+          sprinter
         </label>
         <label className="radius">
           <input
