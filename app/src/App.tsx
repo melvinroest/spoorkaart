@@ -1,7 +1,8 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import SchematicView from './SchematicView'
 import GeoView from './GeoView'
 import { loadStations } from './data'
+import { screenshot, type ShotResult } from './screenshot'
 import { PAGE_LABELS, type Station } from './types'
 
 type View = 'schematic' | 'geo'
@@ -14,6 +15,18 @@ export default function App() {
   // The geo view mounts on first visit and then stays mounted (hidden via
   // CSS) so its state survives tab switches.
   const [geoMounted, setGeoMounted] = useState(false)
+  const [shot, setShot] = useState<ShotResult | 'busy' | null>(null)
+  const rootRef = useRef<HTMLDivElement>(null)
+
+  const takeShot = async () => {
+    if (!rootRef.current || shot === 'busy') return
+    setShot('busy')
+    const result = await screenshot(rootRef.current).catch(
+      (): ShotResult => 'failed',
+    )
+    setShot(result)
+    setTimeout(() => setShot(null), 2500)
+  }
 
   useEffect(() => {
     loadStations()
@@ -25,7 +38,7 @@ export default function App() {
   if (!stations) return <p className="muted">Laden...</p>
 
   return (
-    <div className="app">
+    <div className="app" ref={rootRef}>
       <header>
         <h1>Spoorkaart 2026</h1>
         <nav className="tabs">
@@ -51,6 +64,17 @@ export default function App() {
             geo
           </button>
         </nav>
+        <button className="shot-btn" onClick={takeShot} disabled={shot === 'busy'}>
+          {shot === 'busy'
+            ? 'bezig...'
+            : shot === 'clipboard'
+              ? 'gekopieerd'
+              : shot === 'download'
+                ? 'gedownload'
+                : shot === 'failed'
+                  ? 'mislukt'
+                  : 'screenshot'}
+        </button>
       </header>
       {view === 'schematic' && <SchematicView page={page} stations={stations} />}
       {geoMounted && (

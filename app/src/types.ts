@@ -48,6 +48,24 @@ export interface SeriesFile {
   series: Series[]
 }
 
+export interface MinutesRoute {
+  arr: (number | null)[]
+  dep: (number | null)[]
+}
+
+export interface MinutesSerie {
+  headwayMinutes: number | null
+  routes: MinutesRoute[]
+}
+
+export interface MinutesFile {
+  schemaVersion: 1
+  page: number
+  timeWindow: string
+  series: Record<string, MinutesSerie>
+  notes?: string[]
+}
+
 export const PAGE_LABELS: Record<number, string> = {
   1: 'ma-do tot 20u',
   2: 'vrijdag tot 20u',

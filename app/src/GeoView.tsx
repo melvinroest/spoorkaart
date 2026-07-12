@@ -4,11 +4,14 @@ import 'leaflet/dist/leaflet.css'
 import type { Series, Station } from './types'
 import { PAGE_LABELS } from './types'
 import {
+  loadGtfsSeries,
+  loadMinutes,
   loadProductMap,
   loadSerieColors,
   loadSeries,
   type SeriesResult,
 } from './data'
+import { buildTimeIndex, type TimeIndex } from './minutes'
 import { fallbackColor } from './color'
 import { haversineKm, parseLatLon } from './geo'
 
@@ -86,6 +89,7 @@ export default function GeoView({ stations, active = true }: Props) {
 
   const [win, setWin] = useState(1)
   const [series, setSeries] = useState<SeriesResult | null>(null)
+  const [timeIndex, setTimeIndex] = useState<TimeIndex | null>(null)
   const [colors, setColors] = useState<Record<string, string>>({})
   const [products, setProducts] = useState<Record<string, string>>({})
   const [selected, setSelected] = useState<string | null>(null)
@@ -166,9 +170,13 @@ export default function GeoView({ stations, active = true }: Props) {
   useEffect(() => {
     let alive = true
     setSeries(null)
+    setTimeIndex(null)
     setHovered(null)
     loadSeries(win).then((f) => {
       if (alive) setSeries(f)
+    })
+    Promise.all([loadGtfsSeries(win), loadMinutes(win)]).then(([s, m]) => {
+      if (alive) setTimeIndex(s && m ? buildTimeIndex(s, m) : null)
     })
     return () => {
       alive = false
@@ -535,7 +543,21 @@ export default function GeoView({ stations, active = true }: Props) {
                   .map(([id, d]) => {
                     const chip = typeChip(byId.get(id)?.type)
                     const isReach = direct?.reachable.has(id) ?? false
-                    const unreach = Boolean(direct) && !isReach && id !== selected
+                    const pair =
+                      selected && id !== selected
+                        ? timeIndex?.fastest1(selected, id)
+                        : null
+                    const mins = isReach ? (pair?.direct ?? null) : null
+                    const transfer =
+                      pair?.transfer != null &&
+                      (!isReach || pair.transfer < (pair.direct ?? Infinity))
+                        ? pair.transfer
+                        : null
+                    const unreach =
+                      Boolean(direct) &&
+                      !isReach &&
+                      transfer == null &&
+                      id !== selected
                     return (
                       <li
                         key={id}
@@ -554,7 +576,16 @@ export default function GeoView({ stations, active = true }: Props) {
                         <span>
                           {chip && <span className={`chip chip-${chip.toLowerCase()}`}>{chip}</span>}
                           {name(id)}
-                          {isReach && <span className="tag-direct">direct</span>}
+                          {isReach && (
+                            <span className="tag-direct">
+                              {mins != null ? `direct ${Math.round(mins)} min` : 'direct'}
+                            </span>
+                          )}
+                          {transfer != null && (
+                            <span className="tag-transfer">
+                              overstap {Math.round(transfer)} min
+                            </span>
+                          )}
                         </span>
                         <span className="muted">{d.toFixed(1)} km</span>
                       </li>

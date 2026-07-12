@@ -108,14 +108,49 @@ def validate_series_file(doc, target):
     return errors, f"{len(doc['series'])} series, station refs OK"
 
 
+def validate_minutes_file(doc, target):
+    errors = schema_errors(doc, "minutes.schema.json")
+    if errors:
+        return errors, ""
+    page = doc["page"]
+    if doc["timeWindow"] != EXPECTED_TIME_WINDOWS[page]:
+        errors.append(
+            f"timeWindow '{doc['timeWindow']}' does not match page {page} "
+            f"('{EXPECTED_TIME_WINDOWS[page]}')"
+        )
+    series_doc = load(target.parent / f"page{page}.series.json")
+    by_id = {s["id"]: s for s in series_doc["series"]}
+    for sid, entry in doc["series"].items():
+        s = by_id.get(sid)
+        if s is None:
+            errors.append(f"minutes for unknown serie '{sid}'")
+            continue
+        if len(entry["routes"]) != len(s["routes"]):
+            errors.append(
+                f"serie '{sid}': {len(entry['routes'])} minute routes vs "
+                f"{len(s['routes'])} series routes"
+            )
+            continue
+        for i, (mr, sr) in enumerate(zip(entry["routes"], s["routes"])):
+            for key in ("arr", "dep"):
+                if len(mr[key]) != len(sr["stops"]):
+                    errors.append(
+                        f"serie '{sid}' route {i}: {key} length {len(mr[key])} "
+                        f"vs {len(sr['stops'])} stops"
+                    )
+    return errors, f"{len(doc['series'])} series aligned with page{page}.series.json"
+
+
 def main():
     if len(sys.argv) != 2:
-        print("usage: validate.py <data/stations.json | data/pageN.series.json>")
+        print("usage: validate.py <data/stations.json | data/pageN.series.json | data/gtfs/pageN.minutes.json>")
         sys.exit(2)
     target = Path(sys.argv[1])
     doc = load(target)
     if target.name == "stations.json":
         errors, summary = validate_stations(doc)
+    elif target.name.endswith(".minutes.json"):
+        errors, summary = validate_minutes_file(doc, target)
     else:
         errors, summary = validate_series_file(doc, target)
     if errors:

@@ -193,6 +193,11 @@ export default function SchematicView({ page, stations }: Props) {
           style={{ background: colors[s.id] ?? fallbackColor(s.id) }}
         />
         <strong>{s.id}</strong> {isPinned && <span className="pin-mark">vast</span>}{' '}
+        {Object.keys(highlights).length > 0 && !highlights[s.id]?.length && (
+          <span className="tag-nokaart">
+            {series?.source === 'gtfs' ? 'niet op de kaart' : 'geen lijn-highlight'}
+          </span>
+        )}{' '}
         {name(from)} &ndash; {name(to)}
         {s.frequency.note && <div className="muted">{s.frequency.note}</div>}
       </li>

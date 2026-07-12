@@ -1,4 +1,4 @@
-import type { StationsFile, SeriesFile } from './types'
+import type { MinutesFile, StationsFile, SeriesFile } from './types'
 
 export interface SeriesResult {
   file: SeriesFile
@@ -11,7 +11,7 @@ export async function loadStations(): Promise<StationsFile> {
   return res.json()
 }
 
-async function fetchJson(path: string): Promise<SeriesFile | null> {
+async function fetchJson<T>(path: string): Promise<T | null> {
   const res = await fetch(path)
   // Vite dev serves index.html for missing files, so check the content type too.
   if (!res.ok || !res.headers.get('content-type')?.includes('json')) return null
@@ -19,11 +19,21 @@ async function fetchJson(path: string): Promise<SeriesFile | null> {
 }
 
 export async function loadSeries(page: number): Promise<SeriesResult | null> {
-  const map = await fetchJson(`/data/page${page}.series.json`)
+  const map = await fetchJson<SeriesFile>(`/data/page${page}.series.json`)
   if (map) return { file: map, source: 'kaart' }
-  const gtfs = await fetchJson(`/data/gtfs/page${page}.series.json`)
+  const gtfs = await fetchJson<SeriesFile>(`/data/gtfs/page${page}.series.json`)
   if (gtfs) return { file: gtfs, source: 'gtfs' }
   return null
+}
+
+// The time engine always runs on the GTFS-derived files: minutes arrays are
+// index-aligned with THEIR stop arrays, not with the map extraction's.
+export async function loadGtfsSeries(page: number): Promise<SeriesFile | null> {
+  return fetchJson<SeriesFile>(`/data/gtfs/page${page}.series.json`)
+}
+
+export async function loadMinutes(page: number): Promise<MinutesFile | null> {
+  return fetchJson<MinutesFile>(`/data/gtfs/page${page}.minutes.json`)
 }
 
 // Serie id -> product (Intercity, Sprinter, ...) unioned over the four GTFS
@@ -32,7 +42,7 @@ export async function loadSeries(page: number): Promise<SeriesResult | null> {
 export async function loadProductMap(): Promise<Record<string, string>> {
   const out: Record<string, string> = {}
   const files = await Promise.all(
-    [1, 2, 3, 4].map((p) => fetchJson(`/data/gtfs/page${p}.series.json`)),
+    [1, 2, 3, 4].map((p) => fetchJson<SeriesFile>(`/data/gtfs/page${p}.series.json`)),
   )
   for (const f of files) {
     if (!f) continue

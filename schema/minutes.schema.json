@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Spoorkaart cumulative travel minutes per serie route",
+  "type": "object",
+  "required": ["schemaVersion", "page", "timeWindow", "series"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "page": {"enum": [1, 2, 3, 4]},
+    "timeWindow": {"type": "string"},
+    "series": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["headwayMinutes", "routes"],
+        "additionalProperties": false,
+        "properties": {
+          "headwayMinutes": {"type": ["number", "null"], "exclusiveMinimum": 0},
+          "routes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["arr", "dep"],
+              "additionalProperties": false,
+              "properties": {
+                "arr": {"$ref": "#/$defs/cumArray"},
+                "dep": {"$ref": "#/$defs/cumArray"}
+              }
+            }
+          }
+        }
+      }
+    },
+    "notes": {"type": "array", "items": {"type": "string"}}
+  },
+  "$defs": {
+    "cumArray": {
+      "type": "array",
+      "minItems": 2,
+      "items": {"type": ["number", "null"], "minimum": 0}
+    }
+  }
+}
