@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import SchematicView from './SchematicView'
 import GeoView from './GeoView'
-import { loadStations } from './data'
+import { hasMapArtwork, loadStations } from './data'
 import { screenshot, type ShotResult } from './screenshot'
 import { PAGE_LABELS, type Station } from './types'
 
@@ -15,6 +15,9 @@ export default function App() {
   // The geo view mounts on first visit and then stays mounted (hidden via
   // CSS) so its state survives tab switches.
   const [geoMounted, setGeoMounted] = useState(false)
+  // Public deploys ship without the NS map artwork; the schematic tabs hide
+  // and the geo view becomes the whole app.
+  const [artwork, setArtwork] = useState<boolean | null>(null)
   const [shot, setShot] = useState<ShotResult | 'busy' | null>(null)
   const rootRef = useRef<HTMLDivElement>(null)
 
@@ -32,6 +35,13 @@ export default function App() {
     loadStations()
       .then((f) => setStations(f.stations))
       .catch((e) => setError(String(e)))
+    hasMapArtwork().then((ok) => {
+      setArtwork(ok)
+      if (!ok) {
+        setView('geo')
+        setGeoMounted(true)
+      }
+    })
   }, [])
 
   if (error) return <p className="error">FAIL: {error}</p>
@@ -42,18 +52,19 @@ export default function App() {
       <header>
         <h1>Spoorkaart 2026</h1>
         <nav className="tabs">
-          {[1, 2, 3, 4].map((p) => (
-            <button
-              key={p}
-              className={view === 'schematic' && page === p ? 'active' : ''}
-              onClick={() => {
-                setView('schematic')
-                setPage(p)
-              }}
-            >
-              {PAGE_LABELS[p]}
-            </button>
-          ))}
+          {artwork !== false &&
+            [1, 2, 3, 4].map((p) => (
+              <button
+                key={p}
+                className={view === 'schematic' && page === p ? 'active' : ''}
+                onClick={() => {
+                  setView('schematic')
+                  setPage(p)
+                }}
+              >
+                {PAGE_LABELS[p]}
+              </button>
+            ))}
           <button
             className={view === 'geo' ? 'active' : ''}
             onClick={() => {
