@@ -28,7 +28,7 @@ const DOT_BASE = {
 }
 
 // Last-mile speeds for the isochrone, km/h.
-const SPEEDS = { fiets: 16, auto: 40 } as const
+const SPEEDS = { lopen: 5, fiets: 16, auto: 40 } as const
 type Speed = keyof typeof SPEEDS
 
 // Real routes are longer than the straight line. Measured against Google
