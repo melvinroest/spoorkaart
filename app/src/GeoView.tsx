@@ -60,6 +60,20 @@ function offsetFor(id: string): number {
   return ((h % 5) - 2) * 4
 }
 
+// A pixel offset larger than a curve's on-screen size draws little loops at
+// tight bends, so the offset fades out when zooming to country level where
+// strand separation is invisible anyway.
+function offsetZoomFactor(zoom: number): number {
+  if (zoom >= 11) return 1
+  if (zoom >= 10) return 0.5
+  return 0
+}
+
+type OffsetPolyline = L.Polyline & {
+  _baseOffset?: number
+  setOffset?: (offset: number) => void
+}
+
 // RdT station type -> chip label. Sneltrein stays its own category on purpose:
 // a knooppuntSneltreinstation (Ommen, Valkenburg) is neither IC nor sprinter.
 function typeChip(t?: string): 'IC' | 'SNEL' | 'SPR' | null {
@@ -176,6 +190,15 @@ export default function GeoView({ stations, active = true }: Props) {
     }
     // A click on empty map (no dot, no line) clears the station selection.
     map.on('click', () => setSelected(null))
+    // Rescale the per-serie line offsets when the zoom level changes.
+    map.on('zoomend', () => {
+      const f = offsetZoomFactor(map.getZoom())
+      linesRef.current?.eachLayer((l) => {
+        const line = l as OffsetPolyline
+        if (line._baseOffset !== undefined && line.setOffset)
+          line.setOffset(line._baseOffset * f)
+      })
+    })
     const nl = geoStations
       .filter((s) => s.country === 'NL')
       .map((s) => s.geo as [number, number])
@@ -400,30 +423,34 @@ export default function GeoView({ stations, active = true }: Props) {
         geoms.push({ s, state, pts })
       }
     }
+    const zoomF = offsetZoomFactor(mapRef.current?.getZoom() ?? 8)
     // Pass 1: white casing under everything (transit map style).
     for (const g of geoms) {
-      group.addLayer(
-        L.polyline(g.pts, {
-          renderer,
-          color: '#ffffff',
-          weight: (g.state === 'hot' ? 5 : 3) + 3,
-          opacity: g.state === 'cold' ? 0.08 : 0.9,
-          interactive: false,
-          offset: offsetFor(g.s.id),
-        } as L.PolylineOptions),
-      )
+      const base = offsetFor(g.s.id)
+      const casing = L.polyline(g.pts, {
+        renderer,
+        color: '#ffffff',
+        weight: (g.state === 'hot' ? 5 : 3) + 3,
+        opacity: g.state === 'cold' ? 0.08 : 0.9,
+        interactive: false,
+        offset: base * zoomF,
+      } as L.PolylineOptions) as OffsetPolyline
+      casing._baseOffset = base
+      group.addLayer(casing)
     }
     // Pass 2: the colored lines.
     for (const g of geoms) {
       const color = colors[g.s.id] ?? fallbackColor(g.s.id)
+      const base = offsetFor(g.s.id)
       const line = L.polyline(g.pts, {
         renderer,
         color,
         weight: g.state === 'hot' ? 5 : 3,
         opacity: g.state === 'cold' ? 0.15 : 0.9,
         bubblingMouseEvents: false,
-        offset: offsetFor(g.s.id),
-      } as L.PolylineOptions)
+        offset: base * zoomF,
+      } as L.PolylineOptions) as OffsetPolyline
+      line._baseOffset = base
       line.bindTooltip(g.s.id, { sticky: true })
       line.on('mouseover', () => setHovered(g.s.id))
       line.on('mouseout', () => setHovered(null))
