@@ -132,7 +132,9 @@ export default function GeoView({ stations, active = true }: Props) {
   const linesRef = useRef<L.LayerGroup | null>(null)
   const lineRendererRef = useRef<L.Renderer | null>(null)
   const circleRef = useRef<L.Circle | null>(null)
-  const targetDotRef = useRef<L.CircleMarker | null>(null)
+  const targetDotRef = useRef<L.Marker | null>(null)
+  // Mirrors `arming` so the once-bound Leaflet handlers read the live value.
+  const armingRef = useRef(false)
 
   const [win, setWin] = useState(1)
   const [series, setSeries] = useState<SeriesResult | null>(null)
@@ -154,9 +156,26 @@ export default function GeoView({ stations, active = true }: Props) {
   const [showSpr, setShowSpr] = useState(true)
   const [coordText, setCoordText] = useState('')
   const [coordError, setCoordError] = useState(false)
+  // Armed by pressing prik-punt with an empty field: the next map click drops
+  // the point. Right-click drops without arming.
+  const [arming, setArming] = useState(false)
 
   const byId = useMemo(() => new Map(stations.map((s) => [s.id, s])), [stations])
   const geoStations = useMemo(() => stations.filter((s) => s.geo), [stations])
+
+  useEffect(() => {
+    armingRef.current = arming
+  }, [arming])
+
+  // Escape cancels the armed state so a click-drop mode is never a trap.
+  useEffect(() => {
+    if (!arming) return
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setArming(false)
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [arming])
 
   // Map island: Leaflet owns everything inside mapDivRef.
   useEffect(() => {
@@ -181,7 +200,11 @@ export default function GeoView({ stations, active = true }: Props) {
         ...DOT_BASE,
       })
       m.bindTooltip(s.name, { direction: 'top', offset: [0, -6] })
-      m.on('click', () => {
+      m.on('click', (e) => {
+        if (armingRef.current) {
+          dropPoint(e.latlng)
+          return
+        }
         setPinned([])
         setSelected((cur) => (cur === s.id ? null : s.id))
       })
@@ -190,8 +213,17 @@ export default function GeoView({ stations, active = true }: Props) {
       m.addTo(map)
       dotsRef.current.set(s.id, m)
     }
-    // A click on empty map (no dot, no line) clears the station selection.
-    map.on('click', () => setSelected(null))
+    // A click on empty map: drop the point when armed, else clear selection.
+    map.on('click', (e) => {
+      if (armingRef.current) dropPoint(e.latlng)
+      else setSelected(null)
+    })
+    // Right-click (desktop) or long-press (touch) drops the point instantly,
+    // no arming needed. This is Google Maps' own set-location gesture.
+    map.on('contextmenu', (e) => {
+      e.originalEvent.preventDefault()
+      dropPoint(e.latlng)
+    })
     // Rescale the per-serie line offsets when the zoom level changes.
     map.on('zoomend', () => {
       const f = offsetZoomFactor(map.getZoom())
@@ -461,7 +493,10 @@ export default function GeoView({ stations, active = true }: Props) {
       line.bindTooltip(g.s.id, { sticky: true })
       line.on('mouseover', () => setHovered(g.s.id))
       line.on('mouseout', () => setHovered(null))
-      line.on('click', () => togglePin(g.s.id))
+      line.on('click', (e) => {
+        if (armingRef.current) dropPoint((e as L.LeafletMouseEvent).latlng)
+        else togglePin(g.s.id)
+      })
       group.addLayer(line)
     }
   }, [renderSeries, colors, hovered, pinned, byId, selected, hoveredStation, shapes, gtfsSeries])
@@ -586,14 +621,24 @@ export default function GeoView({ stations, active = true }: Props) {
       fillColor: '#0063d3',
       fillOpacity: 0.05,
     }).addTo(map)
-    targetDotRef.current = L.circleMarker(target, {
-      radius: 6,
-      interactive: false,
-      color: '#ffffff',
-      weight: 2,
-      fillColor: '#d6006f',
-      fillOpacity: 1,
+    const marker = L.marker(target, {
+      draggable: true,
+      keyboard: false,
+      title: 'sleep om te verplaatsen',
+      icon: L.divIcon({
+        className: 'target-pin',
+        iconSize: [16, 16],
+        iconAnchor: [8, 8],
+      }),
     }).addTo(map)
+    // The circle follows the pin live during the drag; the heavier inside and
+    // isochrone recompute only fire on dragend, when setTarget updates.
+    marker.on('drag', () => circleRef.current?.setLatLng(marker.getLatLng()))
+    marker.on('dragend', () => {
+      const ll = marker.getLatLng()
+      setTarget([ll.lat, ll.lng])
+    })
+    targetDotRef.current = marker
   }, [target, radiusKm])
 
   const togglePin = (serie: string) =>
@@ -602,6 +647,13 @@ export default function GeoView({ stations, active = true }: Props) {
     )
 
   const name = (id: string) => byId.get(id)?.name ?? id
+
+  // Set the target from a map LatLng (armed click, right-click, drag) without
+  // recentering the map: the user clicked a spot they can already see.
+  const dropPoint = (ll: L.LatLng) => {
+    setTarget([ll.lat, ll.lng])
+    setArming(false)
+  }
 
   const applyCoord = () => {
     const p = parseLatLon(coordText)
@@ -661,7 +713,9 @@ export default function GeoView({ stations, active = true }: Props) {
           className="coord-form"
           onSubmit={(e) => {
             e.preventDefault()
-            applyCoord()
+            // Text present: parse it. Empty: arm the map for a click-drop.
+            if (coordText.trim()) applyCoord()
+            else setArming((a) => !a)
           }}
         >
           <input
@@ -671,7 +725,13 @@ export default function GeoView({ stations, active = true }: Props) {
             placeholder="lat, lon of Google Maps-link"
             size={26}
           />
-          <button type="submit">prik punt</button>
+          <button
+            type="submit"
+            className={arming ? 'active' : ''}
+            title="typ een coordinaat, of laat leeg en klik daarna op de kaart (rechtsklik prikt direct)"
+          >
+            {arming ? 'klik op kaart...' : 'prik punt'}
+          </button>
           {target && (
             <button
               type="button"
@@ -680,6 +740,7 @@ export default function GeoView({ stations, active = true }: Props) {
                 setCoordText('')
                 setCoordError(false)
                 setIsoMode(false)
+                setArming(false)
               }}
             >
               wis
@@ -749,14 +810,16 @@ export default function GeoView({ stations, active = true }: Props) {
       </div>
       <div className="geo-body">
         <div
-          className={`geo-map${colorBase ? '' : ' base-muted'}`}
+          className={`geo-map${colorBase ? '' : ' base-muted'}${arming ? ' arming' : ''}`}
           ref={mapDivRef}
         />
         <aside className="panel">
           {!selected && !target && (
             <p>
-              Klik een station voor zijn directe series, of prik een GPS-punt en
-              zie welke stations binnen de straal liggen.
+              Klik een station voor zijn directe series. Prik een werkplek als
+              punt op drie manieren: plak een coordinaat of Google Maps-link,
+              of klik "prik punt" en daarna op de kaart, of klik met rechts op
+              de kaart. Sleep het roze punt om het te verplaatsen.
             </p>
           )}
           {isoTimes && (

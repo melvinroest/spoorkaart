@@ -347,6 +347,26 @@ h1 {
   filter: grayscale(0.9) brightness(1.06) contrast(0.9);
 }
 
+/* While armed, the whole map reads as a place-a-point surface. */
+.geo-map.arming .leaflet-container,
+.geo-map.arming .leaflet-grab,
+.geo-map.arming .leaflet-interactive {
+  cursor: crosshair;
+}
+
+/* The draggable work-location pin (a Leaflet divIcon). */
+.target-pin {
+  border-radius: 50%;
+  background: #d6006f;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.35);
+  cursor: grab;
+}
+
+.target-pin:active {
+  cursor: grabbing;
+}
+
 .iso-legend {
   border-bottom: 1px solid #2a323b;
   padding-bottom: 8px;
