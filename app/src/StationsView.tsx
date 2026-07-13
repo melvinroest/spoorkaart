@@ -1,12 +1,19 @@
 import { useEffect, useMemo, useState } from 'react'
-import type { MinutesFile, SeriesFile, Station } from './types'
-import { loadGtfsSeries, loadMinutes } from './data'
+import type { MinutesFile, SeriesFile, ShapesFile, Station } from './types'
+import { loadGtfsSeries, loadMinutes, loadShapes } from './data'
+import { haversineKm } from './geo'
+
+function polyKm(pts: [number, number][]): number {
+  let k = 0
+  for (let i = 1; i < pts.length; i++) k += haversineKm(pts[i - 1], pts[i])
+  return k
+}
 
 interface Props {
   stations: Station[]
 }
 
-// RdT station type -> short chip. Kept local so this view is self-contained.
+// RdT station type -> coarse class, used only to colour the type text.
 function typeChip(t?: string): 'IC' | 'SNEL' | 'SPR' | null {
   if (!t) return null
   const s = t.toLowerCase()
@@ -15,7 +22,14 @@ function typeChip(t?: string): 'IC' | 'SNEL' | 'SPR' | null {
   return 'SPR'
 }
 
-type MetricKey = 'freq' | 'seriesCount' | 'dirDeg' | 'reach' | 'length'
+// The verbatim NS classification, readable: "knooppuntIntercitystation" ->
+// "knooppunt intercitystation".
+function humanType(t?: string): string {
+  if (!t) return '?'
+  return t.replace(/([a-z])([A-Z])/g, '$1 $2').toLowerCase()
+}
+
+type MetricKey = 'freq' | 'seriesCount' | 'dirDeg' | 'reach' | 'length' | 'km'
 type SortKey = MetricKey | 'name'
 
 interface Row {
@@ -27,6 +41,7 @@ interface Row {
   dirDeg: number
   reach: number
   length: number
+  km: number
 }
 
 // Column config drives both the header and the cells, so a metric is defined
@@ -34,28 +49,37 @@ interface Row {
 const COLUMNS: { key: MetricKey; label: string; title: string }[] = [
   {
     key: 'freq',
-    label: 'treinen/uur',
-    title: 'som van de frequenties van alle series die hier stoppen',
+    label: 'treinen per uur',
+    title:
+      'som van de frequentie (treinen per uur) van alle treinseries die hier stoppen',
   },
   {
     key: 'seriesCount',
-    label: 'series',
-    title: 'aantal treinseries dat hier stopt',
+    label: 'treinseries',
+    title: 'aantal verschillende treinseries dat hier stopt',
   },
   {
     key: 'dirDeg',
-    label: 'richtingen',
-    title: 'aantal directe buurstations (in hoeveel richtingen je kunt vertrekken)',
+    label: 'richtingen uit station',
+    title:
+      'aantal directe buurstations: in hoeveel richtingen je vanaf hier kunt vertrekken',
   },
   {
     key: 'reach',
-    label: 'direct bereik',
-    title: 'aantal stations bereikbaar zonder overstap',
+    label: 'stations zonder overstap',
+    title: 'aantal stations dat je vanaf hier zonder overstap kunt bereiken',
   },
   {
     key: 'length',
-    label: 'lijnlengte (min)',
-    title: 'som van de rijtijd van alle lijnen die hier stoppen',
+    label: 'lijnduur (min)',
+    title:
+      'som van de rijtijd in minuten van alle treinseries die hier stoppen; een maat voor de totale lijnlengte',
+  },
+  {
+    key: 'km',
+    label: 'lijnlengte (km)',
+    title:
+      'som van de baanlengte in kilometers van alle treinseries die hier stoppen, uit de echte spoorgeometrie',
   },
 ]
 
@@ -64,6 +88,7 @@ const LIMITS: (number | 'all')[] = [25, 50, 100, 'all']
 export default function StationsView({ stations }: Props) {
   const [gtfs, setGtfs] = useState<SeriesFile | null>(null)
   const [minutes, setMinutes] = useState<MinutesFile | null>(null)
+  const [shapes, setShapes] = useState<ShapesFile | null>(null)
   const [sortKey, setSortKey] = useState<SortKey>('freq')
   const [sortDir, setSortDir] = useState<'asc' | 'desc'>('desc')
   const [limit, setLimit] = useState<number | 'all'>(50)
@@ -75,6 +100,7 @@ export default function StationsView({ stations }: Props) {
   useEffect(() => {
     loadGtfsSeries(1).then(setGtfs)
     loadMinutes(1).then(setMinutes)
+    loadShapes(1).then(setShapes)
   }, [])
 
   const rows = useMemo<Row[]>(() => {
@@ -84,6 +110,7 @@ export default function StationsView({ stations }: Props) {
     const reach = new Map<string, Set<string>>()
     const freq = new Map<string, number>()
     const length = new Map<string, number>()
+    const km = new Map<string, number>()
     const addTo = (m: Map<string, Set<string>>, k: string, v: string) => {
       let s = m.get(k)
       if (!s) {
@@ -101,11 +128,26 @@ export default function StationsView({ stations }: Props) {
         let dur = 0
         const mr = mm?.routes?.[ri]
         if (mr) for (const a of mr.arr) if (a != null && a > dur) dur = a
+        // Route length in km: real track geometry when present (the shapes
+        // file is route-index-aligned with the gtfs series), else the chord
+        // sum through the stop coordinates.
+        const shp = shapes?.series[s.id]?.routes?.[ri] ?? null
+        let dist = 0
+        if (shp && shp.length > 1) dist = polyKm(shp)
+        else {
+          const gpts: [number, number][] = []
+          for (const st of stops) {
+            const g = byId.get(st)?.geo
+            if (g) gpts.push(g)
+          }
+          dist = polyKm(gpts)
+        }
         for (let i = 0; i < stops.length; i++) {
           const st = stops[i]
           addTo(seriesAt, st, s.id)
           freq.set(st, (freq.get(st) ?? 0) + tph)
           if (dur) length.set(st, (length.get(st) ?? 0) + dur)
+          if (dist) km.set(st, (km.get(st) ?? 0) + dist)
           let rs = reach.get(st)
           if (!rs) {
             rs = new Set()
@@ -129,10 +171,11 @@ export default function StationsView({ stations }: Props) {
         reach: reach.get(id)?.size ?? 0,
         freq: Math.round((freq.get(id) ?? 0) * 10) / 10,
         length: Math.round(length.get(id) ?? 0),
+        km: Math.round(km.get(id) ?? 0),
       })
     }
     return out
-  }, [gtfs, minutes, byId])
+  }, [gtfs, minutes, shapes, byId])
 
   const sorted = useMemo(() => {
     const arr = [...rows]
@@ -197,7 +240,7 @@ export default function StationsView({ stations }: Props) {
               >
                 Station{caret('name')}
               </th>
-              <th>type</th>
+              <th title="de NS-classificatie van het station">NS-type</th>
               {COLUMNS.map((c) => (
                 <th
                   key={c.key}
@@ -213,15 +256,13 @@ export default function StationsView({ stations }: Props) {
           </thead>
           <tbody>
             {shown.map((r, i) => {
-              const chip = typeChip(r.type)
+              const cls = typeChip(r.type)
               return (
                 <tr key={r.id}>
                   <td className="rank-num">{i + 1}</td>
                   <td className="rank-name">{r.name}</td>
-                  <td>
-                    {chip && (
-                      <span className={`chip chip-${chip.toLowerCase()}`}>{chip}</span>
-                    )}
+                  <td className={cls ? `ns-type type-${cls.toLowerCase()}` : 'ns-type'}>
+                    {humanType(r.type)}
                   </td>
                   {COLUMNS.map((c) => (
                     <td

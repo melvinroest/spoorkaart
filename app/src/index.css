@@ -541,3 +541,19 @@ h1 {
 .rank-table tbody tr:hover td {
   background: #232a32;
 }
+
+.rank-table td.ns-type {
+  color: #8b97a3;
+}
+
+.rank-table td.type-ic {
+  color: #6aa9ff;
+}
+
+.rank-table td.type-snel {
+  color: #b39ddb;
+}
+
+.rank-table td.type-spr {
+  color: #7fd1a6;
+}
