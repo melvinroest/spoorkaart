@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
 import SchematicView from './SchematicView'
 import GeoView from './GeoView'
+import StationsView from './StationsView'
 import { hasMapArtwork, loadStations } from './data'
 import { screenshot, type ShotResult } from './screenshot'
 import { PAGE_LABELS, type Station } from './types'
 
-type View = 'schematic' | 'geo'
+type View = 'schematic' | 'geo' | 'stations'
 
 export default function App() {
   const [stations, setStations] = useState<Station[] | null>(null)
@@ -74,6 +75,12 @@ export default function App() {
           >
             geo
           </button>
+          <button
+            className={view === 'stations' ? 'active' : ''}
+            onClick={() => setView('stations')}
+          >
+            ranglijst
+          </button>
         </nav>
         <button className="shot-btn" onClick={takeShot} disabled={shot === 'busy'}>
           {shot === 'busy'
@@ -93,6 +100,7 @@ export default function App() {
           <GeoView stations={stations} active={view === 'geo'} />
         </div>
       )}
+      {view === 'stations' && <StationsView stations={stations} />}
     </div>
   )
 }

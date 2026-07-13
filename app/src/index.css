@@ -447,3 +447,97 @@ h1 {
   padding: 1px 4px;
   vertical-align: middle;
 }
+
+.rank-view {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rank-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: #8b97a3;
+}
+
+.rank-controls select {
+  background: #232a32;
+  color: #e6e9ec;
+  border: 1px solid #39424c;
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 13px;
+}
+
+.rank-scroll {
+  max-height: calc(100vh - 150px);
+  overflow: auto;
+  border: 1px solid #39424c;
+  border-radius: 8px;
+}
+
+.rank-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 14px;
+}
+
+.rank-table th,
+.rank-table td {
+  padding: 6px 12px;
+  text-align: left;
+  border-bottom: 1px solid #2a323b;
+  white-space: nowrap;
+}
+
+.rank-table thead th {
+  position: sticky;
+  top: 0;
+  background: #1b2128;
+  color: #8b97a3;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.rank-table th.sortable {
+  cursor: pointer;
+  user-select: none;
+}
+
+.rank-table th.sortable:hover {
+  color: #e6e9ec;
+}
+
+.rank-table th.num,
+.rank-table td.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.rank-table .rank-num {
+  color: #8b97a3;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.rank-table .rank-name {
+  font-weight: 600;
+  color: #e6e9ec;
+}
+
+.rank-table th.sorted {
+  color: #ffc917;
+}
+
+.rank-table td.sorted {
+  color: #ffc917;
+  background: rgba(255, 201, 23, 0.06);
+}
+
+.rank-table tbody tr:hover td {
+  background: #232a32;
+}
