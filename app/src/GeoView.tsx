@@ -819,7 +819,10 @@ export default function GeoView({ stations, active = true }: Props) {
               Klik een station voor zijn directe series. Prik een werkplek als
               punt op drie manieren: plak een coordinaat of Google Maps-link,
               of klik "prik punt" en daarna op de kaart, of klik met rechts op
-              de kaart. Sleep het roze punt om het te verplaatsen.
+              de kaart. Sleep het roze punt om het te verplaatsen. Zet daarna
+              "isochroon" aan om elk station te kleuren op deur-tot-deur-tijd
+              naar het punt (trein plus lopen, fiets of auto voor het laatste
+              stuk); hover een stip voor de opbouw van het getal.
             </p>
           )}
           {isoTimes && (

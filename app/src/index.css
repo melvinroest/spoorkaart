@@ -557,3 +557,8 @@ h1 {
 .rank-table td.type-spr {
   color: #7fd1a6;
 }
+
+.ns-note {
+  color: #8b97a3;
+  font-size: 11px;
+}

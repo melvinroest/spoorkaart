@@ -82,6 +82,13 @@ export default function App() {
             ranglijst
           </button>
         </nav>
+        {(view !== 'schematic' || artwork) && (
+          <span className="ns-note">
+            {view === 'schematic'
+              ? 'kaartbeeld © NS, wordt op eerste verzoek verwijderd'
+              : 'opgebouwd uit open data (OVapi GTFS, Rijden de Treinen, CC0)'}
+          </span>
+        )}
         <button className="shot-btn" onClick={takeShot} disabled={shot === 'busy'}>
           {shot === 'busy'
             ? 'bezig...'
