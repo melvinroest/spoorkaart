@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { Station, Series } from './types'
+import { PAGE_LABELS } from './types'
 import {
   loadMapSvg,
   loadSeries,
@@ -14,6 +15,7 @@ const VIEWBOX = '0 0 895.181 1262'
 
 interface Props {
   page: number
+  onPage: (page: number) => void
   stations: Station[]
 }
 
@@ -42,7 +44,7 @@ function parseDash(dash: string): string | undefined {
   return inner ? inner.split(/\s+/).join(' ') : undefined
 }
 
-export default function SchematicView({ page, stations }: Props) {
+export default function SchematicView({ page, onPage, stations }: Props) {
   const wrapRef = useRef<HTMLDivElement>(null)
   const mapRef = useRef<HTMLDivElement>(null)
   const [series, setSeries] = useState<SeriesResult | null>(null)
@@ -53,7 +55,7 @@ export default function SchematicView({ page, stations }: Props) {
   const [pinned, setPinned] = useState<string[]>([])
   const [tip, setTip] = useState<Tip | null>(null)
   const [showLines, setShowLines] = useState(true)
-  const [showStations, setShowStations] = useState(false)
+  const [showStations, setShowStations] = useState(true)
   const [showIc, setShowIc] = useState(true)
   const [showSpr, setShowSpr] = useState(true)
 
@@ -205,7 +207,19 @@ export default function SchematicView({ page, stations }: Props) {
   }
 
   return (
-    <div className="schematic">
+    <div>
+      <nav className="tabs schematic-tabs">
+        {[1, 2, 3, 4].map((p) => (
+          <button
+            key={p}
+            className={page === p ? 'active' : ''}
+            onClick={() => onPage(p)}
+          >
+            {PAGE_LABELS[p]}
+          </button>
+        ))}
+      </nav>
+      <div className="schematic">
       <div
         ref={wrapRef}
         className={`map-wrap${selected || pinned.length ? ' map-dim' : ''}`}
@@ -324,7 +338,8 @@ export default function SchematicView({ page, stations }: Props) {
         {!selected && !pinned.length && (
           <p>
             Klik een station. Klik daarna een oplichtende lijn om die vast te
-            zetten.
+            zetten. De grijze stippen markeren de klikbare stations; zet ze
+            uit met "stations" rechtsboven op de kaart.
           </p>
         )}
         {selected && (
@@ -354,6 +369,7 @@ export default function SchematicView({ page, stations }: Props) {
           </>
         )}
       </aside>
+      </div>
     </div>
   )
 }

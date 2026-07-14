@@ -4,7 +4,7 @@ import GeoView from './GeoView'
 import StationsView from './StationsView'
 import { hasMapArtwork, loadStations } from './data'
 import { screenshot, type ShotResult } from './screenshot'
-import { PAGE_LABELS, type Station } from './types'
+import type { Station } from './types'
 
 type View = 'schematic' | 'geo' | 'stations'
 
@@ -53,19 +53,14 @@ export default function App() {
       <header>
         <h1>Spoorkaart 2026</h1>
         <nav className="tabs">
-          {artwork !== false &&
-            [1, 2, 3, 4].map((p) => (
-              <button
-                key={p}
-                className={view === 'schematic' && page === p ? 'active' : ''}
-                onClick={() => {
-                  setView('schematic')
-                  setPage(p)
-                }}
-              >
-                {PAGE_LABELS[p]}
-              </button>
-            ))}
+          {artwork !== false && (
+            <button
+              className={view === 'schematic' ? 'active' : ''}
+              onClick={() => setView('schematic')}
+            >
+              NS Spoorkaart
+            </button>
+          )}
           <button
             className={view === 'geo' ? 'active' : ''}
             onClick={() => {
@@ -101,7 +96,9 @@ export default function App() {
                   : 'screenshot'}
         </button>
       </header>
-      {view === 'schematic' && <SchematicView page={page} stations={stations} />}
+      {view === 'schematic' && (
+        <SchematicView page={page} onPage={setPage} stations={stations} />
+      )}
       {geoMounted && (
         <div className={view === 'geo' ? '' : 'view-hidden'}>
           <GeoView stations={stations} active={view === 'geo'} />

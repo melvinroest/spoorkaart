@@ -338,7 +338,7 @@ STATIONS = [
     E("Twello", "Twello", "NL"),
     # Overijssel en Drenthe
     E("Zwolle", "Zwolle", "NL", "M"),
-    E("Zwolle Stadshagen", "Stadshagen", "NL"),
+    E("Zwolle Stadshagen", "Zwolle Stadshagen", "NL"),
     E("Kampen", "Kampen", "NL"),
     E("Kampen Zuid", "Kampen Zuid", "NL"),
     E("Dronten", "Dronten", "NL"),
