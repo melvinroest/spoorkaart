@@ -19,9 +19,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      # map/ holds NS-copyrighted artwork and is gitignored; the empty dir
-      # keeps the app/public/map symlink from dangling during the build.
-      # The app detects the missing artwork and serves the geo view only.
+      # Extra build-time assets from a separate private repo, injected only
+      # while the repo variable DEPLOY_ASSETS is 'true'; flip the variable
+      # and re-run the workflow to build without them.
+      - uses: actions/checkout@v4
+        if: vars.DEPLOY_ASSETS == 'true'
+        with:
+          repository: melvinroest/sk-assets
+          ssh-key: ${{ secrets.ASSETS_SSH_KEY }}
+          path: map
+      # the checkout's own .git dir would otherwise be copied into the
+      # served build via app/public/map
+      - run: rm -rf map/.git
+        if: vars.DEPLOY_ASSETS == 'true'
+      # map/ is not part of this repo; the empty dir keeps the
+      # app/public/map symlink from dangling during the build. The app
+      # detects a missing map and serves the geo view only.
       - run: mkdir -p map
       - uses: actions/setup-node@v4
         with:

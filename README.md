@@ -19,7 +19,7 @@ npm --prefix app run dev
 - One shared station vocabulary. data/stations.json is the only legal id namespace. Four agents extracting pages independently cannot drift apart on naming, because they may only reference these ids; name fixes and missing stations travel through structured corrections channels.
 - Dual truth, deliberately. The map encodes editorial information no dataset has (spits-only stops, direction-only stops, combined series labels, the 4-window split as NS drew it). GTFS has factual per-trip detail the map compresses away. Map wins on editorial semantics, GTFS on stop-level facts.
 - React with imperative islands. React renders the chrome (tabs, panels, inputs). The two heavy map surfaces (a multi-megabyte inline SVG, later a Leaflet map) live behind refs; React never diffs them. Highlighting is CSS class toggling.
-- Static site, no backend, no auth. Hosting the geo view later is a file upload: it is built entirely from CC0 data (OVapi GTFS, Rijden de Treinen stations) plus OSM tiles. The schematic view embeds NS-copyrighted artwork and stays personal.
+- Static site, no backend, no auth. Hosting the geo view later is a file upload: it is built entirely from CC0 data (OVapi GTFS, Rijden de Treinen stations) plus OSM tiles. The schematic view embeds the original map artwork, which is not distributed via this repo.
 - Coordinate trick: pdftocairo -svg keeps the PDF point coordinate system (viewBox 0 0 895.181 1262), and station coordinates were extracted in the same system, so click circles overlay the artwork with no transformation.
 
 ## How the PDF extraction works, briefly

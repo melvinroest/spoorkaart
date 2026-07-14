@@ -89,7 +89,7 @@ export async function loadMapSvg(page: number): Promise<string> {
 }
 
 // The schematic view needs the NS map artwork, which is not part of the
-// public repo (NS copyright). Probe it so the app can hide those tabs.
+// public repo. Probe it so the app can hide those tabs.
 export async function hasMapArtwork(): Promise<boolean> {
   try {
     const res = await fetch(`${BASE}map/page1.svg`, { method: 'HEAD' })

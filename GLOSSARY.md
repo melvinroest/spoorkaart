@@ -6,7 +6,7 @@ Short explanations of every domain concept in this project, with pointers to the
 
 NS -> NDOV Loket (raw, CC0) -> OVapi (GTFS conversion) -> this project's pipeline.
 
-- **NS spoorkaart**: the official schematic rail map PDF (spoorkaart2026.pdf, versie 26.02). Four pages, same base map, four time windows. Editorial: NS cartographers decide what one line per serie looks like and which footnotes exist. Copyright NS, which is why only the geo view is publicly hostable.
+- **NS spoorkaart**: the official schematic rail map PDF (spoorkaart2026.pdf, versie 26.02). Four pages, same base map, four time windows. Editorial: NS cartographers decide what one line per serie looks like and which footnotes exist. The artwork itself is not distributed via this repo; the geo view is built from open data only.
 - **IFF**: NS's own timetable exchange format, the raw delivery behind everything. A zip of fixed-width text files (timetbls.dat, stations.dat, footnote.dat), one record block per train run, first character = field type. Uniquely encodes stations a train passes WITHOUT stopping (";" lines), which GTFS drops. Sample decoded in research/2026-07-12 public-timetable-data.md, source 2. Available at data.ndovloket.nl/iff/ns-latest.zip.
 - **NDOV Loket** (data.ndovloket.nl): the national open-data clearinghouse where Dutch public-transport operators must publish their raw timetable data. CC0, no registration.
 - **OVapi** (gtfs.ovapi.nl): volunteer-run openOV service that converts all NDOV deliveries into one national GTFS zip covering every Dutch operator (gtfs-nl.zip, about 236 MB, rebuilt nightly, valid through the timetable year, currently 2026-12-12).

@@ -4,7 +4,7 @@ dist/
 __pycache__/
 .DS_Store
 
-# NS-copyrighted source artifacts, personal use only, regenerable
+# source artifacts, local only, regenerable
 spoorkaart2026.pdf
 map/
 
