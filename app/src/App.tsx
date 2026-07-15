@@ -68,13 +68,13 @@ export default function App() {
               setGeoMounted(true)
             }}
           >
-            geo
+            Geo
           </button>
           <button
             className={view === 'stations' ? 'active' : ''}
             onClick={() => setView('stations')}
           >
-            ranglijst
+            Ranglijst
           </button>
         </nav>
         {(view !== 'schematic' || artwork) && (
